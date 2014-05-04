@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
+		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
+		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
+		AA55226C1916E98E005D5950 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA55226B1916E98E005D5950 /* CoreData.framework */; };
+		AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5522701916E98E005D5950 /* InfoPlist.strings */; };
+		AA5522741916E98E005D5950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522731916E98E005D5950 /* main.m */; };
+		AA5522781916E98E005D5950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522771916E98E005D5950 /* AppDelegate.m */; };
+		AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */; };
+		AA55227D1916E98E005D5950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55227C1916E98E005D5950 /* Images.xcassets */; };
+		AA5522841916E98E005D5950 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522831916E98E005D5950 /* XCTest.framework */; };
+		AA5522851916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
+		AA5522861916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
+		AA5522871916E98E005D5950 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA55226B1916E98E005D5950 /* CoreData.framework */; };
+		AA55228F1916E98E005D5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA55228D1916E98E005D5950 /* InfoPlist.strings */; };
+		AA5522911916E98E005D5950 /* VRINXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522901916E98E005D5950 /* VRINXTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA5522881916E98E005D5950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA55225A1916E98E005D5950 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA5522611916E98E005D5950;
+			remoteInfo = VRINX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AA5522691916E98E005D5950 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA55226B1916E98E005D5950 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA55226F1916E98E005D5950 /* VRINX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VRINX-Info.plist"; sourceTree = "<group>"; };
+		AA5522711916E98E005D5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA5522731916E98E005D5950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA5522751916E98E005D5950 /* VRINX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRINX-Prefix.pch"; sourceTree = "<group>"; };
+		AA5522761916E98E005D5950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA5522771916E98E005D5950 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VRINX.xcdatamodel; sourceTree = "<group>"; };
+		AA55227C1916E98E005D5950 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA5522821916E98E005D5950 /* VRINXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRINXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5522831916E98E005D5950 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AA55228C1916E98E005D5950 /* VRINXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VRINXTests-Info.plist"; sourceTree = "<group>"; };
+		AA55228E1916E98E005D5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA5522901916E98E005D5950 /* VRINXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRINXTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA55225F1916E98E005D5950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */,
+				AA55226C1916E98E005D5950 /* CoreData.framework in Frameworks */,
+				AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */,
+				AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA55227F1916E98E005D5950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5522841916E98E005D5950 /* XCTest.framework in Frameworks */,
+				AA5522871916E98E005D5950 /* CoreData.framework in Frameworks */,
+				AA5522861916E98E005D5950 /* UIKit.framework in Frameworks */,
+				AA5522851916E98E005D5950 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA5522591916E98E005D5950 = {
+			isa = PBXGroup;
+			children = (
+				AA55226D1916E98E005D5950 /* VRINX */,
+				AA55228A1916E98E005D5950 /* VRINXTests */,
+				AA5522641916E98E005D5950 /* Frameworks */,
+				AA5522631916E98E005D5950 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA5522631916E98E005D5950 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522621916E98E005D5950 /* VRINX.app */,
+				AA5522821916E98E005D5950 /* VRINXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA5522641916E98E005D5950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522651916E98E005D5950 /* Foundation.framework */,
+				AA5522671916E98E005D5950 /* CoreGraphics.framework */,
+				AA5522691916E98E005D5950 /* UIKit.framework */,
+				AA55226B1916E98E005D5950 /* CoreData.framework */,
+				AA5522831916E98E005D5950 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA55226D1916E98E005D5950 /* VRINX */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522761916E98E005D5950 /* AppDelegate.h */,
+				AA5522771916E98E005D5950 /* AppDelegate.m */,
+				AA55227C1916E98E005D5950 /* Images.xcassets */,
+				AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */,
+				AA55226E1916E98E005D5950 /* Supporting Files */,
+			);
+			path = VRINX;
+			sourceTree = "<group>";
+		};
+		AA55226E1916E98E005D5950 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA55226F1916E98E005D5950 /* VRINX-Info.plist */,
+				AA5522701916E98E005D5950 /* InfoPlist.strings */,
+				AA5522731916E98E005D5950 /* main.m */,
+				AA5522751916E98E005D5950 /* VRINX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA55228A1916E98E005D5950 /* VRINXTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522901916E98E005D5950 /* VRINXTests.m */,
+				AA55228B1916E98E005D5950 /* Supporting Files */,
+			);
+			path = VRINXTests;
+			sourceTree = "<group>";
+		};
+		AA55228B1916E98E005D5950 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA55228C1916E98E005D5950 /* VRINXTests-Info.plist */,
+				AA55228D1916E98E005D5950 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA5522611916E98E005D5950 /* VRINX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5522941916E98E005D5950 /* Build configuration list for PBXNativeTarget "VRINX" */;
+			buildPhases = (
+				AA55225E1916E98E005D5950 /* Sources */,
+				AA55225F1916E98E005D5950 /* Frameworks */,
+				AA5522601916E98E005D5950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRINX;
+			productName = VRINX;
+			productReference = AA5522621916E98E005D5950 /* VRINX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA5522811916E98E005D5950 /* VRINXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5522971916E98E005D5950 /* Build configuration list for PBXNativeTarget "VRINXTests" */;
+			buildPhases = (
+				AA55227E1916E98E005D5950 /* Sources */,
+				AA55227F1916E98E005D5950 /* Frameworks */,
+				AA5522801916E98E005D5950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA5522891916E98E005D5950 /* PBXTargetDependency */,
+			);
+			name = VRINXTests;
+			productName = VRINXTests;
+			productReference = AA5522821916E98E005D5950 /* VRINXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA55225A1916E98E005D5950 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Christian Vazquez";
+				TargetAttributes = {
+					AA5522811916E98E005D5950 = {
+						TestTargetID = AA5522611916E98E005D5950;
+					};
+				};
+			};
+			buildConfigurationList = AA55225D1916E98E005D5950 /* Build configuration list for PBXProject "VRINX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA5522591916E98E005D5950;
+			productRefGroup = AA5522631916E98E005D5950 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA5522611916E98E005D5950 /* VRINX */,
+				AA5522811916E98E005D5950 /* VRINXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA5522601916E98E005D5950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */,
+				AA55227D1916E98E005D5950 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5522801916E98E005D5950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA55228F1916E98E005D5950 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA55225E1916E98E005D5950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
+				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AA5522741916E98E005D5950 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA55227E1916E98E005D5950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5522911916E98E005D5950 /* VRINXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA5522891916E98E005D5950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA5522611916E98E005D5950 /* VRINX */;
+			targetProxy = AA5522881916E98E005D5950 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA5522701916E98E005D5950 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5522711916E98E005D5950 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AA55228D1916E98E005D5950 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA55228E1916E98E005D5950 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA5522921916E98E005D5950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA5522931916E98E005D5950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA5522951916E98E005D5950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
+				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AA5522961916E98E005D5950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
+				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AA5522981916E98E005D5950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VRINX.app/VRINX";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VRINXTests/VRINXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AA5522991916E98E005D5950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VRINX.app/VRINX";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
+				INFOPLIST_FILE = "VRINXTests/VRINXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA55225D1916E98E005D5950 /* Build configuration list for PBXProject "VRINX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5522921916E98E005D5950 /* Debug */,
+				AA5522931916E98E005D5950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5522941916E98E005D5950 /* Build configuration list for PBXNativeTarget "VRINX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5522951916E98E005D5950 /* Debug */,
+				AA5522961916E98E005D5950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA5522971916E98E005D5950 /* Build configuration list for PBXNativeTarget "VRINXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5522981916E98E005D5950 /* Debug */,
+				AA5522991916E98E005D5950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */,
+			);
+			currentVersion = AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */;
+			path = VRINX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AA55225A1916E98E005D5950 /* Project object */;
+}
