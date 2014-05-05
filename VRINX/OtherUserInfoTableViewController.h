@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface OtherUserInfoTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -20,7 +21,8 @@
 
 @property (nonatomic,strong) UIImagePickerController *imagePicker;
 @property (nonatomic,strong) UIImage *image;
-
+@property (nonatomic,strong) PFFile *file;
+@property (nonatomic,retain) NSString *haveProfilePicture;
 
 - (IBAction)changeProfilePicture:(id)sender;
 - (IBAction)finishSetup:(id)sender;

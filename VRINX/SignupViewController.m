@@ -73,7 +73,7 @@
             newUser.username=username;
             newUser.password=password;
             newUser.email=username;
-            [newUser addObject:nil forKey:@"FirstName"];
+            [newUser addObject:nil forKey:@"FistName"];
             [newUser addObject:nil forKey:@"LastName"];
             [newUser addObject:nil forKey:@"Mobile"];
             [newUser addObject:nil forKey:@"ProfilePicture"];

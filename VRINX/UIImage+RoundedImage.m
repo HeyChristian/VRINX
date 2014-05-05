@@ -37,7 +37,9 @@
 + (UIImage *)roundedImageWiththumbnailImage:(UIImage *)image {
     if (image) {
         CGContextRef cx = CGBitmapContextCreate(NULL, image.size.width, image.size.height, CGImageGetBitsPerComponent(image.CGImage), 0, CGImageGetColorSpace(image.CGImage), CGImageGetBitmapInfo(image.CGImage));
+        
         NSLog(@" width: %f  - H: %f",image.size.height,image.size.height);
+        
         CGContextBeginPath(cx);
         CGRect pathRect = CGRectMake(0, 0, 452.5f,452.5f);
         CGContextAddEllipseInRect(cx, pathRect);

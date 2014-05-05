@@ -179,23 +179,97 @@
             // self.profilePictureField.image = self.image;
             
             
-            UIImage *myRoundedImage = [UIImage roundedImageWithImage:self.image];
+           // UIImage *myRoundedImage = [UIImage roundedImageWithImage:self.image];
             
             
-            UIImage *small = [UIImage imageWithCGImage:myRoundedImage.CGImage scale:0.05 orientation:myRoundedImage.imageOrientation];
+           /// UIImage *small = [UIImage imageWithCGImage:myRoundedImage.CGImage scale:0.05 orientation:myRoundedImage.imageOrientation];
             
-            self.image = small;
+            //self.image = small;
             [self.imageProfile setImage:self.image];
             NSLog(@" image : %@",self.image);
+           
+            self.imageProfile.layer.cornerRadius = self.imageProfile.frame.size.width / 2;
+            self.imageProfile.clipsToBounds = YES;
+            
+            self.imageProfile.layer.cornerRadius = 10.0f;
+
+            self.imageProfile.layer.borderWidth = 3.0f;
+            self.imageProfile.layer.borderColor = [UIColor whiteColor].CGColor;
             
         }
         
     }
+    
+    
+   
+
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
 
 - (IBAction)finishSetup:(id)sender {
+    
+    
+    if( self.image != nil){
+        NSData *fileData = UIImagePNGRepresentation(self.image);
+        self.file = [PFFile fileWithName:@"Image.png" data:fileData];
+        
+        [self.file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(error){
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!"
+                                                                    message:@"Please try again!"
+                                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+                
+                self.haveProfilePicture= @"YES";
+            }
+        }];
+    }
+
+    
+    NSString *firstname = [self.firstNameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];;
+    NSString *lastname = [self.lastNameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];;
+    NSString *mobile= [self.phoneNumberField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];;
+    
+    
+    
+    PFUser *user = [PFUser currentUser];
+    
+    user[@"Firstname"]=firstname;
+    user[@"LastName"]=lastname;
+    user[@"Mobile"]=mobile;
+    
+    
+    
+    if ([self.haveProfilePicture isEqualToString:@"YES"]){
+        
+        user[@"ProfilePicture"]=self.file;
+        
+        //[newUser setObject:self.file forKey:@"ProfilePicture"];
+    }
+    
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded,NSError *error){
+        
+        if(error){
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"
+                                                                message:[error.userInfo objectForKey:@"error"]
+                                                               delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            
+        }else{
+            // [self dismissModalViewControllerAnimated:YES];
+           // [self dismissViewControllerAnimated:YES completion:nil];
+             [self.navigationController popToRootViewControllerAnimated:YES];
+            
+            //  [self performSegueWithIdentifier:@"GoHome" sender:self];
+            
+        }
+    }];
+    
+    
 }
 @end
