@@ -26,13 +26,22 @@
     
     if(!currentUser){
         [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }else{
+        
+        [self performSegueWithIdentifier:@"FillAnotherUserInfo" sender:self];
+        
+        
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setHidden:NO];
+    
+    
+    
 }
 
 #pragma mark - Table view data source

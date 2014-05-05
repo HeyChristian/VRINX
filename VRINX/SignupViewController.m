@@ -16,14 +16,7 @@
 
 @implementation SignupViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
@@ -60,52 +53,65 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"Make sure you enter a email and password!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-    }else{
+         [alertView show];
+    }else {
         
         if(![password isEqualToString:repassword]){
             
-            if( [username length] == 0 || [password length] ==0 || [repassword length] ==0){
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                                     message:@"The Password does match!"
                                                                    delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
-                return;
             
+            
+        }else{
+        
+        
+        
+        
+            PFUser *newUser = [PFUser user];
+            newUser.username=username;
+            newUser.password=password;
+            newUser.email=username;
+            [newUser addObject:nil forKey:@"FirstName"];
+            [newUser addObject:nil forKey:@"LastName"];
+            [newUser addObject:nil forKey:@"Mobile"];
+            [newUser addObject:nil forKey:@"ProfilePicture"];
+            
+            
+            [newUser signUpInBackgroundWithBlock:^(BOOL succeeded,NSError *error){
+                
+                
+                if(error){
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"
+                                                                        message:[error.userInfo objectForKey:@"error"]
+                                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alertView show];
+                    
+                }else{
+                    //Continue for Registration
+                    //[self dismissViewControllerAnimated:YES completion:nil];
+                    [[[self presentingViewController] presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+                   // [self performSegueWithIdentifier:@"continue" sender:self];
+                }
+                
+                
+            }];
         }
         
-        
-        
-        
-        PFUser *newUser = [PFUser user];
-        newUser.username=username;
-        newUser.password=password;
-        newUser.email=username;
-        
-        
-        
-        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded,NSError *error){
-            
-            if(error){
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"
-                                                                    message:[error.userInfo objectForKey:@"error"]
-                                                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alertView show];
-                
-            }else{
-                //Continue for Registration
-                [self.navigationController popToRootViewControllerAnimated:YES];
-                
-            }
-        }];
-        
-        
     }
-
-    
-    
 }
 
+    
 - (IBAction)Close:(id)sender {
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    //[self.navigationController popToRootViewControllerAnimated:YES];
+    
+    
 }
+
+
 @end

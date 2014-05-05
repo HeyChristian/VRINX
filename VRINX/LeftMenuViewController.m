@@ -8,7 +8,7 @@
 
 #import "LeftMenuViewController.h"
 #import "UIViewController+RESideMenu.h"
-
+#import <Parse/Parse.h>
 
 @interface LeftMenuViewController ()
 
@@ -86,12 +86,17 @@
     }else if(indexPath.row ==4){
         [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileController"]]
                                                      animated:YES];
+       [self.sideMenuViewController hideMenuViewController];
         
-        UINavigationBar *navigationBar      = [UINavigationBar appearance];
-        navigationBar.tintColor             = [UIColor whiteColor];
-        navigationBar.backgroundColor       = [UIColor colorWithRed:0.94 green:0.47 blue:0.47 alpha:1.0];
-        [self.sideMenuViewController hideMenuViewController];
         
+    }else if(indexPath.row == 6){
+        [PFUser logOut];
+        
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+        
+      //  [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"loginFlow"]]
+                                                 //    animated:YES];
+      //  [self.sideMenuViewController hideMenuViewController];
         
     }
     

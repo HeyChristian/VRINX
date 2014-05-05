@@ -44,6 +44,8 @@
 		AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */; };
 		AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522D71916F8A9005D5950 /* LoginViewController.m */; };
 		AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522DD1916F90E005D5950 /* SignupViewController.m */; };
+		AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */; };
+		AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		AA5522D71916F8A9005D5950 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AA5522DC1916F90E005D5950 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		AA5522DD1916F90E005D5950 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		AA5522DF19173034005D5950 /* OtherUserInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherUserInfoTableViewController.h; sourceTree = "<group>"; };
+		AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherUserInfoTableViewController.m; sourceTree = "<group>"; };
+		AA5522E3191748DB005D5950 /* UIImage+RoundedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedImage.h"; sourceTree = "<group>"; };
+		AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				AA5522E2191748AA005D5950 /* UIImageExtended */,
 				AA5522C11916EC45005D5950 /* KPKeyboardScroll */,
 				AA5522B51916EB68005D5950 /* RESideMenu */,
 			);
@@ -307,8 +314,19 @@
 				AA5522D71916F8A9005D5950 /* LoginViewController.m */,
 				AA5522DC1916F90E005D5950 /* SignupViewController.h */,
 				AA5522DD1916F90E005D5950 /* SignupViewController.m */,
+				AA5522DF19173034005D5950 /* OtherUserInfoTableViewController.h */,
+				AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		AA5522E2191748AA005D5950 /* UIImageExtended */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522E3191748DB005D5950 /* UIImage+RoundedImage.h */,
+				AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */,
+			);
+			name = UIImageExtended;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,11 +430,13 @@
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
+				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,
 				AA5522BC1916EB68005D5950 /* RECommonFunctions.m in Sources */,
 				AA5522BE1916EB68005D5950 /* UIViewController+RESideMenu.m in Sources */,
