@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <Parse/Parse.h>
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -16,10 +16,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    [Parse setApplicationId:@"tq7bh8cI1itDr3h41AKNErBBlTrwiM8xfUv8e1be"
+                  clientKey:@"QBg4CPe6152z3u1lX3zyc8lZoupKjF2kgm7IHngM"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+   // PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+   // testObject[@"foo"] = @"bar";
+  //  [testObject saveInBackground];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.48 green:0.09 blue:0.09 alpha:1.0]];
+    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
     return YES;
 }
 

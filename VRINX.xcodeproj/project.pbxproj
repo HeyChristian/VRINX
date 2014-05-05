@@ -22,6 +22,28 @@
 		AA5522871916E98E005D5950 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA55226B1916E98E005D5950 /* CoreData.framework */; };
 		AA55228F1916E98E005D5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA55228D1916E98E005D5950 /* InfoPlist.strings */; };
 		AA5522911916E98E005D5950 /* VRINXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522901916E98E005D5950 /* VRINXTests.m */; };
+		AA55229F1916E9B4005D5950 /* bundle1.o in Frameworks */ = {isa = PBXBuildFile; fileRef = AA55229C1916E9B4005D5950 /* bundle1.o */; };
+		AA5522A11916E9CB005D5950 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522A01916E9CB005D5950 /* AudioToolbox.framework */; };
+		AA5522A31916E9D4005D5950 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522A21916E9D4005D5950 /* CFNetwork.framework */; };
+		AA5522A51916E9FC005D5950 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522A41916E9FC005D5950 /* CoreLocation.framework */; };
+		AA5522A71916EA10005D5950 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522A61916EA0F005D5950 /* libz.1.1.3.dylib */; };
+		AA5522A91916EA1A005D5950 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522A81916EA1A005D5950 /* MobileCoreServices.framework */; };
+		AA5522AB1916EA25005D5950 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522AA1916EA25005D5950 /* QuartzCore.framework */; };
+		AA5522AD1916EA2F005D5950 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522AC1916EA2F005D5950 /* Security.framework */; };
+		AA5522AF1916EA8A005D5950 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522AE1916EA8A005D5950 /* StoreKit.framework */; };
+		AA5522B11916EA95005D5950 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522B01916EA95005D5950 /* SystemConfiguration.framework */; };
+		AA5522B31916EAA6005D5950 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522B21916EAA6005D5950 /* Parse.framework */; };
+		AA5522BC1916EB68005D5950 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522B71916EB68005D5950 /* RECommonFunctions.m */; };
+		AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522B91916EB68005D5950 /* RESideMenu.m */; };
+		AA5522BE1916EB68005D5950 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522BB1916EB68005D5950 /* UIViewController+RESideMenu.m */; };
+		AA5522C01916EB99005D5950 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5522BF1916EB99005D5950 /* iPhone.storyboard */; };
+		AA5522C41916EC59005D5950 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522C31916EC59005D5950 /* TPKeyboardAvoidingScrollView.m */; };
+		AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522C71916ECD8005D5950 /* LeftMenuViewController.m */; };
+		AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522CA1916EDB3005D5950 /* RootViewController.m */; };
+		AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522CD1916F360005D5950 /* RightMenuViewController.m */; };
+		AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */; };
+		AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522D71916F8A9005D5950 /* LoginViewController.m */; };
+		AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522DD1916F90E005D5950 /* SignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +75,40 @@
 		AA55228C1916E98E005D5950 /* VRINXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VRINXTests-Info.plist"; sourceTree = "<group>"; };
 		AA55228E1916E98E005D5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA5522901916E98E005D5950 /* VRINXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRINXTests.m; sourceTree = "<group>"; };
+		AA55229A1916E9B4005D5950 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		AA55229B1916E9B4005D5950 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AA55229C1916E9B4005D5950 /* bundle1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = bundle1.o; path = usr/lib/bundle1.o; sourceTree = SDKROOT; };
+		AA5522A01916E9CB005D5950 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AA5522A21916E9D4005D5950 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AA5522A41916E9FC005D5950 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AA5522A61916EA0F005D5950 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		AA5522A81916EA1A005D5950 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AA5522AA1916EA25005D5950 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AA5522AC1916EA2F005D5950 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AA5522AE1916EA8A005D5950 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AA5522B01916EA95005D5950 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AA5522B21916EAA6005D5950 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Parse.framework; sourceTree = "<group>"; };
+		AA5522B61916EB68005D5950 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		AA5522B71916EB68005D5950 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		AA5522B81916EB68005D5950 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		AA5522B91916EB68005D5950 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		AA5522BA1916EB68005D5950 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		AA5522BB1916EB68005D5950 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		AA5522BF1916EB99005D5950 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = VRINX/iPhone.storyboard; sourceTree = "<group>"; };
+		AA5522C21916EC59005D5950 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = "../../../../Treehouse/Keyboard Solutuion/TPKeyboardAvoidingScrollView.h"; sourceTree = "<group>"; };
+		AA5522C31916EC59005D5950 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = "../../../../Treehouse/Keyboard Solutuion/TPKeyboardAvoidingScrollView.m"; sourceTree = "<group>"; };
+		AA5522C61916ECD8005D5950 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		AA5522C71916ECD8005D5950 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		AA5522C91916EDB3005D5950 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		AA5522CA1916EDB3005D5950 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AA5522CC1916F360005D5950 /* RightMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightMenuViewController.h; sourceTree = "<group>"; };
+		AA5522CD1916F360005D5950 /* RightMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightMenuViewController.m; sourceTree = "<group>"; };
+		AA5522D11916F6B7005D5950 /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
+		AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsTableViewController.m; sourceTree = "<group>"; };
+		AA5522D61916F8A9005D5950 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		AA5522D71916F8A9005D5950 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		AA5522DC1916F90E005D5950 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		AA5522DD1916F90E005D5950 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +116,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5522B31916EAA6005D5950 /* Parse.framework in Frameworks */,
+				AA5522B11916EA95005D5950 /* SystemConfiguration.framework in Frameworks */,
+				AA5522AF1916EA8A005D5950 /* StoreKit.framework in Frameworks */,
+				AA5522AD1916EA2F005D5950 /* Security.framework in Frameworks */,
+				AA5522AB1916EA25005D5950 /* QuartzCore.framework in Frameworks */,
+				AA5522A91916EA1A005D5950 /* MobileCoreServices.framework in Frameworks */,
+				AA5522A71916EA10005D5950 /* libz.1.1.3.dylib in Frameworks */,
+				AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */,
+				AA5522A51916E9FC005D5950 /* CoreLocation.framework in Frameworks */,
 				AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */,
 				AA55226C1916E98E005D5950 /* CoreData.framework in Frameworks */,
+				AA5522A31916E9D4005D5950 /* CFNetwork.framework in Frameworks */,
+				AA5522A11916E9CB005D5950 /* AudioToolbox.framework in Frameworks */,
+				AA55229F1916E9B4005D5950 /* bundle1.o in Frameworks */,
 				AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */,
-				AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +151,7 @@
 		AA5522591916E98E005D5950 = {
 			isa = PBXGroup;
 			children = (
+				AA5522BF1916EB99005D5950 /* iPhone.storyboard */,
 				AA55226D1916E98E005D5950 /* VRINX */,
 				AA55228A1916E98E005D5950 /* VRINXTests */,
 				AA5522641916E98E005D5950 /* Frameworks */,
@@ -103,6 +171,19 @@
 		AA5522641916E98E005D5950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA5522B21916EAA6005D5950 /* Parse.framework */,
+				AA5522B01916EA95005D5950 /* SystemConfiguration.framework */,
+				AA5522AE1916EA8A005D5950 /* StoreKit.framework */,
+				AA5522AC1916EA2F005D5950 /* Security.framework */,
+				AA5522AA1916EA25005D5950 /* QuartzCore.framework */,
+				AA5522A81916EA1A005D5950 /* MobileCoreServices.framework */,
+				AA5522A61916EA0F005D5950 /* libz.1.1.3.dylib */,
+				AA5522A41916E9FC005D5950 /* CoreLocation.framework */,
+				AA5522A21916E9D4005D5950 /* CFNetwork.framework */,
+				AA5522A01916E9CB005D5950 /* AudioToolbox.framework */,
+				AA55229A1916E9B4005D5950 /* AudioUnit.framework */,
+				AA55229B1916E9B4005D5950 /* AVFoundation.framework */,
+				AA55229C1916E9B4005D5950 /* bundle1.o */,
 				AA5522651916E98E005D5950 /* Foundation.framework */,
 				AA5522671916E98E005D5950 /* CoreGraphics.framework */,
 				AA5522691916E98E005D5950 /* UIKit.framework */,
@@ -115,6 +196,8 @@
 		AA55226D1916E98E005D5950 /* VRINX */ = {
 			isa = PBXGroup;
 			children = (
+				AA5522C51916EC7A005D5950 /* ViewControllers */,
+				AA5522B41916EAC6005D5950 /* ExternalClasses */,
 				AA5522761916E98E005D5950 /* AppDelegate.h */,
 				AA5522771916E98E005D5950 /* AppDelegate.m */,
 				AA55227C1916E98E005D5950 /* Images.xcassets */,
@@ -151,6 +234,81 @@
 				AA55228D1916E98E005D5950 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522C11916EC45005D5950 /* KPKeyboardScroll */,
+				AA5522B51916EB68005D5950 /* RESideMenu */,
+			);
+			name = ExternalClasses;
+			sourceTree = "<group>";
+		};
+		AA5522B51916EB68005D5950 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522B61916EB68005D5950 /* RECommonFunctions.h */,
+				AA5522B71916EB68005D5950 /* RECommonFunctions.m */,
+				AA5522B81916EB68005D5950 /* RESideMenu.h */,
+				AA5522B91916EB68005D5950 /* RESideMenu.m */,
+				AA5522BA1916EB68005D5950 /* UIViewController+RESideMenu.h */,
+				AA5522BB1916EB68005D5950 /* UIViewController+RESideMenu.m */,
+			);
+			name = RESideMenu;
+			path = "../../../../Treehouse/RESideMenu-master/RESideMenu";
+			sourceTree = "<group>";
+		};
+		AA5522C11916EC45005D5950 /* KPKeyboardScroll */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522C21916EC59005D5950 /* TPKeyboardAvoidingScrollView.h */,
+				AA5522C31916EC59005D5950 /* TPKeyboardAvoidingScrollView.m */,
+			);
+			name = KPKeyboardScroll;
+			sourceTree = "<group>";
+		};
+		AA5522C51916EC7A005D5950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522D51916F881005D5950 /* Authentication */,
+				AA5522D01916F5F3005D5950 /* Accounts */,
+				AA5522CF1916F594005D5950 /* Navigation */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA5522CF1916F594005D5950 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522C61916ECD8005D5950 /* LeftMenuViewController.h */,
+				AA5522C71916ECD8005D5950 /* LeftMenuViewController.m */,
+				AA5522C91916EDB3005D5950 /* RootViewController.h */,
+				AA5522CA1916EDB3005D5950 /* RootViewController.m */,
+				AA5522CC1916F360005D5950 /* RightMenuViewController.h */,
+				AA5522CD1916F360005D5950 /* RightMenuViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		AA5522D01916F5F3005D5950 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522D11916F6B7005D5950 /* AccountsTableViewController.h */,
+				AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		AA5522D51916F881005D5950 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522D61916F8A9005D5950 /* LoginViewController.h */,
+				AA5522D71916F8A9005D5950 /* LoginViewController.m */,
+				AA5522DC1916F90E005D5950 /* SignupViewController.h */,
+				AA5522DD1916F90E005D5950 /* SignupViewController.m */,
+			);
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */,
+				AA5522C01916EB99005D5950 /* iPhone.storyboard in Resources */,
 				AA55227D1916E98E005D5950 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,9 +407,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5522C41916EC59005D5950 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
+				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
+				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
+				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
+				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
+				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,
+				AA5522BC1916EB68005D5950 /* RECommonFunctions.m in Sources */,
+				AA5522BE1916EB68005D5950 /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +536,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Christian/Development,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
@@ -380,6 +553,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Christian/Development,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
