@@ -9,6 +9,8 @@
 #import "AccountsTableViewController.h"
 #import "RESideMenu.h"
 #import <Parse/Parse.h>
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
 
 @interface AccountsTableViewController ()
 
@@ -23,6 +25,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//AppDelegate.NSManagedObjectModel *m;
+    
+    
+    
+    
+  
     
     [self validateUser];
 }

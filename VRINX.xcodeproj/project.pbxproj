@@ -47,6 +47,10 @@
 		AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */; };
 		AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */; };
 		AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E719186F08005D5950 /* AccountEditTableViewController.m */; };
+		AA5522F2191886CD005D5950 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522EB191886CD005D5950 /* Account.m */; };
+		AA5522F3191886CD005D5950 /* Orders.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522ED191886CD005D5950 /* Orders.m */; };
+		AA5522F4191886CD005D5950 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522EF191886CD005D5950 /* Client.m */; };
+		AA5522F5191886CD005D5950 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522F1191886CD005D5950 /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,14 @@
 		AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedImage.m"; sourceTree = "<group>"; };
 		AA5522E619186F08005D5950 /* AccountEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditTableViewController.h; sourceTree = "<group>"; };
 		AA5522E719186F08005D5950 /* AccountEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditTableViewController.m; sourceTree = "<group>"; };
+		AA5522EA191886CD005D5950 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = ../../../BissBoxApp/BissBoxApp/Account.h; sourceTree = "<group>"; };
+		AA5522EB191886CD005D5950 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = ../../../BissBoxApp/BissBoxApp/Account.m; sourceTree = "<group>"; };
+		AA5522EC191886CD005D5950 /* Orders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Orders.h; path = ../../../BissBoxApp/BissBoxApp/Orders.h; sourceTree = "<group>"; };
+		AA5522ED191886CD005D5950 /* Orders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orders.m; path = ../../../BissBoxApp/BissBoxApp/Orders.m; sourceTree = "<group>"; };
+		AA5522EE191886CD005D5950 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../../../BissBoxApp/BissBoxApp/Client.h; sourceTree = "<group>"; };
+		AA5522EF191886CD005D5950 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = ../../../BissBoxApp/BissBoxApp/Client.m; sourceTree = "<group>"; };
+		AA5522F0191886CD005D5950 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = ../../../BissBoxApp/BissBoxApp/Product.h; sourceTree = "<group>"; };
+		AA5522F1191886CD005D5950 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = ../../../BissBoxApp/BissBoxApp/Product.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,7 @@
 		AA55226D1916E98E005D5950 /* VRINX */ = {
 			isa = PBXGroup;
 			children = (
+				AA5522E919188529005D5950 /* Model */,
 				AA5522C51916EC7A005D5950 /* ViewControllers */,
 				AA5522B41916EAC6005D5950 /* ExternalClasses */,
 				AA5522761916E98E005D5950 /* AppDelegate.h */,
@@ -334,6 +347,21 @@
 			name = UIImageExtended;
 			sourceTree = "<group>";
 		};
+		AA5522E919188529005D5950 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA5522EA191886CD005D5950 /* Account.h */,
+				AA5522EB191886CD005D5950 /* Account.m */,
+				AA5522EC191886CD005D5950 /* Orders.h */,
+				AA5522ED191886CD005D5950 /* Orders.m */,
+				AA5522EE191886CD005D5950 /* Client.h */,
+				AA5522EF191886CD005D5950 /* Client.m */,
+				AA5522F0191886CD005D5950 /* Product.h */,
+				AA5522F1191886CD005D5950 /* Product.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,14 +459,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5522C41916EC59005D5950 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				AA5522F5191886CD005D5950 /* Product.m in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
+				AA5522F3191886CD005D5950 /* Orders.m in Sources */,
 				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AA5522F2191886CD005D5950 /* Account.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
+				AA5522F4191886CD005D5950 /* Client.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 #import "LeftMenuViewController.h"
-
 @interface RootViewController ()
 
 @end
@@ -19,7 +18,6 @@
     [super viewDidLoad];
     
  
-    
 }
 
 

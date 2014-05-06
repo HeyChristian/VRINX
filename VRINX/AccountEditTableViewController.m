@@ -7,8 +7,10 @@
 //
 
 #import "AccountEditTableViewController.h"
+//#import "AppDelegate.h"
 
 @interface AccountEditTableViewController ()
+
 
 @end
 
@@ -20,6 +22,11 @@
 {
     [super viewDidLoad];
     
+    
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -27,11 +34,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -49,16 +51,17 @@
     return 0;
 }
 
-- (IBAction)saveData:(id)sender {
+//- (void)save{
 
-    CoreDataAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    NSManagedObjectContext *context =
-    [appDelegate managedObjectContext];
+    //CoreDataAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   /*
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSManagedObject *newContact;
     newContact = [NSEntityDescription
                   insertNewObjectForEntityForName:@"Contacts"
                   inManagedObjectContext:context];
+    
+    
     [newContact setValue: _name.text forKey:@"name"];
     [newContact setValue: _address.text forKey:@"address"];
     [newContact setValue: _phone.text forKey:@"phone"];
@@ -68,7 +71,9 @@
     NSError *error;
     [context save:&error];
     _status.text = @"Contact saved";
-}
+    
+    */
+//}
 
 
 @end

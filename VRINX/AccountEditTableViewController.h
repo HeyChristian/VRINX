@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface AccountEditTableViewController : UITableViewController
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
+
+
 
 @end
