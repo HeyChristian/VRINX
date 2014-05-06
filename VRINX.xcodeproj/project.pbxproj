@@ -46,6 +46,7 @@
 		AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522DD1916F90E005D5950 /* SignupViewController.m */; };
 		AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */; };
 		AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */; };
+		AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E719186F08005D5950 /* AccountEditTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherUserInfoTableViewController.m; sourceTree = "<group>"; };
 		AA5522E3191748DB005D5950 /* UIImage+RoundedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedImage.h"; sourceTree = "<group>"; };
 		AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedImage.m"; sourceTree = "<group>"; };
+		AA5522E619186F08005D5950 /* AccountEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditTableViewController.h; sourceTree = "<group>"; };
+		AA5522E719186F08005D5950 /* AccountEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +306,8 @@
 			children = (
 				AA5522D11916F6B7005D5950 /* AccountsTableViewController.h */,
 				AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */,
+				AA5522E619186F08005D5950 /* AccountEditTableViewController.h */,
+				AA5522E719186F08005D5950 /* AccountEditTableViewController.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,

@@ -12,6 +12,7 @@
 
 +(UIImage *)roundedImageWithImage:(UIImage *)image;
 +(UIImage *)roundedImageWiththumbnailImage:(UIImage *)image;
-
++ (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
++(UIImage *)squaredImageWithImage:(UIImage *)image;
 
 @end

@@ -18,20 +18,13 @@
 
 
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    PFUser *currentUser = [PFUser currentUser];
-    
-    if(!currentUser){
-        [self performSegueWithIdentifier:@"showLogin" sender:self];
-    }else{
-        
-        [self performSegueWithIdentifier:@"FillAnotherUserInfo" sender:self];
-        
-        
-    }
+    [self validateUser];
 }
 
 
@@ -39,7 +32,8 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setHidden:NO];
-    
+    [self.navigationItem setHidesBackButton:NO animated:YES];
+    [self validateUser];
     
     
 }
@@ -125,5 +119,19 @@
     
     [self.sideMenuViewController presentLeftMenuViewController];
     
+}
+
+- (void)validateUser
+{
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if(!currentUser){
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }else{
+        
+        [self performSegueWithIdentifier:@"FillAnotherUserInfo" sender:self];
+        
+        
+    }
 }
 @end

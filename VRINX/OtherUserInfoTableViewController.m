@@ -21,11 +21,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.navigationItem.leftBarButtonItem = nil;
+   
+    [self loadUser];
 }
 
-
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+     [self.navigationItem setHidesBackButton:YES animated:YES];
+    
+  
+    
+    
+    
+}
 
 #pragma mark - Table view data source
 
@@ -98,53 +107,6 @@
     }
     
 }
-/*
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSUInteger rowsCount = 5; //[self tableView:tableView numberOfRowsInSection:indexPath.section];
-    if (1 == rowsCount) {
-        cell.contentView.layer.cornerRadius = 8.f;
-        cell.contentView.layer.masksToBounds = YES;
-    } else {
-        if (0 == indexPath.row) {
-            CGRect cellRect = cell.contentView.bounds;
-            CGMutablePathRef firstRowPath = CGPathCreateMutable();
-            CGPathMoveToPoint(firstRowPath, NULL, CGRectGetMinX(cellRect), CGRectGetMaxY(cellRect));
-            CGPathAddLineToPoint(firstRowPath, NULL, CGRectGetMinX(cellRect), 8.f);
-            CGPathAddArcToPoint(firstRowPath, NULL, CGRectGetMinX(cellRect), CGRectGetMinY(cellRect), 8.f, CGRectGetMinY(cellRect), 8.f);
-            CGPathAddLineToPoint(firstRowPath, NULL, CGRectGetMaxX(cellRect) - 8.f, 0.f);
-            CGPathAddArcToPoint(firstRowPath, NULL, CGRectGetMaxX(cellRect), CGRectGetMinY(cellRect), CGRectGetMaxX(cellRect), 8.f, 8.f);
-            CGPathAddLineToPoint(firstRowPath, NULL, CGRectGetMaxX(cellRect), CGRectGetMaxY(cellRect));
-            CGPathCloseSubpath(firstRowPath);
-            
-            CAShapeLayer *newSharpLayer = [[CAShapeLayer alloc] init];
-            newSharpLayer.path = firstRowPath;
-            newSharpLayer.fillColor = [[UIColor whiteColor] colorWithAlphaComponent:1.f].CGColor;
-            CFRelease(firstRowPath);
-            
-            cell.contentView.layer.mask = newSharpLayer;
-        } else if (indexPath.row == (rowsCount - 1)) {
-            CGRect cellRect = cell.contentView.bounds;
-            CGMutablePathRef lastRowPath = CGPathCreateMutable();
-            CGPathMoveToPoint(lastRowPath, NULL, CGRectGetMinX(cellRect), CGRectGetMinY(cellRect));
-            CGPathAddLineToPoint(lastRowPath, NULL, CGRectGetMaxX(cellRect), CGRectGetMinY(cellRect));
-            CGPathAddLineToPoint(lastRowPath, NULL, CGRectGetMaxX(cellRect), CGRectGetMaxY(cellRect) - 8.f);
-            CGPathAddArcToPoint(lastRowPath, NULL, CGRectGetMaxX(cellRect), CGRectGetMaxY(cellRect), CGRectGetMaxX(cellRect)- 8.f, CGRectGetMaxY(cellRect), 8.f);
-            CGPathAddLineToPoint(lastRowPath, NULL, 8.f, CGRectGetMaxY(cellRect));
-            CGPathAddArcToPoint(lastRowPath, NULL, CGRectGetMinX(cellRect), CGRectGetMaxY(cellRect), CGRectGetMinX(cellRect), CGRectGetMaxY(cellRect) - 8.f, 8.f);
-            CGPathCloseSubpath(lastRowPath);
-            
-            CAShapeLayer *newSharpLayer = [[CAShapeLayer alloc] init];
-            newSharpLayer.path = lastRowPath;
-            newSharpLayer.fillColor = [[UIColor whiteColor] colorWithAlphaComponent:1.f].CGColor;
-            CFRelease(lastRowPath);
-            
-            cell.contentView.layer.mask = newSharpLayer;
-        }
-    }
-}
-
-*/
 - (IBAction)changeProfilePicture:(id)sender {
     
     if(self.image == nil){
@@ -167,6 +129,16 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (void)setSquaredConernersToImageView {
+    self.imageProfile.layer.cornerRadius = self.imageProfile.frame.size.width / 2;
+    self.imageProfile.clipsToBounds = YES;
+    
+    self.imageProfile.layer.cornerRadius = 10.0f;
+    
+    self.imageProfile.layer.borderWidth = 3.0f;
+    self.imageProfile.layer.borderColor = [UIColor whiteColor].CGColor;
+}
+
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
@@ -174,6 +146,7 @@
     if([mediaType isEqualToString:(NSString *)kUTTypeImage]){
         // A photo was taken/seleted
         self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        
         if(self.imagePicker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary){
             // UIImageWriteToSavedPhotosAlbum(self.image, nil,nil,nil);
             // self.profilePictureField.image = self.image;
@@ -188,13 +161,7 @@
             [self.imageProfile setImage:self.image];
             NSLog(@" image : %@",self.image);
            
-            self.imageProfile.layer.cornerRadius = self.imageProfile.frame.size.width / 2;
-            self.imageProfile.clipsToBounds = YES;
-            
-            self.imageProfile.layer.cornerRadius = 10.0f;
-
-            self.imageProfile.layer.borderWidth = 3.0f;
-            self.imageProfile.layer.borderColor = [UIColor whiteColor].CGColor;
+            [self setSquaredConernersToImageView];
             
         }
         
@@ -211,23 +178,30 @@
 
 
 - (IBAction)finishSetup:(id)sender {
+  //  NSData *fileData =nil;
     
-    
-    if( self.image != nil){
-        NSData *fileData = UIImagePNGRepresentation(self.image);
-        self.file = [PFFile fileWithName:@"Image.png" data:fileData];
+  //  if( self.image != nil){
         
+     // *fileData = UIImagePNGRepresentation(self.image);
+       // self.haveProfilePicture= @"YES";
+     
+        
+        //self.file = [PFFile fileWithName:@"Image.png" data:fileData];
+        
+        /*
         [self.file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(error){
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!"
                                                                     message:@"Please try again!"
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
-                
+            }else{
+             
                 self.haveProfilePicture= @"YES";
             }
         }];
-    }
+        */
+//}
 
     
     NSString *firstname = [self.firstNameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];;
@@ -244,15 +218,27 @@
     
     
     
-    if ([self.haveProfilePicture isEqualToString:@"YES"]){
+    if (self.image != nil){
+       
+      // NSData *fileData = UIImageJPEGRepresentation(self.image, 0.6); //UIImagePNGRepresentation(self.image);
+       
+        // Resize image
+       // UIGraphicsBeginImageContext(CGSizeMake(640, 960));
+       // [self.image drawInRect: CGRectMake(0, 0, 640, 960)];
+       // UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+       // UIGraphicsEndImageContext();
         
-        user[@"ProfilePicture"]=self.file;
+       NSData *imageData = UIImageJPEGRepresentation(self.image, 0.05f);
+       
+        self.file = [PFFile fileWithName:@"Image.png" data:imageData];
+        [self.file save];
+        
+        user[@"Image"]=self.file;
         
         //[newUser setObject:self.file forKey:@"ProfilePicture"];
     }
     
-    
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded,NSError *error){
+    [user saveInBackgroundWithBlock:^(BOOL succeeded,NSError *error){
         
         if(error){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"
@@ -262,8 +248,8 @@
             
         }else{
             // [self dismissModalViewControllerAnimated:YES];
-           // [self dismissViewControllerAnimated:YES completion:nil];
-             [self.navigationController popToRootViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
+           //  [self.navigationController popToRootViewControllerAnimated:YES];
             
             //  [self performSegueWithIdentifier:@"GoHome" sender:self];
             
@@ -272,4 +258,62 @@
     
     
 }
+
+
+- (void)loadUser {
+    PFUser *user = [PFUser currentUser];
+    
+    PFFile *imageFile = [user objectForKey:@"Image"];
+    NSLog(@"Image Data URL: %@",imageFile.url);
+    
+    /*
+     NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
+     NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
+     self.imageProfile.image = [UIImage imageWithData:imageData];
+     [self setSquaredConernersToImageView];
+     */
+    NSLog(@"Object ID: %@",user.objectId);
+    
+    self.firstNameField.text = [user objectForKey:@"Firstname"];
+    self.lastNameField.text = [user objectForKey:@"LastName"];
+    self.phoneNumberField.text = [user objectForKey:@"Mobile"];
+    
+    
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"objectId" equalTo:user.objectId];
+    
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            // Do something with the found objects
+            // for (PFObject *object in objects) {
+            //    NSLog(@"%@", object.objectId);
+            //}
+            PFUser *u = objects[0];
+            
+            PFFile *imageFile = [u objectForKey:@"Image"];
+            NSLog(@"Image Data URL: %@",imageFile.url);
+            if(imageFile.url != nil){
+                NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
+                NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
+                self.imageProfile.image = [UIImage imageWithData:imageData];
+                [self setSquaredConernersToImageView];
+            }
+            
+            
+            self.firstNameField.text = [u objectForKey:@"Firstname"];
+            self.lastNameField.text =[u objectForKey:@"LastName"];
+            self.phoneNumberField.text = [u objectForKey:@"Mobile"];
+            
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 @end
