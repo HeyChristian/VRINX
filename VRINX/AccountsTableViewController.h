@@ -11,5 +11,6 @@
 @interface AccountsTableViewController : UITableViewController
 - (IBAction)SlideLeftMenu:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIView *EmptyAccount;
 
 @end

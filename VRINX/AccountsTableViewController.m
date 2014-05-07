@@ -13,9 +13,13 @@
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
 #import "AccountCell.h"
-//#import "AccountEditTableViewController.h"
 #import "EntityAccount.h"
 #import "AccountDetail.h"
+//#import "EmptyAccount.h"
+//#import "NoAccountsViewController.h"
+//#import "UIViewController+MJPopupViewController.h"
+#import "CustomIOS7AlertView.h"
+
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate>
 
 @property(nonatomic,strong) NSFetchedResultsController *fetchResultsController;
@@ -33,12 +37,39 @@
 {
     [super viewDidLoad];
  //   [self validateUser];
-    [self.fetchResultsController performFetch:nil];
+    
+    
+   //UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
+  // UIViewController *noAccount = [storyboard instantiateViewControllerWithIdentifier:@"NoAccountID"];
+   
+    
+    //EmptyAccount *emptyAccount = [[EmptyAccount alloc] initWithNibName:@"EmptyAccount" bundle:nil];
+    
+    
+   //[self presentPopupViewController:emptyAccount animationType:MJPopupViewAnimationFade];
+    
+    
+    //CusAlertView *alert = [[CusAlertView alloc] initWithFrame:CGRectMake(20, 100, 280, 100)];
+    //[self.view addSubview:alert];
+    
+    //[self.fetchResultsController performFetch:nil];
     
     
   
-    
+   // [GlobalPopupAlert show:@"My Message" andFadeOutAfter:5];
    
+    CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Time to start", nil]];
+    [alertView addSubview:self.EmptyAccount];
+    
+    
+    [alertView show];
+    
+    [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
+        NSLog(@"Block: Button at position %d is clicked on alertView %ld.", buttonIndex, (long)[alertView tag]);
+        [alertView close];
+    }];
+    
 }
 
 
@@ -48,6 +79,7 @@
     [self.navigationController.navigationBar setHidden:NO];
     [self.navigationItem setHidesBackButton:NO animated:YES];
    // [self validateUser];
+    //[GlobalPopupAlert show:@"My Message" andFadeOutAfter:5];
     
     
 }
