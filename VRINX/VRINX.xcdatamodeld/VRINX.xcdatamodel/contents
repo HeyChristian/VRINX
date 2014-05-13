@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Accounts" isAbstract="YES" syncable="YES">
+    <entity name="Account" representedClassName="EntityAccount" isAbstract="YES" syncable="YES">
+        <attribute name="earningPercent" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="earnings" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="investment" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="logo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="missed" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tax" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="clients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Client" syncable="YES"/>
+        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" syncable="YES"/>
     </entity>
-    <entity name="Orders" isAbstract="YES" syncable="YES">
-        <attribute name="accId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    <entity name="Client" representedClassName="EntityClient" isAbstract="YES" syncable="YES">
+        <attribute name="clientName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName="EntityOrder" isAbstract="YES" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="estimateDelivery" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="isMasterOrder" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="parentOrderId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="orderDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shippingTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="taxesTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="childOrders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" syncable="YES"/>
+        <relationship name="orderProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderProduct" syncable="YES"/>
+    </entity>
+    <entity name="OrderProduct" representedClassName="EntityOrderProduct" isAbstract="YES" syncable="YES">
+        <attribute name="itemCount" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="EntityProduct" isAbstract="YES" syncable="YES">
+        <attribute name="itemPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationshipOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accounts" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Accounts" positionX="-189" positionY="-10" width="128" height="163"/>
-        <element name="Orders" positionX="565" positionY="36" width="128" height="148"/>
+        <element name="Account" positionX="-1091" positionY="-2070" width="128" height="195"/>
+        <element name="Client" positionX="-1017" positionY="-1741" width="128" height="58"/>
+        <element name="Order" positionX="-828" positionY="-2074" width="128" height="193"/>
+        <element name="OrderProduct" positionX="-632" positionY="-2079" width="128" height="73"/>
+        <element name="Product" positionX="-461" positionY="-1899" width="128" height="103"/>
     </elements>
 </model>

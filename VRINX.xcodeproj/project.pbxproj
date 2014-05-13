@@ -47,10 +47,13 @@
 		AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E019173034005D5950 /* OtherUserInfoTableViewController.m */; };
 		AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */; };
 		AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E719186F08005D5950 /* AccountEditTableViewController.m */; };
-		AA5522F2191886CD005D5950 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522EB191886CD005D5950 /* Account.m */; };
-		AA5522F3191886CD005D5950 /* Orders.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522ED191886CD005D5950 /* Orders.m */; };
-		AA5522F4191886CD005D5950 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522EF191886CD005D5950 /* Client.m */; };
-		AA5522F5191886CD005D5950 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522F1191886CD005D5950 /* Product.m */; };
+		AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2047019215A8400B2744C /* CoreDataStack.m */; };
+		AAC204BF1921893A00B2744C /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204BE1921893A00B2744C /* EntityOrder.m */; };
+		AAC204C21921893A00B2744C /* EntityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C11921893A00B2744C /* EntityClient.m */; };
+		AAC204C51921893A00B2744C /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C41921893A00B2744C /* EntityAccount.m */; };
+		AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C71921893A00B2744C /* EntityOrderProduct.m */; };
+		AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CA1921893A00B2744C /* EntityProduct.m */; };
+		AAC204CE1921910600B2744C /* AccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CD1921910600B2744C /* AccountCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,14 +125,20 @@
 		AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedImage.m"; sourceTree = "<group>"; };
 		AA5522E619186F08005D5950 /* AccountEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditTableViewController.h; sourceTree = "<group>"; };
 		AA5522E719186F08005D5950 /* AccountEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditTableViewController.m; sourceTree = "<group>"; };
-		AA5522EA191886CD005D5950 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = ../../../BissBoxApp/BissBoxApp/Account.h; sourceTree = "<group>"; };
-		AA5522EB191886CD005D5950 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = ../../../BissBoxApp/BissBoxApp/Account.m; sourceTree = "<group>"; };
-		AA5522EC191886CD005D5950 /* Orders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Orders.h; path = ../../../BissBoxApp/BissBoxApp/Orders.h; sourceTree = "<group>"; };
-		AA5522ED191886CD005D5950 /* Orders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orders.m; path = ../../../BissBoxApp/BissBoxApp/Orders.m; sourceTree = "<group>"; };
-		AA5522EE191886CD005D5950 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../../../BissBoxApp/BissBoxApp/Client.h; sourceTree = "<group>"; };
-		AA5522EF191886CD005D5950 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = ../../../BissBoxApp/BissBoxApp/Client.m; sourceTree = "<group>"; };
-		AA5522F0191886CD005D5950 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = ../../../BissBoxApp/BissBoxApp/Product.h; sourceTree = "<group>"; };
-		AA5522F1191886CD005D5950 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = ../../../BissBoxApp/BissBoxApp/Product.m; sourceTree = "<group>"; };
+		AAC2046F19215A8400B2744C /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		AAC2047019215A8400B2744C /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		AAC204BD1921893A00B2744C /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
+		AAC204BE1921893A00B2744C /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		AAC204C01921893A00B2744C /* EntityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityClient.h; sourceTree = "<group>"; };
+		AAC204C11921893A00B2744C /* EntityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityClient.m; sourceTree = "<group>"; };
+		AAC204C31921893A00B2744C /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
+		AAC204C41921893A00B2744C /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
+		AAC204C61921893A00B2744C /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
+		AAC204C71921893A00B2744C /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
+		AAC204C91921893A00B2744C /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
+		AAC204CA1921893A00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
+		AAC204CC1921910600B2744C /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
+		AAC204CD1921910600B2744C /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +245,8 @@
 				AA5522701916E98E005D5950 /* InfoPlist.strings */,
 				AA5522731916E98E005D5950 /* main.m */,
 				AA5522751916E98E005D5950 /* VRINX-Prefix.pch */,
+				AAC2046F19215A8400B2744C /* CoreDataStack.h */,
+				AAC2047019215A8400B2744C /* CoreDataStack.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -321,6 +332,8 @@
 				AA5522D21916F6B7005D5950 /* AccountsTableViewController.m */,
 				AA5522E619186F08005D5950 /* AccountEditTableViewController.h */,
 				AA5522E719186F08005D5950 /* AccountEditTableViewController.m */,
+				AAC204CC1921910600B2744C /* AccountCell.h */,
+				AAC204CD1921910600B2744C /* AccountCell.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -350,14 +363,16 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA5522EA191886CD005D5950 /* Account.h */,
-				AA5522EB191886CD005D5950 /* Account.m */,
-				AA5522EC191886CD005D5950 /* Orders.h */,
-				AA5522ED191886CD005D5950 /* Orders.m */,
-				AA5522EE191886CD005D5950 /* Client.h */,
-				AA5522EF191886CD005D5950 /* Client.m */,
-				AA5522F0191886CD005D5950 /* Product.h */,
-				AA5522F1191886CD005D5950 /* Product.m */,
+				AAC204C91921893A00B2744C /* EntityProduct.h */,
+				AAC204CA1921893A00B2744C /* EntityProduct.m */,
+				AAC204C61921893A00B2744C /* EntityOrderProduct.h */,
+				AAC204C71921893A00B2744C /* EntityOrderProduct.m */,
+				AAC204C31921893A00B2744C /* EntityAccount.h */,
+				AAC204C41921893A00B2744C /* EntityAccount.m */,
+				AAC204C01921893A00B2744C /* EntityClient.h */,
+				AAC204C11921893A00B2744C /* EntityClient.m */,
+				AAC204BD1921893A00B2744C /* EntityOrder.h */,
+				AAC204BE1921893A00B2744C /* EntityOrder.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -458,20 +473,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC204C51921893A00B2744C /* EntityAccount.m in Sources */,
+				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
 				AA5522C41916EC59005D5950 /* TPKeyboardAvoidingScrollView.m in Sources */,
-				AA5522F5191886CD005D5950 /* Product.m in Sources */,
+				AAC204C21921893A00B2744C /* EntityClient.m in Sources */,
+				AAC204BF1921893A00B2744C /* EntityOrder.m in Sources */,
+				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
-				AA5522F3191886CD005D5950 /* Orders.m in Sources */,
+				AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */,
 				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
-				AA5522F2191886CD005D5950 /* Account.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
-				AA5522F4191886CD005D5950 /* Client.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
@@ -682,6 +700,7 @@
 				AA5522961916E98E005D5950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA5522971916E98E005D5950 /* Build configuration list for PBXNativeTarget "VRINXTests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +709,7 @@
 				AA5522991916E98E005D5950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
