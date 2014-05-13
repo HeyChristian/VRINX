@@ -54,6 +54,8 @@
 		AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C71921893A00B2744C /* EntityOrderProduct.m */; };
 		AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CA1921893A00B2744C /* EntityProduct.m */; };
 		AAC204CE1921910600B2744C /* AccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CD1921910600B2744C /* AccountCell.m */; };
+		AAC204D119228D1300B2744C /* AccountDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204D019228D1300B2744C /* AccountDetail.m */; };
+		AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204D61922A2F000B2744C /* OrderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,10 @@
 		AAC204CA1921893A00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		AAC204CC1921910600B2744C /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
 		AAC204CD1921910600B2744C /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
+		AAC204CF19228D1300B2744C /* AccountDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetail.h; sourceTree = "<group>"; };
+		AAC204D019228D1300B2744C /* AccountDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetail.m; sourceTree = "<group>"; };
+		AAC204D51922A2F000B2744C /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		AAC204D61922A2F000B2744C /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +340,10 @@
 				AA5522E719186F08005D5950 /* AccountEditTableViewController.m */,
 				AAC204CC1921910600B2744C /* AccountCell.h */,
 				AAC204CD1921910600B2744C /* AccountCell.m */,
+				AAC204CF19228D1300B2744C /* AccountDetail.h */,
+				AAC204D019228D1300B2744C /* AccountDetail.m */,
+				AAC204D51922A2F000B2744C /* OrderViewController.h */,
+				AAC204D61922A2F000B2744C /* OrderViewController.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -484,6 +494,7 @@
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */,
 				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
@@ -491,6 +502,7 @@
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
+				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,

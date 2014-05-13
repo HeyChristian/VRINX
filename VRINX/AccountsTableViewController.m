@@ -13,9 +13,9 @@
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
 #import "AccountCell.h"
-#import "AccountEditTableViewController.h"
+//#import "AccountEditTableViewController.h"
 #import "EntityAccount.h"
-
+#import "AccountDetail.h"
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate>
 
 @property(nonatomic,strong) NSFetchedResultsController *fetchResultsController;
@@ -55,14 +55,18 @@
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if([segue.identifier isEqualToString:@"edit"]){
+    if([segue.identifier isEqualToString:@"Detail"]){
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
       //  UINavigationController *navigationController = segue.destinationViewController;
        // AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) navigationController.topViewController;
         
-        AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
-        editAccountVC.account = [self.fetchResultsController objectAtIndexPath:indexPath];
+        //AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
+        //editAccountVC.account = [self.fetchResultsController objectAtIndexPath:indexPath];
+        
+        AccountDetail *accountDetail = (AccountDetail *) segue.destinationViewController;
+        accountDetail.account = [self.fetchResultsController objectAtIndexPath:indexPath];
+    
     }
     
 }
