@@ -17,12 +17,14 @@
     
     NSLog(@" Account: %@",account);
     
-    self.accountName.text = account.name;
     
     if(account.logo){
         self.logoView.image = [UIImage imageWithData:account.logo];
+        self.accountName.text = nil;
     }else{
-        self.logoView.image = [UIImage imageNamed:@"icn_noimage"];
+        self.accountName.text = account.name;
+        
+        //self.logoView.image = [UIImage imageNamed:@"icn_noimage"];
     }
     
 }

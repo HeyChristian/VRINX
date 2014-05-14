@@ -57,6 +57,7 @@
 		AAC2050F1922D94E00B2744C /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2050E1922D94E00B2744C /* EntityOrder.m */; };
 		AAC205121922D94E00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205111922D94E00B2744C /* EntityOrderProduct.m */; };
 		AAC205151922D94E00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205141922D94E00B2744C /* EntityProduct.m */; };
+		AAC205181923F50200B2744C /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205171923F50200B2744C /* ProductCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		AAC205111922D94E00B2744C /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
 		AAC205131922D94E00B2744C /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
 		AAC205141922D94E00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
+		AAC205161923F50200B2744C /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		AAC205171923F50200B2744C /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +399,8 @@
 				AAC204DD1922B3D500B2744C /* ProductTableViewController.m */,
 				AAC204DF1922B3EC00B2744C /* ProductDetailTableViewController.h */,
 				AAC204E01922B3EC00B2744C /* ProductDetailTableViewController.m */,
+				AAC205161923F50200B2744C /* ProductCell.h */,
+				AAC205171923F50200B2744C /* ProductCell.m */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
+				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
 				AAC205151922D94E00B2744C /* EntityProduct.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,

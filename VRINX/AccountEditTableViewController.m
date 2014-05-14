@@ -48,13 +48,11 @@
 
     }
     
+}
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
 }
 
 
@@ -93,6 +91,16 @@
 }
 -(void) updateAccount{
     
+    
+    self.account.name = self.accountNameField.text;
+    self.account.shortDesc = self.descriptionField.text;
+    self.account.tax = [NSDecimalNumber decimalNumberWithString:self.salesTaxField.text];
+    self.account.earningPercent =[NSDecimalNumber decimalNumberWithString:self.earningPercentField.text];
+    self.account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    [coreDataStack saveContext];
 }
 
 #pragma mark - Table view data source

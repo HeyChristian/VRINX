@@ -33,7 +33,11 @@
         self.logoView.image = [UIImage imageWithData:self.account.logo];;
     }
 }
-
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
