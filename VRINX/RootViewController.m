@@ -35,7 +35,7 @@
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
     self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rightMenuViewController"];
     
-    self.backgroundImage = [UIImage imageNamed:@"MenuBackground"];
+    self.backgroundImage = [UIImage imageNamed:@"blackblue2"];
     
     self.delegate = self;
     

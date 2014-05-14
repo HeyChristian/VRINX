@@ -14,7 +14,6 @@
 		AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5522701916E98E005D5950 /* InfoPlist.strings */; };
 		AA5522741916E98E005D5950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522731916E98E005D5950 /* main.m */; };
 		AA5522781916E98E005D5950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522771916E98E005D5950 /* AppDelegate.m */; };
-		AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */; };
 		AA55227D1916E98E005D5950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55227C1916E98E005D5950 /* Images.xcassets */; };
 		AA5522841916E98E005D5950 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522831916E98E005D5950 /* XCTest.framework */; };
 		AA5522851916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
@@ -48,14 +47,16 @@
 		AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E4191748DB005D5950 /* UIImage+RoundedImage.m */; };
 		AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522E719186F08005D5950 /* AccountEditTableViewController.m */; };
 		AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2047019215A8400B2744C /* CoreDataStack.m */; };
-		AAC204BF1921893A00B2744C /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204BE1921893A00B2744C /* EntityOrder.m */; };
-		AAC204C21921893A00B2744C /* EntityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C11921893A00B2744C /* EntityClient.m */; };
-		AAC204C51921893A00B2744C /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C41921893A00B2744C /* EntityAccount.m */; };
-		AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204C71921893A00B2744C /* EntityOrderProduct.m */; };
-		AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CA1921893A00B2744C /* EntityProduct.m */; };
 		AAC204CE1921910600B2744C /* AccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204CD1921910600B2744C /* AccountCell.m */; };
 		AAC204D119228D1300B2744C /* AccountDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204D019228D1300B2744C /* AccountDetail.m */; };
 		AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204D61922A2F000B2744C /* OrderViewController.m */; };
+		AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204DD1922B3D500B2744C /* ProductTableViewController.m */; };
+		AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC204E01922B3EC00B2744C /* ProductDetailTableViewController.m */; };
+		AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC205071922CFE500B2744C /* Model.xcdatamodeld */; };
+		AAC2050C1922D94D00B2744C /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2050B1922D94D00B2744C /* EntityAccount.m */; };
+		AAC2050F1922D94E00B2744C /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2050E1922D94E00B2744C /* EntityOrder.m */; };
+		AAC205121922D94E00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205111922D94E00B2744C /* EntityOrderProduct.m */; };
+		AAC205151922D94E00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205141922D94E00B2744C /* EntityProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +81,6 @@
 		AA5522751916E98E005D5950 /* VRINX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRINX-Prefix.pch"; sourceTree = "<group>"; };
 		AA5522761916E98E005D5950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA5522771916E98E005D5950 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VRINX.xcdatamodel; sourceTree = "<group>"; };
 		AA55227C1916E98E005D5950 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA5522821916E98E005D5950 /* VRINXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRINXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522831916E98E005D5950 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -129,22 +129,25 @@
 		AA5522E719186F08005D5950 /* AccountEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditTableViewController.m; sourceTree = "<group>"; };
 		AAC2046F19215A8400B2744C /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		AAC2047019215A8400B2744C /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		AAC204BD1921893A00B2744C /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
-		AAC204BE1921893A00B2744C /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
-		AAC204C01921893A00B2744C /* EntityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityClient.h; sourceTree = "<group>"; };
-		AAC204C11921893A00B2744C /* EntityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityClient.m; sourceTree = "<group>"; };
-		AAC204C31921893A00B2744C /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
-		AAC204C41921893A00B2744C /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
-		AAC204C61921893A00B2744C /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
-		AAC204C71921893A00B2744C /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
-		AAC204C91921893A00B2744C /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
-		AAC204CA1921893A00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		AAC204CC1921910600B2744C /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
 		AAC204CD1921910600B2744C /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
 		AAC204CF19228D1300B2744C /* AccountDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetail.h; sourceTree = "<group>"; };
 		AAC204D019228D1300B2744C /* AccountDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetail.m; sourceTree = "<group>"; };
 		AAC204D51922A2F000B2744C /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
 		AAC204D61922A2F000B2744C /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		AAC204DC1922B3D500B2744C /* ProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
+		AAC204DD1922B3D500B2744C /* ProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
+		AAC204DF1922B3EC00B2744C /* ProductDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailTableViewController.h; sourceTree = "<group>"; };
+		AAC204E01922B3EC00B2744C /* ProductDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailTableViewController.m; sourceTree = "<group>"; };
+		AAC205081922CFE500B2744C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AAC2050A1922D94D00B2744C /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
+		AAC2050B1922D94D00B2744C /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
+		AAC2050D1922D94E00B2744C /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
+		AAC2050E1922D94E00B2744C /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		AAC205101922D94E00B2744C /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
+		AAC205111922D94E00B2744C /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
+		AAC205131922D94E00B2744C /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
+		AAC205141922D94E00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,8 +241,8 @@
 				AA5522761916E98E005D5950 /* AppDelegate.h */,
 				AA5522771916E98E005D5950 /* AppDelegate.m */,
 				AA55227C1916E98E005D5950 /* Images.xcassets */,
-				AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */,
 				AA55226E1916E98E005D5950 /* Supporting Files */,
+				AAC205071922CFE500B2744C /* Model.xcdatamodeld */,
 			);
 			path = VRINX;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 		AA5522C51916EC7A005D5950 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAC204DB1922B3B600B2744C /* Products */,
 				AA5522D51916F881005D5950 /* Authentication */,
 				AA5522D01916F5F3005D5950 /* Accounts */,
 				AA5522CF1916F594005D5950 /* Navigation */,
@@ -373,18 +377,27 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AAC204C91921893A00B2744C /* EntityProduct.h */,
-				AAC204CA1921893A00B2744C /* EntityProduct.m */,
-				AAC204C61921893A00B2744C /* EntityOrderProduct.h */,
-				AAC204C71921893A00B2744C /* EntityOrderProduct.m */,
-				AAC204C31921893A00B2744C /* EntityAccount.h */,
-				AAC204C41921893A00B2744C /* EntityAccount.m */,
-				AAC204C01921893A00B2744C /* EntityClient.h */,
-				AAC204C11921893A00B2744C /* EntityClient.m */,
-				AAC204BD1921893A00B2744C /* EntityOrder.h */,
-				AAC204BE1921893A00B2744C /* EntityOrder.m */,
+				AAC205131922D94E00B2744C /* EntityProduct.h */,
+				AAC205141922D94E00B2744C /* EntityProduct.m */,
+				AAC205101922D94E00B2744C /* EntityOrderProduct.h */,
+				AAC205111922D94E00B2744C /* EntityOrderProduct.m */,
+				AAC2050D1922D94E00B2744C /* EntityOrder.h */,
+				AAC2050E1922D94E00B2744C /* EntityOrder.m */,
+				AAC2050A1922D94D00B2744C /* EntityAccount.h */,
+				AAC2050B1922D94D00B2744C /* EntityAccount.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		AAC204DB1922B3B600B2744C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC204DC1922B3D500B2744C /* ProductTableViewController.h */,
+				AAC204DD1922B3D500B2744C /* ProductTableViewController.m */,
+				AAC204DF1922B3EC00B2744C /* ProductDetailTableViewController.h */,
+				AAC204E01922B3EC00B2744C /* ProductDetailTableViewController.m */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,28 +496,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC204C51921893A00B2744C /* EntityAccount.m in Sources */,
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
+				AAC2050F1922D94E00B2744C /* EntityOrder.m in Sources */,
 				AA5522C41916EC59005D5950 /* TPKeyboardAvoidingScrollView.m in Sources */,
-				AAC204C21921893A00B2744C /* EntityClient.m in Sources */,
-				AAC204BF1921893A00B2744C /* EntityOrder.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
+				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
+				AAC2050C1922D94D00B2744C /* EntityAccount.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
-				AAC204CB1921893A00B2744C /* EntityProduct.m in Sources */,
-				AA55227B1916E98E005D5950 /* VRINX.xcdatamodeld in Sources */,
+				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
+				AAC205151922D94E00B2744C /* EntityProduct.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
-				AAC204C81921893A00B2744C /* EntityOrderProduct.m in Sources */,
+				AAC205121922D94E00B2744C /* EntityOrderProduct.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
+				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
 				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,
 				AA5522BC1916EB68005D5950 /* RECommonFunctions.m in Sources */,
 				AA5522BE1916EB68005D5950 /* UIViewController+RESideMenu.m in Sources */,
@@ -726,13 +740,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AA5522791916E98E005D5950 /* VRINX.xcdatamodeld */ = {
+		AAC205071922CFE500B2744C /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */,
+				AAC205081922CFE500B2744C /* Model.xcdatamodel */,
 			);
-			currentVersion = AA55227A1916E98E005D5950 /* VRINX.xcdatamodel */;
-			path = VRINX.xcdatamodeld;
+			currentVersion = AAC205081922CFE500B2744C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -10,6 +10,7 @@
 #import "CoreDataStack.h"
 #import "EntityAccount.h"
 #import "AccountEditTableViewController.h"
+#import "ProductTableViewController.h"
 
 @interface AccountDetail ()
 
@@ -41,6 +42,11 @@
         AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
         editAccountVC.account = self.account;
     
+    }else if([segue.identifier isEqualToString:@"products"]){
+     
+        ProductTableViewController *productVC = (ProductTableViewController *) segue.destinationViewController;
+        productVC.account = self.account;
+        
     }
     
 }

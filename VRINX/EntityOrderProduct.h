@@ -2,19 +2,20 @@
 //  EntityOrderProduct.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/12/14.
+//  Created by Christian Vazquez on 5/13/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class EntityProduct;
+@class EntityOrder, EntityProduct;
 
 @interface EntityOrderProduct : NSManagedObject
 
-@property (nonatomic) int16_t itemCount;
+@property (nonatomic, retain) NSNumber * itemCount;
 @property (nonatomic, retain) NSSet *products;
+@property (nonatomic, retain) EntityOrder *orderProducts;
 @end
 
 @interface EntityOrderProduct (CoreDataGeneratedAccessors)

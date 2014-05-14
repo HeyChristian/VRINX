@@ -2,17 +2,18 @@
 //  EntityAccount.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/12/14.
+//  Created by Christian Vazquez on 5/13/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class EntityClient, EntityOrder;
+@class EntityOrder, EntityProduct;
 
 @interface EntityAccount : NSManagedObject
 
+@property (nonatomic, retain) NSDecimalNumber * earningPercent;
 @property (nonatomic, retain) NSDecimalNumber * earnings;
 @property (nonatomic, retain) NSDecimalNumber * investment;
 @property (nonatomic, retain) NSData * logo;
@@ -20,21 +21,21 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * shortDesc;
 @property (nonatomic, retain) NSDecimalNumber * tax;
-@property (nonatomic, retain) NSDecimalNumber * earningPercent;
+@property (nonatomic, retain) NSString * userId;
+@property (nonatomic, retain) NSSet *products;
 @property (nonatomic, retain) NSSet *orders;
-@property (nonatomic, retain) NSSet *clients;
 @end
 
 @interface EntityAccount (CoreDataGeneratedAccessors)
+
+- (void)addProductsObject:(EntityProduct *)value;
+- (void)removeProductsObject:(EntityProduct *)value;
+- (void)addProducts:(NSSet *)values;
+- (void)removeProducts:(NSSet *)values;
 
 - (void)addOrdersObject:(EntityOrder *)value;
 - (void)removeOrdersObject:(EntityOrder *)value;
 - (void)addOrders:(NSSet *)values;
 - (void)removeOrders:(NSSet *)values;
-
-- (void)addClientsObject:(EntityClient *)value;
-- (void)removeClientsObject:(EntityClient *)value;
-- (void)addClients:(NSSet *)values;
-- (void)removeClients:(NSSet *)values;
 
 @end
