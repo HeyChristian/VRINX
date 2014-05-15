@@ -58,6 +58,8 @@
 		AAC205121922D94E00B2744C /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205111922D94E00B2744C /* EntityOrderProduct.m */; };
 		AAC205151922D94E00B2744C /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205141922D94E00B2744C /* EntityProduct.m */; };
 		AAC205181923F50200B2744C /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC205171923F50200B2744C /* ProductCell.m */; };
+		AAC2051C192496A900B2744C /* OrderMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2051B192496A900B2744C /* OrderMasterViewController.m */; };
+		AAC20520192499DE00B2744C /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2051F192499DE00B2744C /* RMDateSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,10 @@
 		AAC205141922D94E00B2744C /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		AAC205161923F50200B2744C /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		AAC205171923F50200B2744C /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		AAC2051A192496A900B2744C /* OrderMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderMasterViewController.h; sourceTree = "<group>"; };
+		AAC2051B192496A900B2744C /* OrderMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderMasterViewController.m; sourceTree = "<group>"; };
+		AAC2051E192499DE00B2744C /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		AAC2051F192499DE00B2744C /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDateSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +290,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				AAC2051D192499DE00B2744C /* RMDateSelectionViewController */,
 				AA5522E2191748AA005D5950 /* UIImageExtended */,
 				AA5522C11916EC45005D5950 /* KPKeyboardScroll */,
 				AA5522B51916EB68005D5950 /* RESideMenu */,
@@ -317,6 +324,7 @@
 		AA5522C51916EC7A005D5950 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAC205191924967E00B2744C /* Orders */,
 				AAC204DB1922B3B600B2744C /* Products */,
 				AA5522D51916F881005D5950 /* Authentication */,
 				AA5522D01916F5F3005D5950 /* Accounts */,
@@ -349,8 +357,6 @@
 				AAC204CD1921910600B2744C /* AccountCell.m */,
 				AAC204CF19228D1300B2744C /* AccountDetail.h */,
 				AAC204D019228D1300B2744C /* AccountDetail.m */,
-				AAC204D51922A2F000B2744C /* OrderViewController.h */,
-				AAC204D61922A2F000B2744C /* OrderViewController.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -403,6 +409,27 @@
 				AAC205171923F50200B2744C /* ProductCell.m */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC205191924967E00B2744C /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				AAC204D51922A2F000B2744C /* OrderViewController.h */,
+				AAC204D61922A2F000B2744C /* OrderViewController.m */,
+				AAC2051A192496A900B2744C /* OrderMasterViewController.h */,
+				AAC2051B192496A900B2744C /* OrderMasterViewController.m */,
+			);
+			name = Orders;
+			sourceTree = "<group>";
+		};
+		AAC2051D192499DE00B2744C /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2051E192499DE00B2744C /* RMDateSelectionViewController.h */,
+				AAC2051F192499DE00B2744C /* RMDateSelectionViewController.m */,
+			);
+			name = RMDateSelectionViewController;
+			path = "../../../download Proyects/RMDateSelectionViewController-master/RMDateSelectionViewController";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,9 +550,11 @@
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
+				AAC20520192499DE00B2744C /* RMDateSelectionViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
 				AA5522BD1916EB68005D5950 /* RESideMenu.m in Sources */,
+				AAC2051C192496A900B2744C /* OrderMasterViewController.m in Sources */,
 				AA5522BC1916EB68005D5950 /* RECommonFunctions.m in Sources */,
 				AA5522BE1916EB68005D5950 /* UIViewController+RESideMenu.m in Sources */,
 			);

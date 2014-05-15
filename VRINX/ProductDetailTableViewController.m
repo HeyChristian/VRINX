@@ -11,7 +11,7 @@
 #import "EntityProduct.h"
 #import "EntityAccount.h"
 #import "CoreDataStack.h"
-
+#import "AppDelegate.h"
 
 @interface ProductDetailTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -31,7 +31,11 @@
        
         self.productNameField.text = self.product.name;
         self.shortDescriptionField.text = self.product.shortDesc;
-        self.priceField.text =  [self formatCurrency:self.product.price];
+        
+      //  NSString* formattedNumber = [NSString stringWithFormat:@"@f", self.product.price];
+       // NSDecimalNumber *doubleDecimal = [[NSDecimalNumber alloc] initWithDouble:self.product.price.doubleValue];
+
+        self.priceField.text = [NSString stringWithFormat:@"%0.2f",self.product.price.doubleValue];
         self.pickedImage = [UIImage imageWithData:self.product.itemPhoto];
         self.imageView.image = self.pickedImage;
         
@@ -45,9 +49,24 @@
         self.imageView.image   = [UIImage imageNamed:@"box.png"];
         
     }
-    
-    NSLog(@"))))))): %@",self.account);
+    [self setSquaredConernersToImageView];
+   // NSLog(@"))))))): %@",self.account);
    
+}
+
+
+- (void)setSquaredConernersToImageView {
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
+    self.imageView.clipsToBounds = YES;
+    
+    self.imageView.layer.cornerRadius = 10.0f;
+    
+    self.imageView.layer.borderWidth = 3.0f;
+    
+    //CGColorRef *borderColor = [[CGColorRef alloc] initWithColor:[AppDelegate colorWithHexString:@"2293f5"]];
+    
+    self.imageView.layer.borderColor =[UIColor whiteColor].CGColor;
+    
 }
 
 -(void)dismissSelf{
@@ -134,6 +153,27 @@
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     self.pickedImage =  image;
     
+    
+    
+   // UIImageView * ac= [[UIImageView alloc] init];
+   // ac.backgroundColor = [UIColor colorWithPatternImage:image];
+   // self.itemPhotoCell.backgroundView =ac;
+   // self.itemPhotoCell.backgroundColor = [UIColor clearColor];
+    
+   /*
+    UIImage *backgroundImage =  image;//[UIImage imageNamed:@"dashboardCellEffect.png"];
+    UIView *backgroundCellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 44)];
+    // redraw the image to fit cell's size
+    UIGraphicsBeginImageContextWithOptions(backgroundCellView.frame.size, NO, 0.f);
+    [backgroundImage drawInRect:CGRectMake(0.f, 0.f, backgroundCellView.frame.size.width, backgroundCellView.frame.size.height)];
+    UIImage *refinedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [backgroundCellView setBackgroundColor:[UIColor colorWithPatternImage:refinedImage]];
+    self.itemPhotoCell.backgroundView = backgroundCellView;
+    */
+    
+    [self setSquaredConernersToImageView];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

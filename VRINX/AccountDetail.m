@@ -14,6 +14,9 @@
 
 @interface AccountDetail ()
 
+@property(nonatomic,strong) NSArray *products;
+@property(nonatomic,strong) NSArray *orders;
+
 @end
 
 @implementation AccountDetail
@@ -35,6 +38,16 @@
 }
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+
+    self.products = [[NSArray alloc] init];
+    self.products = [self.account.products allObjects];
+    self.productCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.products.count];
+    
+    self.orders = [[NSArray alloc] init];
+    self.orders = [self.account.orders allObjects];
+    self.orderCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.orders.count];
+    
+    
     
     [self.tableView reloadData];
 }

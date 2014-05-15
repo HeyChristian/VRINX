@@ -9,6 +9,7 @@
 #import "ProductTableViewController.h"
 #import "EntityAccount.h"
 #import "EntityProduct.h"
+#import "ProductCell.h"
 #import "ProductDetailTableViewController.h"
 
 @interface ProductTableViewController ()
@@ -23,9 +24,10 @@
 {
     [super viewDidLoad];
     
-    self.products = [[NSMutableArray alloc] init];
-    self.products = [self.account.products allObjects];
+//    self.products = [[NSMutableArray alloc] init];
+  //  self.products = [self.account.products allObjects];
     
+    //  [self.tableView reloadData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,7 +38,12 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-       [self.tableView reloadData];
+    
+    
+    self.products = [[NSMutableArray alloc] init];
+    self.products = [self.account.products allObjects];
+    [self.tableView reloadData];
+
 }
 
 #pragma mark - Navigation
@@ -82,17 +89,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     EntityProduct *product = (EntityProduct *)[self.products objectAtIndex:indexPath.row];
   
-    cell.textLabel.text = product.name;
-    cell.detailTextLabel.text = product.shortDesc;
-    cell.imageView.image = [UIImage imageWithData:product.itemPhoto];
-    
+    [cell configureCellForEntry:product];
     return cell;
 }
 
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *CellIdentifier = @"Cell";
+    AccountCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    EntityAccount *entry = [self.fetchResultsController objectAtIndexPath:indexPath];
+    
+    NSLog(@"Account CELL: %@",entry);
+    
+    [cell configureCellForEntry:entry];
+    return cell;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.

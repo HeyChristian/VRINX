@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *missingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
 
+@property (weak, nonatomic) IBOutlet UILabel *productCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *orderCountLabel;
 @end

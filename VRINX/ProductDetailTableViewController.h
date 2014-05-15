@@ -17,6 +17,7 @@
 
 @property (nonatomic,strong) EntityProduct *product;
 @property (nonatomic,strong) EntityAccount *account;
+@property (weak, nonatomic) IBOutlet UITableViewCell *itemPhotoCell;
 
 
 @property (weak, nonatomic) IBOutlet UITextField *productNameField;
