@@ -9,7 +9,7 @@
 #import "OrderMasterViewController.h"
 #import "RMDateSelectionViewController.h"
 
-@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate>
+@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate>
 
 //@property (strong, nonatomic) NSIndexPath *datePickerIndexPath;
 //@property (strong,nonatomic)NSDate *orderDate;
@@ -23,6 +23,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.orderNumberField.delegate = self;
+    self.taxField.delegate=self;
+    self.shippingField.delegate=self;
+    [self.view endEditing:YES];
+    
     
 }
 
@@ -30,7 +35,7 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    
+    [self.view endEditing:YES];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMMM d, yyyy"];
@@ -98,6 +103,8 @@
 }
 
 - (IBAction)openDateSelectionControllerWithBlock:(id)sender {
+    
+    [self.view endEditing:YES];
     RMDateSelectionViewController *dateSelectionVC = [RMDateSelectionViewController dateSelectionController];
     
     //You can enable or disable bouncing and motion effects
@@ -142,7 +149,7 @@
 - (IBAction)setMultipleOrders:(id)sender {
     
   //  NSLog(@"state: %@", self.multipleOrderSwitch.on);
-    
+    [self.view endEditing:YES];
     if(self.multipleOrderSwitch.on){
         self.orderCell.hidden=NO;
         self.productCell.hidden=YES;
@@ -153,5 +160,14 @@
         self.orderCell.hidden=YES;
     }
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 @end

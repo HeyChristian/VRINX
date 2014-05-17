@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomIOS7AlertView.h"
 
-@interface AccountsTableViewController : UITableViewController
+@interface AccountsTableViewController : UITableViewController<CustomIOS7AlertViewDelegate>
 - (IBAction)SlideLeftMenu:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIView *EmptyAccount;
 
 @end

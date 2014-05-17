@@ -37,15 +37,6 @@
         
         
         
-    }else{
-        
-        /*
-        self.accountNameField.text = nil;
-        self.descriptionField.text= nil;
-        self.salesTaxField.text = nil;
-        self.earningPercentField.text = nil;
-        */
-
     }
     
 }
