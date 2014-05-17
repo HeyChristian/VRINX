@@ -26,6 +26,9 @@
 
 - (void)viewDidLoad
 {
+    
+    NSLog(@"account parameter: %@",self.account);
+    
     [super viewDidLoad];
     if(self.product != nil){
        

@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EntityAccount.h"
 
 @interface OrderMasterViewController : UITableViewController
+
+@property(nonatomic,strong) EntityAccount *account;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *orderDateLabel;
 

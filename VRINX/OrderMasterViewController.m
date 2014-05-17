@@ -7,6 +7,7 @@
 //
 
 #import "OrderMasterViewController.h"
+#import "OrderProductViewController.h"
 #import "RMDateSelectionViewController.h"
 
 @interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate>
@@ -30,7 +31,18 @@
     
     
 }
-
+#pragma mark - Navigation
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"orderProducts"]){
+        
+        OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
+        newProduct.account = self.account;
+        
+        NSLog(@"Order Product Account: %@", newProduct.account);
+    }
+    
+}
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -50,16 +62,7 @@
 
 
 #pragma mark - Table view data source
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  return 0;
-}*/
-/*
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 6;
-}*/
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 0 && indexPath.row == 1) {
         [self openDateSelectionControllerWithBlock:self];

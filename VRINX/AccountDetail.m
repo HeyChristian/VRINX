@@ -11,6 +11,7 @@
 #import "EntityAccount.h"
 #import "AccountEditTableViewController.h"
 #import "ProductTableViewController.h"
+#import "OrderViewController.h"
 
 @interface AccountDetail ()
 
@@ -64,7 +65,13 @@
         ProductTableViewController *productVC = (ProductTableViewController *) segue.destinationViewController;
         productVC.account = self.account;
         
+    }else if([segue.identifier isEqualToString:@"orders"]){
+        
+        OrderViewController *orderVC = (OrderViewController *) segue.destinationViewController;
+        orderVC.account = self.account;
+        
     }
+    
     
 }
 #pragma mark - Helpers

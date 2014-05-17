@@ -21,6 +21,8 @@
 		86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799885191AA1DA0070DFFF /* CusAlertView.m */; };
 		8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799889191AA50D0070DFFF /* GlobalPopupAlert.m */; };
 		8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988C191AAB620070DFFF /* CustomIOS7AlertView.m */; };
+		867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988F1927ADAF0070DFFF /* OrderProductViewController.m */; };
+		867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998951927CBC60070DFFF /* EmptyOrderProductCell.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -108,6 +110,10 @@
 		86799889191AA50D0070DFFF /* GlobalPopupAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalPopupAlert.m; sourceTree = "<group>"; };
 		8679988B191AAB620070DFFF /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		8679988C191AAB620070DFFF /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		8679988E1927ADAF0070DFFF /* OrderProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderProductViewController.h; sourceTree = "<group>"; };
+		8679988F1927ADAF0070DFFF /* OrderProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductViewController.m; sourceTree = "<group>"; };
+		867998941927CBC60070DFFF /* EmptyOrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyOrderProductCell.h; sourceTree = "<group>"; };
+		867998951927CBC60070DFFF /* EmptyOrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyOrderProductCell.m; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -474,6 +480,10 @@
 				AAC204D61922A2F000B2744C /* OrderViewController.m */,
 				AAC2051A192496A900B2744C /* OrderMasterViewController.h */,
 				AAC2051B192496A900B2744C /* OrderMasterViewController.m */,
+				8679988E1927ADAF0070DFFF /* OrderProductViewController.h */,
+				8679988F1927ADAF0070DFFF /* OrderProductViewController.m */,
+				867998941927CBC60070DFFF /* EmptyOrderProductCell.h */,
+				867998951927CBC60070DFFF /* EmptyOrderProductCell.m */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -595,6 +605,7 @@
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
+				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
@@ -617,6 +628,7 @@
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
+				867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */,
 				86799870191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				86799862191A897D0070DFFF /* UIViewController+RESideMenu.m in Sources */,
 				8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */,

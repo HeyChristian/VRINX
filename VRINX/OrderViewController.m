@@ -7,8 +7,9 @@
 //
 
 #import "OrderViewController.h"
+#import "OrderMasterViewController.h"
 
-@interface OrderViewController ()
+@interface OrderViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -19,24 +20,81 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.orders = [[NSArray alloc] init];
+    self.orders = [self.account.orders allObjects];
+    
+    self.tableView.dataSource =self;
+    self.tableView.delegate =self;
+    
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+ 
+     if([segue.identifier isEqualToString:@"newOrder"]){
+     
+         OrderMasterViewController *orderProductVC = (OrderMasterViewController *) segue.destinationViewController;
+         orderProductVC.account = self.account;
+     
+         NSLog(@"Order Product Account: %@",orderProductVC.account);
+         
+     }
+     
+ 
+ }
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return 1;
 }
-*/
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    // id<NSFetchedResultsSectionInfo> sectionInfo = [self.fetchResultsController sections][section];
+    
+    // NSLog(@"# of Records : %lu", (unsigned long)[sectionInfo numberOfObjects]);
+    
+    //return [sectionInfo numberOfObjects];
+    
+    
+    NSInteger actualNumberOfRows = [self.orders count];
+    return (actualNumberOfRows  == 0) ? 1 : actualNumberOfRows;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell; // = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    //EntityAccount *entry = [self.fetchResultsController objectAtIndexPath:indexPath];
+    
+    //NSLog(@"Account CELL: %@",entry);
+    
+    //[cell configureCellForEntry:entry];
+    
+    NSInteger actualNumberOfRows = [self.orders count];
+    if (actualNumberOfRows == 0) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
+        
+    }
+    // Produce the correct cell the usual way
+    
+    
+    return cell;
+}
 
 @end
