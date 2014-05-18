@@ -11,7 +11,7 @@
 #import "EntityOrder.h"
 #import "EntityOrderProduct.h"
 
-@interface OrderProductViewController : UIViewController
+@interface OrderProductViewController : UITableViewController
 
 
 @property(nonatomic,strong) EntityAccount *account;
@@ -20,7 +20,7 @@
 @property(nonatomic,strong) NSArray *products;
 
 
-@property (weak, nonatomic) IBOutlet UITableView *productTableView;
 - (IBAction)filterProductSource:(id)sender;
 
+- (IBAction)addToCart:(id)sender;
 @end

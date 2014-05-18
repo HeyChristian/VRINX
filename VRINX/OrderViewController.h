@@ -14,8 +14,6 @@
 
 @property (nonatomic,strong) EntityAccount *account;
 @property (nonatomic,strong) NSArray *orders;
-
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

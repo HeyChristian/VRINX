@@ -36,7 +36,7 @@
 
  -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
  
-     if([segue.identifier isEqualToString:@"newOrder"]){
+     if([segue.identifier isEqualToString:@"newOrder"] || [segue.identifier isEqualToString:@"newOrderBtn"] ){
      
          OrderMasterViewController *orderProductVC = (OrderMasterViewController *) segue.destinationViewController;
          orderProductVC.account = self.account;

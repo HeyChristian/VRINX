@@ -57,7 +57,7 @@ static int const GLOBAL_POPUP_HEIGHT = 70;
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor whiteColor];
         
-        label.textAlignment = UITextAlignmentCenter;
+      //  label.textAlignment = UITextAlignmentCenter;
         
         label.numberOfLines = 0;
         [roundView addSubview:label];
@@ -109,12 +109,12 @@ static int const GLOBAL_POPUP_HEIGHT = 70;
     [view addSubview:instance.roundView];
     
     // Autosize
-    CGSize rsz = [instance.label.text
-                  sizeWithFont:instance.label.font
-                  constrainedToSize:CGSizeMake(instance.label.bounds.size.width, INT_MAX)
-                  lineBreakMode:UILineBreakModeWordWrap];
+  //  CGSize rsz = [instance.label.text
+    //              sizeWithFont:instance.label.font
+      //            constrainedToSize:CGSizeMake(instance.label.bounds.size.width, INT_MAX)
+        //          lineBreakMode:UILineBreakModeWordWrap];
     
-    [self setHeight:rsz.height+40];
+    //[self setHeight:rsz.height+40];
 }
 
 /**

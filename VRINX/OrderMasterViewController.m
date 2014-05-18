@@ -34,7 +34,7 @@
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if([segue.identifier isEqualToString:@"orderProducts"]){
+    if([segue.identifier isEqualToString:@"orderProducts"] || [segue.identifier isEqualToString:@"orderProductsBtn"]){
         
         OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
         newProduct.account = self.account;

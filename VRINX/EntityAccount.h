@@ -2,7 +2,7 @@
 //  EntityAccount.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/13/14.
+//  Created by Christian Vazquez on 5/17/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -22,20 +22,20 @@
 @property (nonatomic, retain) NSString * shortDesc;
 @property (nonatomic, retain) NSDecimalNumber * tax;
 @property (nonatomic, retain) NSString * userId;
-@property (nonatomic, retain) NSSet *products;
 @property (nonatomic, retain) NSSet *orders;
+@property (nonatomic, retain) NSSet *products;
 @end
 
 @interface EntityAccount (CoreDataGeneratedAccessors)
-
-- (void)addProductsObject:(EntityProduct *)value;
-- (void)removeProductsObject:(EntityProduct *)value;
-- (void)addProducts:(NSSet *)values;
-- (void)removeProducts:(NSSet *)values;
 
 - (void)addOrdersObject:(EntityOrder *)value;
 - (void)removeOrdersObject:(EntityOrder *)value;
 - (void)addOrders:(NSSet *)values;
 - (void)removeOrders:(NSSet *)values;
+
+- (void)addProductsObject:(EntityProduct *)value;
+- (void)removeProductsObject:(EntityProduct *)value;
+- (void)addProducts:(NSSet *)values;
+- (void)removeProducts:(NSSet *)values;
 
 @end

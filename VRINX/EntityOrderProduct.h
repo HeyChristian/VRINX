@@ -2,7 +2,7 @@
 //  EntityOrderProduct.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/13/14.
+//  Created by Christian Vazquez on 5/17/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -14,8 +14,8 @@
 @interface EntityOrderProduct : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * itemCount;
-@property (nonatomic, retain) NSSet *products;
 @property (nonatomic, retain) EntityOrder *orderProducts;
+@property (nonatomic, retain) NSSet *products;
 @end
 
 @interface EntityOrderProduct (CoreDataGeneratedAccessors)
