@@ -13,16 +13,23 @@
 
 @interface OrderProductViewController()<UITableViewDataSource,UITableViewDelegate>
 
+ 
 @end
 
+
+
 @implementation OrderProductViewController
+
+@synthesize selectedSource;
 
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     
-  
+    self.selectedSource = ALL;
+    
+    
     
     
     
@@ -68,7 +75,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
    
-    NSInteger actualNumberOfRows = [self.products count];
+    NSInteger actualNumberOfRows =  (self.selectedSource == ALL ?[self.products count]:[self.orderProducts count]);
     return (actualNumberOfRows  == 0) ? 1 : actualNumberOfRows;
 }
 
@@ -82,19 +89,30 @@
     UITableViewCell *cell;
     OrderProductCell *productCell;
     
-    NSInteger actualNumberOfRows = [self.products count];
+    
+    
+    NSInteger actualNumberOfRows =  (self.selectedSource == ALL ?[self.products count]:[self.orderProducts count]);
+    
     if (actualNumberOfRows == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
      
     }else{
+        
        productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-       [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row]];
+       
+        
+        if(self.selectedSource == ALL){
+           [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row]];
+        }else{
+           [productCell configureCellForEntry:[self.orderProducts objectAtIndex:indexPath.row]];
+        }
+        
        UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 44, 320, 2)];
        line.backgroundColor = [UIColor lightGrayColor];
        [cell addSubview:line];
         
-        productCell.itemStepper.tag = indexPath.row;
-        [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+       productCell.itemStepper.tag = indexPath.row;
+       [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
         
         
     }
@@ -109,37 +127,40 @@
     
     NSLog(@"Stepper ID: %ld",(long)stepper.tag);
     NSLog(@"Stepper Value: %f", stepper.value);
+   
+    if(self.selectedSource == ALL){
+        
+        self.inCartProduct = [[EntityOrderProduct alloc] init];
+        self.inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+        self.inCartProduct.products = [self.products objectAtIndex:stepper.tag];
     
+    }
     
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         return 105;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIAlertView *messageAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    // Display Alert Message
-    [messageAlert show];
-    
-}
+
 
 
 #pragma mark - IBActions
 - (IBAction)filterProductSource:(id)sender {
+    
+    NSLog(@"Reaload Data with Selected Segment");
+    
+    
     UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
     NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
     
     if (selectedSegment == 0) {
-        NSLog(@"select index: 0");
+        self.selectedSource = ALL;
     }
     else{
-        
-        NSLog(@"select index: 1");
+        self.selectedSource = INCART;
     }
     
+    [self.tableView reloadData];
 }
 
 @end

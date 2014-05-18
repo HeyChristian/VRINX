@@ -25,9 +25,9 @@
 		867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998951927CBC60070DFFF /* EmptyOrderProductCell.m */; };
 		86799899192866330070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799898192866330070DFFF /* EntityAccount.m */; };
 		8679989C192866330070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679989B192866330070DFFF /* EntityProduct.m */; };
-		8679989F192866330070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679989E192866330070DFFF /* EntityOrder.m */; };
-		867998A2192866330070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998A1192866330070DFFF /* EntityOrderProduct.m */; };
 		867998A5192868660070DFFF /* OrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998A4192868660070DFFF /* OrderProductCell.m */; };
+		867998AB192928170070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998AA192928170070DFFF /* EntityOrder.m */; };
+		867998AE192928170070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998AD192928170070DFFF /* EntityOrderProduct.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -119,12 +119,12 @@
 		86799898192866330070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
 		8679989A192866330070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
 		8679989B192866330070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
-		8679989D192866330070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
-		8679989E192866330070DFFF /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
-		867998A0192866330070DFFF /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
-		867998A1192866330070DFFF /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
 		867998A3192868660070DFFF /* OrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderProductCell.h; sourceTree = "<group>"; };
 		867998A4192868660070DFFF /* OrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductCell.m; sourceTree = "<group>"; };
+		867998A9192928170070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
+		867998AA192928170070DFFF /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		867998AC192928170070DFFF /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
+		867998AD192928170070DFFF /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -451,10 +451,10 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				867998A0192866330070DFFF /* EntityOrderProduct.h */,
-				867998A1192866330070DFFF /* EntityOrderProduct.m */,
-				8679989D192866330070DFFF /* EntityOrder.h */,
-				8679989E192866330070DFFF /* EntityOrder.m */,
+				867998AC192928170070DFFF /* EntityOrderProduct.h */,
+				867998AD192928170070DFFF /* EntityOrderProduct.m */,
+				867998A9192928170070DFFF /* EntityOrder.h */,
+				867998AA192928170070DFFF /* EntityOrder.m */,
 				8679989A192866330070DFFF /* EntityProduct.h */,
 				8679989B192866330070DFFF /* EntityProduct.m */,
 				86799897192866330070DFFF /* EntityAccount.h */,
@@ -600,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
+				867998AE192928170070DFFF /* EntityOrderProduct.m in Sources */,
 				8679989C192866330070DFFF /* EntityProduct.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
@@ -623,7 +624,6 @@
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
 				86799860191A897D0070DFFF /* RECommonFunctions.m in Sources */,
 				86799861191A897D0070DFFF /* RESideMenu.m in Sources */,
-				8679989F192866330070DFFF /* EntityOrder.m in Sources */,
 				8679986E191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
@@ -632,13 +632,13 @@
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
+				867998AB192928170070DFFF /* EntityOrder.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
 				867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */,
 				86799870191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				86799862191A897D0070DFFF /* UIViewController+RESideMenu.m in Sources */,
 				8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */,
 				AAC2051C192496A900B2744C /* OrderMasterViewController.m in Sources */,
-				867998A2192866330070DFFF /* EntityOrderProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

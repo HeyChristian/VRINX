@@ -23,13 +23,12 @@
         <attribute name="total" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="accountOrders" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="orders" inverseEntity="Account" syncable="YES"/>
-        <relationship name="orderProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderProduct" inverseName="orderProducts" inverseEntity="OrderProduct" syncable="YES"/>
+        <relationship name="orderProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderProduct" syncable="YES"/>
         <relationship name="orders" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orders" inverseEntity="Order" syncable="YES"/>
     </entity>
     <entity name="OrderProduct" representedClassName="EntityOrderProduct" syncable="YES">
         <attribute name="itemCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="orderProducts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orderProducts" inverseEntity="Order" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="orderProducts" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="orderProducts" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="EntityProduct" syncable="YES">
         <attribute name="itemPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -43,7 +42,7 @@
     <elements>
         <element name="Account" positionX="-506" positionY="-199" width="128" height="208"/>
         <element name="Order" positionX="-272" positionY="-297" width="128" height="208"/>
-        <element name="OrderProduct" positionX="-99" positionY="-18" width="128" height="88"/>
+        <element name="OrderProduct" positionX="-99" positionY="-18" width="128" height="73"/>
         <element name="Product" positionX="-290" positionY="254" width="128" height="148"/>
     </elements>
 </model>

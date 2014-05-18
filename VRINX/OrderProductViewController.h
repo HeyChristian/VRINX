@@ -11,16 +11,26 @@
 #import "EntityOrder.h"
 #import "EntityOrderProduct.h"
 
+typedef enum SOURCE{
+
+    ALL=0,
+    INCART=1
+
+}SOURCE;
+
 @interface OrderProductViewController : UITableViewController
+ 
 
 
+
+
+@property(nonatomic,assign) SOURCE selectedSource;
 @property(nonatomic,strong) EntityAccount *account;
 @property(nonatomic,strong) EntityOrder *order;
 @property(nonatomic,strong) NSMutableArray *orderProducts;
 @property(nonatomic,strong) NSArray *products;
-
+@property(nonatomic,strong) EntityOrderProduct *inCartProduct;
 
 - (IBAction)filterProductSource:(id)sender;
 
-- (IBAction)addToCart:(id)sender;
 @end
