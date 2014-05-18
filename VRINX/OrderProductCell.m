@@ -17,7 +17,7 @@
 - (IBAction)addToCart:(id)sender {
     
     
-    NSLog(@" add to cart!!");
+   // NSLog(@" add to cart!!");
    // UIStepper *stepper = (UIStepper *) sender;
     
    // stepper.maximumValue = 100;
@@ -34,13 +34,23 @@
         [self.itemCountField setText:[NSString stringWithFormat:@"x %d",count]];
         
     }
-    NSLog(@"item count: %d", count);
+    
+    /*
+    UIView *view = [sender superview]; //to recover the superview
+    self = (UITableViewCell *) [[view superview] superview]; //this is making a cast to get the cell of the stepper (the one that was pressed)
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:self.selectedCell ]; // to get the index path and help me refresh that cell in specific
+    
+    self.selectedRow = [[NSArray alloc]initWithObjects:indexPath, nil];
+    [self.tableView reloadRowsAtIndexPaths:self.selectedRow withRowAnimation:UITableViewRowAnimationAutomatic]; // to refresh the selected cell
+*/
+    
+   // NSLog(@"item count: %d", count);
     
 }
 
 -(void)configureCellForEntry:(EntityProduct *)product{
     
-    NSLog(@" product: %@",product);
+   // NSLog(@" product: %@",product);
     
     self.itemNameField.text = product.name;
     self.itemDescriptionField.text =  product.shortDesc;
