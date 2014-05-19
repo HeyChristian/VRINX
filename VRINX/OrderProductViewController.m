@@ -146,6 +146,7 @@
 
 - (void)stepperValueChanged:(UIStepper *)sender {
     // Replace old stepper value with new one
+    [self.tableView beginUpdates];
     
     NSLog(@"stepper value changed in >> opvc");
     UIStepper *stepper = (UIStepper *) sender;
@@ -153,53 +154,95 @@
     NSLog(@"Stepper ID: %ld",(long)stepper.tag);
     NSLog(@"Stepper Value: %f", stepper.value);
    
+    NSNumber *itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+    
     if(self.selectedSource == ALL){
         bool exist = NO;
         EntityProduct *product = [self.products objectAtIndex:stepper.tag];
         
-        for(TempOrderProduct *top in self.orderProducts){
-            
-            if([top.product.objectID isEqual:product.objectID]){
-                exist=YES;
-                
-                
-            }
-        }
+        
         
         TempOrderProduct *inCartProduct = [[TempOrderProduct alloc] init];
         TempProduct *tempProduct = [[TempProduct alloc] init];
         
         for(int i = 0; i < self.orderProducts.count; i++)
         {
-            tempProduct =  [self.orderProducts objectAtIndex:i];
-            if([tempProduct.objectID isEqual:product.objectID]){
+            inCartProduct =  [self.orderProducts objectAtIndex:i];
+            if([inCartProduct.product.objectID isEqual:product.objectID]){
                 
-            
+                
+                if(itemCount > 0 ){
+                    inCartProduct.itemCount = itemCount;
+                    [self.orderProducts removeObjectAtIndex:i];
+                    [self.orderProducts insertObject:inCartProduct atIndex:i];
+                    
+                }else{
+                    [self.orderProducts removeObjectAtIndex:i];
+                    
+                }
+                exist=YES;
+               
             }
+            if([inCartProduct.itemCount intValue] == 0 )
+                [self.orderProducts removeObjectAtIndex:i];
+            
+            
+        }
+        
+        if(exist==NO){
+        
+            tempProduct.objectID=product.objectID;
+            tempProduct.name = product.name;
+            tempProduct.itemPhoto = product.itemPhoto;
+            tempProduct.shortDesc = product.shortDesc;
+            tempProduct.price = product.price;
+        
+            inCartProduct.product = tempProduct;
+            inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+        
+            [self.orderProducts addObject:inCartProduct];
+        }
+        
+        NSLog(@"product for change  stepper value>> %@",inCartProduct);
+        
+    }else if(self.selectedSource == INCART){
+        
+        EntityProduct *product = [self.products objectAtIndex:stepper.tag];
+        
+        
+        
+        TempOrderProduct *inCartProduct = [[TempOrderProduct alloc] init];
+       // int productInCart = 0;
+        
+        for(int i = 0; i < self.orderProducts.count; i++)
+        {
+            inCartProduct =  [self.orderProducts objectAtIndex:i];
+            if([inCartProduct.product.objectID isEqual:product.objectID]){
+                
+                
+                if(itemCount > 0 ){
+                    inCartProduct.itemCount = itemCount;
+                    [self.orderProducts removeObjectAtIndex:i];
+                    [self.orderProducts insertObject:inCartProduct atIndex:i];
+                    
+                }else{
+                    [self.orderProducts removeObjectAtIndex:i];
+                    
+                }
+            }
+            
+            if([inCartProduct.itemCount intValue] == 0 )
+                [self.orderProducts removeObjectAtIndex:i];
+            
             
         }
         
         
-        
-        
-        //Necesito actualizar el listado del carrito, ya que cada vez que agrego se actualiza como si fuera uno nuevo y no el conteo de el producto seleccionado. hay que iliterar en la lista utilizando el ID unico ObjectID para verificar la existencia de el objeto
-        
-        tempProduct.objectID=product.objectID;
-        tempProduct.name = product.name;
-        tempProduct.itemPhoto = product.itemPhoto;
-        tempProduct.shortDesc = product.shortDesc;
-        tempProduct.price = product.price;
-        
-        inCartProduct.product = tempProduct;
-        inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
-        
-        [self.orderProducts addObject:inCartProduct];
-        
-        
-        NSLog(@"product for change  stepper value>> %@",inCartProduct);
-        
     }
     
+    [self.tableView endUpdates];
+    
+    [self.tableView reloadData];
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
