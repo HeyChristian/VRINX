@@ -30,6 +30,8 @@
 		867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B91929BC870070DFFF /* EntityOrderProduct.m */; };
 		867998BE1929C8750070DFFF /* TempProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998BD1929C8750070DFFF /* TempProduct.m */; };
 		867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998C31929CAD10070DFFF /* TempOrderProduct.m */; };
+		867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CB192AB1680070DFFF /* PSCropToolView.m */; };
+		867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CF192AB4A00070DFFF /* CroperViewController.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -131,6 +133,10 @@
 		867998BD1929C8750070DFFF /* TempProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempProduct.m; sourceTree = "<group>"; };
 		867998C21929CAD10070DFFF /* TempOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempOrderProduct.h; sourceTree = "<group>"; };
 		867998C31929CAD10070DFFF /* TempOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempOrderProduct.m; sourceTree = "<group>"; };
+		867998CA192AB1680070DFFF /* PSCropToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCropToolView.h; sourceTree = "<group>"; };
+		867998CB192AB1680070DFFF /* PSCropToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCropToolView.m; sourceTree = "<group>"; };
+		867998CE192AB4A00070DFFF /* CroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroperViewController.h; sourceTree = "<group>"; };
+		867998CF192AB4A00070DFFF /* CroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroperViewController.m; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -268,6 +274,24 @@
 			name = TempModels;
 			sourceTree = "<group>";
 		};
+		867998C9192AB12B0070DFFF /* PSCropToolComponent */ = {
+			isa = PBXGroup;
+			children = (
+				867998CA192AB1680070DFFF /* PSCropToolView.h */,
+				867998CB192AB1680070DFFF /* PSCropToolView.m */,
+			);
+			name = PSCropToolComponent;
+			sourceTree = "<group>";
+		};
+		867998CD192AB2110070DFFF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				867998CE192AB4A00070DFFF /* CroperViewController.h */,
+				867998CF192AB4A00070DFFF /* CroperViewController.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		AA5522591916E98E005D5950 = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +388,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				867998C9192AB12B0070DFFF /* PSCropToolComponent */,
 				86799887191AA4EC0070DFFF /* popups */,
 				86799871191A94830070DFFF /* UIViewExtended */,
 				AAC2051D192499DE00B2744C /* RMDateSelectionViewController */,
@@ -406,6 +431,7 @@
 		AA5522C51916EC7A005D5950 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				867998CD192AB2110070DFFF /* Tools */,
 				AAC205191924967E00B2744C /* Orders */,
 				AAC204DB1922B3B600B2744C /* Products */,
 				AA5522D51916F881005D5950 /* Authentication */,
@@ -568,6 +594,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Christian Vazquez";
 				TargetAttributes = {
+					AA5522611916E98E005D5950 = {
+						DevelopmentTeam = YCPPE5ZM94;
+					};
 					AA5522811916E98E005D5950 = {
 						TestTargetID = AA5522611916E98E005D5950;
 					};
@@ -650,7 +679,9 @@
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
+				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
+				867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				867998B71929BC870070DFFF /* EntityOrder.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
@@ -775,6 +806,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Christian/Development,
@@ -784,6 +817,7 @@
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -793,6 +827,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Christian/Development,
@@ -802,6 +838,7 @@
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

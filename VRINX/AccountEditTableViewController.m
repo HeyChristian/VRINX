@@ -9,6 +9,7 @@
 #import "AccountEditTableViewController.h"
 #import "CoreDataStack.h"
 #import "EntityAccount.h"
+#import "CroperViewController.h"
 
 @interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -45,15 +46,28 @@
     
     [self.tableView reloadData];
 }
-
+#pragma mark - Navigation
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"cropImage"]){
+        
+        CroperViewController *cropper = [[CroperViewController alloc]  init];
+        cropper = (CroperViewController *) segue.destinationViewController;
+        cropper.sourceImage = [self pickedImage];
+    
+    }
+    
+    
+}
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    self.pickedImage =  image;
-    
+    self.pickedImage =  info[UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"cropImage" sender:self];
+    
+    
 }
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -68,13 +82,6 @@
     account.tax = [NSDecimalNumber decimalNumberWithString:self.salesTaxField.text];
     account.earningPercent =[NSDecimalNumber decimalNumberWithString:self.earningPercentField.text];
     account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
-    
-    
-    //entry.body = self.textView.text;
-    //entry.date = [[NSDate date] timeIntervalSince1970];
-    //entry.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
-    //entry.location = self.location;
-    
     
     [coreDataStack saveContext];
     
@@ -95,29 +102,8 @@
 }
 
 #pragma mark - Table view data source
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}*/
-
-
-//}
 -(void)dismissSelf{
-   // [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-   // [self popToViewController:object animated:YES];
      [self.navigationController popViewControllerAnimated: YES];
-    
-  //   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)save:(id)sender {

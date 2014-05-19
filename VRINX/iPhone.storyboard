@@ -155,7 +155,7 @@
             <objects>
                 <tableViewController id="8E0-5b-r9Z" customClass="AccountEditTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="9NO-tV-arf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -275,7 +275,7 @@
                                                     <rect key="frame" x="211" y="11" width="89" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sales Tax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYv-Lm-Rj9">
                                                     <rect key="frame" x="20" y="11" width="73" height="21"/>
@@ -308,6 +308,7 @@
                         <outlet property="earningPercentField" destination="OVH-3g-EIy" id="Kbg-kK-Qgx"/>
                         <outlet property="logoView" destination="eDe-vI-kue" id="WoA-J9-Kzl"/>
                         <outlet property="salesTaxField" destination="i4V-RI-sa7" id="1sk-3F-ENP"/>
+                        <segue destination="R6t-h3-huo" kind="modal" identifier="cropImage" id="Hdy-dA-Tm3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2RD-bZ-9Dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -992,7 +993,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icn_picture" translatesAutoresizingMaskIntoConstraints="NO" id="n2y-D9-iT4">
-                                                    <rect key="frame" x="0.0" y="-1" width="320" height="101"/>
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
@@ -1684,6 +1685,40 @@
             </objects>
             <point key="canvasLocation" x="876" y="-807"/>
         </scene>
+        <!--Croper View Controller-->
+        <scene sceneID="6T9-HO-D4y">
+            <objects>
+                <viewController id="R6t-h3-huo" customClass="CroperViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vsW-qU-GOT"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIr-3X-scq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kbx-tl-hue">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glb-14-Emd">
+                                <rect key="frame" x="0.0" y="14" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="gdX-7s-3in">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y8S-qq-UrK"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Uwv-ue-DOT"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-CT-qIa">
+                                <rect key="frame" x="0.0" y="58" width="336" height="521"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdu-dZ-hMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="-858"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccT-3B-idV">
             <objects>
@@ -1723,7 +1758,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="LLw-NE-84t"/>
         <segue reference="rLs-Qt-n24"/>
+        <segue reference="ZLa-tn-gvo"/>
         <segue reference="tBG-LO-q3K"/>
-        <segue reference="r8M-NS-zu0"/>
     </inferredMetricsTieBreakers>
 </document>
