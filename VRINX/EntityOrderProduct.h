@@ -14,6 +14,6 @@
 @interface EntityOrderProduct : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * itemCount;
-@property (nonatomic, retain) EntityProduct *products;
+@property (nonatomic, retain) EntityProduct *product;
 
 @end

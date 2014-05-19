@@ -13,6 +13,6 @@
 @implementation EntityOrderProduct
 
 @dynamic itemCount;
-@dynamic products;
+@dynamic product;
 
 @end

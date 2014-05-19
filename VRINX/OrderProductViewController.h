@@ -27,9 +27,8 @@ typedef enum SOURCE{
 @property(nonatomic,assign) SOURCE selectedSource;
 @property(nonatomic,strong) EntityAccount *account;
 @property(nonatomic,strong) EntityOrder *order;
-@property(nonatomic,strong) NSMutableArray *orderProducts;
+@property(nonatomic,retain) NSMutableArray *orderProducts;
 @property(nonatomic,strong) NSArray *products;
-@property(nonatomic,strong) EntityOrderProduct *inCartProduct;
 
 - (IBAction)filterProductSource:(id)sender;
 

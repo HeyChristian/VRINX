@@ -10,6 +10,7 @@
 
 @interface EmptyOrderProductCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *EmptyMessagelabel;
 
 
 @end

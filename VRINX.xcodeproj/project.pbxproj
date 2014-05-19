@@ -23,11 +23,13 @@
 		8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988C191AAB620070DFFF /* CustomIOS7AlertView.m */; };
 		867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988F1927ADAF0070DFFF /* OrderProductViewController.m */; };
 		867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998951927CBC60070DFFF /* EmptyOrderProductCell.m */; };
-		86799899192866330070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799898192866330070DFFF /* EntityAccount.m */; };
-		8679989C192866330070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679989B192866330070DFFF /* EntityProduct.m */; };
 		867998A5192868660070DFFF /* OrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998A4192868660070DFFF /* OrderProductCell.m */; };
-		867998AB192928170070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998AA192928170070DFFF /* EntityOrder.m */; };
-		867998AE192928170070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998AD192928170070DFFF /* EntityOrderProduct.m */; };
+		867998B11929BC860070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B01929BC860070DFFF /* EntityAccount.m */; };
+		867998B41929BC870070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B31929BC870070DFFF /* EntityProduct.m */; };
+		867998B71929BC870070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B61929BC870070DFFF /* EntityOrder.m */; };
+		867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B91929BC870070DFFF /* EntityOrderProduct.m */; };
+		867998BE1929C8750070DFFF /* TempProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998BD1929C8750070DFFF /* TempProduct.m */; };
+		867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998C31929CAD10070DFFF /* TempOrderProduct.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -115,16 +117,20 @@
 		8679988F1927ADAF0070DFFF /* OrderProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductViewController.m; sourceTree = "<group>"; };
 		867998941927CBC60070DFFF /* EmptyOrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyOrderProductCell.h; sourceTree = "<group>"; };
 		867998951927CBC60070DFFF /* EmptyOrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyOrderProductCell.m; sourceTree = "<group>"; };
-		86799897192866330070DFFF /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
-		86799898192866330070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
-		8679989A192866330070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
-		8679989B192866330070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		867998A3192868660070DFFF /* OrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderProductCell.h; sourceTree = "<group>"; };
 		867998A4192868660070DFFF /* OrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductCell.m; sourceTree = "<group>"; };
-		867998A9192928170070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
-		867998AA192928170070DFFF /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
-		867998AC192928170070DFFF /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
-		867998AD192928170070DFFF /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
+		867998AF1929BC860070DFFF /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
+		867998B01929BC860070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
+		867998B21929BC870070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
+		867998B31929BC870070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
+		867998B51929BC870070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
+		867998B61929BC870070DFFF /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		867998B81929BC870070DFFF /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
+		867998B91929BC870070DFFF /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
+		867998BC1929C8750070DFFF /* TempProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempProduct.h; sourceTree = "<group>"; };
+		867998BD1929C8750070DFFF /* TempProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempProduct.m; sourceTree = "<group>"; };
+		867998C21929CAD10070DFFF /* TempOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempOrderProduct.h; sourceTree = "<group>"; };
+		867998C31929CAD10070DFFF /* TempOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempOrderProduct.m; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,6 +255,17 @@
 				86799889191AA50D0070DFFF /* GlobalPopupAlert.m */,
 			);
 			name = popups;
+			sourceTree = "<group>";
+		};
+		867998BB1929C8070070DFFF /* TempModels */ = {
+			isa = PBXGroup;
+			children = (
+				867998BC1929C8750070DFFF /* TempProduct.h */,
+				867998BD1929C8750070DFFF /* TempProduct.m */,
+				867998C21929CAD10070DFFF /* TempOrderProduct.h */,
+				867998C31929CAD10070DFFF /* TempOrderProduct.m */,
+			);
+			name = TempModels;
 			sourceTree = "<group>";
 		};
 		AA5522591916E98E005D5950 = {
@@ -451,14 +468,15 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				867998AC192928170070DFFF /* EntityOrderProduct.h */,
-				867998AD192928170070DFFF /* EntityOrderProduct.m */,
-				867998A9192928170070DFFF /* EntityOrder.h */,
-				867998AA192928170070DFFF /* EntityOrder.m */,
-				8679989A192866330070DFFF /* EntityProduct.h */,
-				8679989B192866330070DFFF /* EntityProduct.m */,
-				86799897192866330070DFFF /* EntityAccount.h */,
-				86799898192866330070DFFF /* EntityAccount.m */,
+				867998BB1929C8070070DFFF /* TempModels */,
+				867998B81929BC870070DFFF /* EntityOrderProduct.h */,
+				867998B91929BC870070DFFF /* EntityOrderProduct.m */,
+				867998B51929BC870070DFFF /* EntityOrder.h */,
+				867998B61929BC870070DFFF /* EntityOrder.m */,
+				867998B21929BC870070DFFF /* EntityProduct.h */,
+				867998B31929BC870070DFFF /* EntityProduct.m */,
+				867998AF1929BC860070DFFF /* EntityAccount.h */,
+				867998B01929BC860070DFFF /* EntityAccount.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -600,8 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
-				867998AE192928170070DFFF /* EntityOrderProduct.m in Sources */,
-				8679989C192866330070DFFF /* EntityProduct.m in Sources */,
+				867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
@@ -610,6 +627,7 @@
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
+				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
@@ -617,13 +635,15 @@
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
-				86799899192866330070DFFF /* EntityAccount.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				867998B11929BC860070DFFF /* EntityAccount.m in Sources */,
 				8679986F191A89E40070DFFF /* TPKeyboardAvoidingTableView.m in Sources */,
+				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
 				86799860191A897D0070DFFF /* RECommonFunctions.m in Sources */,
 				86799861191A897D0070DFFF /* RESideMenu.m in Sources */,
+				867998B41929BC870070DFFF /* EntityProduct.m in Sources */,
 				8679986E191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
@@ -632,7 +652,7 @@
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
-				867998AB192928170070DFFF /* EntityOrder.m in Sources */,
+				867998B71929BC870070DFFF /* EntityOrder.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
 				867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */,
 				86799870191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,

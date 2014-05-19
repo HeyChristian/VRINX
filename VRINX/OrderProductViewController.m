@@ -10,6 +10,10 @@
 #import "EntityProduct.h"
 #import "ProductDetailTableViewController.h"
 #import "OrderProductCell.h"
+#import "EmptyOrderProductCell.h"
+
+#import "TempProduct.h"
+#import "TempOrderProduct.h"
 
 @interface OrderProductViewController()<UITableViewDataSource,UITableViewDelegate>
 
@@ -30,13 +34,6 @@
     self.selectedSource = ALL;
     
     
-    
-    
-    
-}
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
     self.products = [[NSArray alloc] init];
     self.products = [self.account.products allObjects];
     
@@ -45,11 +42,16 @@
     self.orderProducts = [[NSMutableArray alloc] init];
     
     
+    
+}
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
+    
     [self.tableView reloadData];
   
-    if([self.products count] == 0){
-           self.tableView.separatorColor = [UIColor clearColor];
-    }
+    
     
 }
 #pragma mark - Navigation
@@ -79,14 +81,29 @@
     return (actualNumberOfRows  == 0) ? 1 : actualNumberOfRows;
 }
 
-
+- (NSArray*)tableData{
+    
+    if(self.selectedSource == ALL){
+        
+        if([self.products count] == 0){
+            self.tableView.separatorColor = [UIColor clearColor];
+        }
+        
+        return self.products;
+    }else{
+        if([self.orderProducts count] == 0){
+            self.tableView.separatorColor = [UIColor clearColor];
+        }
+        return self.orderProducts;
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"cell for row at index path: %ld",(long)indexPath.row);
     
     
-    UITableViewCell *cell;
+   EmptyOrderProductCell  *emptyCell;
     OrderProductCell *productCell;
     
     
@@ -94,8 +111,14 @@
     NSInteger actualNumberOfRows =  (self.selectedSource == ALL ?[self.products count]:[self.orderProducts count]);
     
     if (actualNumberOfRows == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
-     
+        emptyCell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
+        if(self.selectedSource == ALL)
+            emptyCell.EmptyMessagelabel.text = @"No have any product in the pocket";
+        else
+            emptyCell.EmptyMessagelabel.text = @"No have any product in the cart";
+        
+        self.tableView.separatorColor = [UIColor clearColor];
+        
     }else{
         
        productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -104,19 +127,21 @@
         if(self.selectedSource == ALL){
            [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row]];
         }else{
-           [productCell configureCellForEntry:[self.orderProducts objectAtIndex:indexPath.row]];
+            EntityOrderProduct *order =[self.orderProducts objectAtIndex:indexPath.row];
+           [productCell configureCellForEntry:order.product];
         }
         
-       UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 44, 320, 2)];
+       UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 105, 320, .5)];
        line.backgroundColor = [UIColor lightGrayColor];
-       [cell addSubview:line];
+       
+        [productCell addSubview:line];
         
        productCell.itemStepper.tag = indexPath.row;
        [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
         
         
     }
-    return (actualNumberOfRows == 0 ? cell:productCell);
+    return (actualNumberOfRows == 0 ? emptyCell:productCell);
 }
 
 - (void)stepperValueChanged:(UIStepper *)sender {
@@ -129,11 +154,50 @@
     NSLog(@"Stepper Value: %f", stepper.value);
    
     if(self.selectedSource == ALL){
+        bool exist = NO;
+        EntityProduct *product = [self.products objectAtIndex:stepper.tag];
         
-        self.inCartProduct = [[EntityOrderProduct alloc] init];
-        self.inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
-        self.inCartProduct.products = [self.products objectAtIndex:stepper.tag];
-    
+        for(TempOrderProduct *top in self.orderProducts){
+            
+            if([top.product.objectID isEqual:product.objectID]){
+                exist=YES;
+                
+                
+            }
+        }
+        
+        TempOrderProduct *inCartProduct = [[TempOrderProduct alloc] init];
+        TempProduct *tempProduct = [[TempProduct alloc] init];
+        
+        for(int i = 0; i < self.orderProducts.count; i++)
+        {
+            tempProduct =  [self.orderProducts objectAtIndex:i];
+            if([tempProduct.objectID isEqual:product.objectID]){
+                
+            
+            }
+            
+        }
+        
+        
+        
+        
+        //Necesito actualizar el listado del carrito, ya que cada vez que agrego se actualiza como si fuera uno nuevo y no el conteo de el producto seleccionado. hay que iliterar en la lista utilizando el ID unico ObjectID para verificar la existencia de el objeto
+        
+        tempProduct.objectID=product.objectID;
+        tempProduct.name = product.name;
+        tempProduct.itemPhoto = product.itemPhoto;
+        tempProduct.shortDesc = product.shortDesc;
+        tempProduct.price = product.price;
+        
+        inCartProduct.product = tempProduct;
+        inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+        
+        [self.orderProducts addObject:inCartProduct];
+        
+        
+        NSLog(@"product for change  stepper value>> %@",inCartProduct);
+        
     }
     
     
