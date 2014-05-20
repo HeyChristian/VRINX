@@ -5,13 +5,13 @@
 //  Created by Christian Vazquez on 5/5/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
-
+#import "UIImage+RoundedImage.h"
 #import "AccountEditTableViewController.h"
 #import "CoreDataStack.h"
 #import "EntityAccount.h"
 #import "CroperViewController.h"
 
-@interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate>
 
 @property (nonatomic,strong) UIImage *pickedImage;
 
@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+      [self.tableView reloadData];
     
     if(self.account != nil){
         // edit mode
@@ -43,19 +43,19 @@
 }
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self.navigationController setToolbarHidden:YES];
     [self.tableView reloadData];
 }
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if([segue.identifier isEqualToString:@"cropImage"]){
+   /*
+    if([segue.identifier isEqualToString:@"cropper"]){
         
-        CroperViewController *cropper = [[CroperViewController alloc]  init];
-        cropper = (CroperViewController *) segue.destinationViewController;
-        cropper.sourceImage = [self pickedImage];
+       CroperViewController *cropper = [[CroperViewController alloc]  init];
+       cropper = (CroperViewController *) segue.destinationViewController;
+       cropper.sourceImage = [self pickedImage];
     
-    }
+    }*/
     
     
 }
@@ -65,10 +65,44 @@
     
     self.pickedImage =  info[UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self performSegueWithIdentifier:@"cropImage" sender:self];
+   // [self performSegueWithIdentifier:@"cropper" sender:self.view];
+    
+    CroperViewController *cropper = [[CroperViewController alloc]init];
+    cropper.delegate=self;
+    cropper.sourceImage = [self pickedImage];
+    [self.navigationController pushViewController:cropper animated:YES];
+    
+   
+    
+  //  [self.navigationController presentViewController:cropper animated:YES completion:nil];
+    
+    //[self addChildViewController:cropper];
+   // [self.view addSubview:cropper.view];
+   
+    //[self addChildViewController:cropper];
+    
+    // [self presentModalViewController:cropper animated:YES];
+    //[self presentViewController:cropper animated:YES completion:nil];
     
     
 }
+-(void) setCroppedImage:(UIImage *)image{
+    
+    CGRect rect = CGRectMake(0,0,320,120);
+    UIGraphicsBeginImageContext( rect.size );
+    [image drawInRect:rect];
+    UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImagePNGRepresentation(picture1);
+    UIImage *newImage=[UIImage imageWithData:imageData];
+    
+  
+    //CGSize size = CGSizeMake(320, 120);
+    self.pickedImage =newImage; //[UIImage imageWithColor:image andColor:[UIColor whiteColor] andSize:size];
+
+}
+
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -124,6 +158,7 @@
     //if device have camera
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         [self promptForSource];
+        
     }else{
         [self promptForPhotoRoll];
     }
@@ -138,9 +173,12 @@
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex != actionSheet.cancelButtonIndex){
         if(buttonIndex != actionSheet.firstOtherButtonIndex){
-            [self promptForCamera];
-        }else{
+        
             [self promptForPhotoRoll];
+            
+        }else{
+      
+            [self promptForCamera];
         }
     }
 }

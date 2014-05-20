@@ -9,7 +9,7 @@
 #import "PSCropToolView.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define DEFAULT_OUTPUT_SIZE CGSizeMake(320, 480)
+#define DEFAULT_OUTPUT_SIZE CGSizeMake(320, 480)//480
 #define DEFAULT_REQUIRED_FILL_FACTOR 1.0
 #define DEFAULT_CROOP_AREA_FILL_FACTOR 0.95
 #define DEFAULT_CROOP_AREA_DEFAULT_BORDER_WIDTH 2
@@ -46,7 +46,7 @@
         self.layer.masksToBounds = YES;
         self.showQueueActivitiIndicator = DEFAULT_SHOW_QUEUE_INDICATOR;
         self.outputSize                 = DEFAULT_OUTPUT_SIZE;
-        self.cropAreaFillFactor        = DEFAULT_CROOP_AREA_FILL_FACTOR;
+        self.cropAreaFillFactor         = DEFAULT_CROOP_AREA_FILL_FACTOR;
         self.requiredFillFactor         = DEFAULT_REQUIRED_FILL_FACTOR;
     }
     return self;

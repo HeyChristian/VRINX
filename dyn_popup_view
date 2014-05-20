@@ -1,0 +1,12 @@
+vc2 *viewController = [[vc2 alloc]init];
+    [self addChildViewController:viewController];
+    viewController.view.frame = self.view.frame;
+    [self.view addSubview:viewController.view];
+    viewController.view.alpha = 0;
+    [viewController didMoveToParentViewController:self];
+
+    [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^
+     {
+         viewController.view.alpha = 1;
+     }
+                     completion:nil];

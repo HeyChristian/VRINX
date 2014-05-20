@@ -154,7 +154,7 @@
     NSLog(@"Stepper ID: %ld",(long)stepper.tag);
     NSLog(@"Stepper Value: %f", stepper.value);
    
-    NSNumber *itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+    NSNumber *itemCount = [[NSNumber alloc] initWithDouble:stepper.value + 1];
     
     if(self.selectedSource == ALL){
         bool exist = NO;

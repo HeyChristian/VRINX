@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomIOS7AlertView.h"
 
-@interface AccountsTableViewController : UITableViewController<CustomIOS7AlertViewDelegate>
+@interface AccountsTableViewController : UITableViewController
 - (IBAction)SlideLeftMenu:(id)sender;
 
 

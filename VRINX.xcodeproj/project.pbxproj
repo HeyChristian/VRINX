@@ -32,6 +32,7 @@
 		867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998C31929CAD10070DFFF /* TempOrderProduct.m */; };
 		867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CB192AB1680070DFFF /* PSCropToolView.m */; };
 		867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CF192AB4A00070DFFF /* CroperViewController.m */; };
+		867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */ = {isa = PBXBuildFile; fileRef = 867998D1192AD4BB0070DFFF /* dyn_popup_view */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -137,6 +138,7 @@
 		867998CB192AB1680070DFFF /* PSCropToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCropToolView.m; sourceTree = "<group>"; };
 		867998CE192AB4A00070DFFF /* CroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroperViewController.h; sourceTree = "<group>"; };
 		867998CF192AB4A00070DFFF /* CroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroperViewController.m; sourceTree = "<group>"; };
+		867998D1192AD4BB0070DFFF /* dyn_popup_view */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dyn_popup_view; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -295,6 +297,7 @@
 		AA5522591916E98E005D5950 = {
 			isa = PBXGroup;
 			children = (
+				867998D1192AD4BB0070DFFF /* dyn_popup_view */,
 				AA5522BF1916EB99005D5950 /* iPhone.storyboard */,
 				AA55226D1916E98E005D5950 /* VRINX */,
 				AA55228A1916E98E005D5950 /* VRINXTests */,
@@ -627,6 +630,7 @@
 			files = (
 				AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */,
 				AA5522C01916EB99005D5950 /* iPhone.storyboard in Resources */,
+				867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */,
 				AA55227D1916E98E005D5950 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

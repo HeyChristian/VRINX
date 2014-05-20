@@ -18,7 +18,6 @@
 //#import "EmptyAccount.h"
 //#import "NoAccountsViewController.h"
 //#import "UIViewController+MJPopupViewController.h"
-#import "CustomIOS7AlertView.h"
 
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate>
 
@@ -36,94 +35,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- //   [self validateUser];
     
     
-   //UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
-  // UIViewController *noAccount = [storyboard instantiateViewControllerWithIdentifier:@"NoAccountID"];
-   
+  //  UIView *fixItView = [[UIView alloc] init];
+  //  fixItView = CGRectMake(0, 0, 320, 20);
+   // fixItView = [UIColor colorWithRed:0.973 green:0.973 blue:0.973 alpha:1]; //change this to match your navigation bar
+   // [self.view addSubview:fixItView];
     
-    //EmptyAccount *emptyAccount = [[EmptyAccount alloc] initWithNibName:@"EmptyAccount" bundle:nil];
-    
-    
-   //[self presentPopupViewController:emptyAccount animationType:MJPopupViewAnimationFade];
-    
-    
-    //CusAlertView *alert = [[CusAlertView alloc] initWithFrame:CGRectMake(20, 100, 280, 100)];
-    //[self.view addSubview:alert];
-    
+ 
     [self.fetchResultsController performFetch:nil];
     
     
   
-   // [GlobalPopupAlert show:@"My Message" andFadeOutAfter:5];
-   
-    // A simple button to launch the demo
- /*
-    UIButton *launchDialog = [UIButton buttonWithType:UIButtonTypeCustom];
-    [launchDialog setFrame:CGRectMake(10, 30, self.view.bounds.size.width-20, 50)];
-    [launchDialog addTarget:self action:@selector(launchDialog:) forControlEvents:UIControlEventTouchDown];
-    [launchDialog setTitle:@"Launch Dialog" forState:UIControlStateNormal];
-    [launchDialog setBackgroundColor:[UIColor whiteColor]];
-    [launchDialog setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [launchDialog.layer setBorderWidth:0];
-    [launchDialog.layer setCornerRadius:5];
-    [self.view addSubview:launchDialog];
-*/
-  //  [self showEmptyAccount];
     
-}
--(void) showEmptyAccount//- (IBAction)launchDialog:(id)sender
-{
-    // Here we need to pass a full frame
-    CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
-    
-    // Add some custom content to the alert view
-    [alertView setContainerView:[self createDemoView]];
-    
-    // Modify the parameters
-    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Close1", @"Close2", @"Close3", nil]];
-    [alertView setDelegate:self];
-    
-    // You may use a Block, rather than a delegate.
-    [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
-        NSLog(@"Block: Button at position %d is clicked on alertView %ld.", buttonIndex, (long)[alertView tag]);
-        [alertView close];
-    }];
-    
-    [alertView setUseMotionEffects:true];
-    
-    // And launch the dialog
-    [alertView show];
-}
-
-- (void)customIOS7dialogButtonTouchUpInside: (CustomIOS7AlertView *)alertView clickedButtonAtIndex: (NSInteger)buttonIndex
-{
-    NSLog(@"Delegate: Button at position %ld is clicked on alertView %ld.", (long)buttonIndex, (long)[alertView tag]);
-    [alertView close];
-}
-
-- (UIView *)createDemoView
-{
-    UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
-    [imageView setImage:[UIImage imageNamed:@"icn_picture"]];
-    [demoView addSubview:imageView];
-    
-    return demoView;
 }
 
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    
+    
     [self.navigationController.navigationBar setHidden:NO];
     [self.navigationItem setHidesBackButton:NO animated:YES];
-   // [self validateUser];
-    //[GlobalPopupAlert show:@"My Message" andFadeOutAfter:5];
-    
-    
+    [self.navigationController setToolbarHidden:YES];
+  
 }
 
 #pragma mark - Navigation
@@ -252,6 +188,7 @@
     NSLog(@"Account CELL: %@",entry);
     
     [cell configureCellForEntry:entry];
+    [cell setBackgroundColor:[UIColor whiteColor]];
     return cell;
 }
 
