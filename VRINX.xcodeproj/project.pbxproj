@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
-		86799860191A897D0070DFFF /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679985B191A897D0070DFFF /* RECommonFunctions.m */; };
-		86799861191A897D0070DFFF /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679985D191A897D0070DFFF /* RESideMenu.m */; };
-		86799862191A897D0070DFFF /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679985F191A897D0070DFFF /* UIViewController+RESideMenu.m */; };
-		86799864191A89BE0070DFFF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86799863191A89BE0070DFFF /* Parse.framework */; };
-		8679986D191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799866191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.m */; };
-		8679986E191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799868191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m */; };
-		8679986F191A89E40070DFFF /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679986A191A89E40070DFFF /* TPKeyboardAvoidingTableView.m */; };
-		86799870191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679986C191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
 		86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799885191AA1DA0070DFFF /* CusAlertView.m */; };
@@ -33,6 +25,11 @@
 		867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CB192AB1680070DFFF /* PSCropToolView.m */; };
 		867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CF192AB4A00070DFFF /* CroperViewController.m */; };
 		867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */ = {isa = PBXBuildFile; fileRef = 867998D1192AD4BB0070DFFF /* dyn_popup_view */; };
+		AA3F0E65192BCBF50042186D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3F0E64192BCBF50042186D /* Parse.framework */; };
+		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
+		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
+		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
+		AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E71192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522681916E98E005D5950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522671916E98E005D5950 /* CoreGraphics.framework */; };
 		AA55226A1916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -91,21 +88,6 @@
 /* Begin PBXFileReference section */
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
-		8679985A191A897D0070DFFF /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECommonFunctions.h; path = /Development/remote/vrinx/VRINX/RECommonFunctions.h; sourceTree = "<absolute>"; };
-		8679985B191A897D0070DFFF /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECommonFunctions.m; path = /Development/remote/vrinx/VRINX/RECommonFunctions.m; sourceTree = "<absolute>"; };
-		8679985C191A897D0070DFFF /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESideMenu.h; path = /Development/remote/vrinx/VRINX/RESideMenu.h; sourceTree = "<absolute>"; };
-		8679985D191A897D0070DFFF /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESideMenu.m; path = /Development/remote/vrinx/VRINX/RESideMenu.m; sourceTree = "<absolute>"; };
-		8679985E191A897D0070DFFF /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RESideMenu.h"; path = "/Development/remote/vrinx/VRINX/UIViewController+RESideMenu.h"; sourceTree = "<absolute>"; };
-		8679985F191A897D0070DFFF /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RESideMenu.m"; path = "/Development/remote/vrinx/VRINX/UIViewController+RESideMenu.m"; sourceTree = "<absolute>"; };
-		86799863191A89BE0070DFFF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../iosLibs/Parse.framework; sourceTree = "<group>"; };
-		86799865191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
-		86799866191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
-		86799867191A89E40070DFFF /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		86799868191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		86799869191A89E40070DFFF /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		8679986A191A89E40070DFFF /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		8679986B191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
-		8679986C191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		86799875191A94F50070DFFF /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
@@ -139,6 +121,15 @@
 		867998CE192AB4A00070DFFF /* CroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroperViewController.h; sourceTree = "<group>"; };
 		867998CF192AB4A00070DFFF /* CroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroperViewController.m; sourceTree = "<group>"; };
 		867998D1192AD4BB0070DFFF /* dyn_popup_view */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dyn_popup_view; sourceTree = "<group>"; };
+		AA3F0E64192BCBF50042186D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Parse.framework; sourceTree = "<group>"; };
+		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		AA3F0E6B192BD1280042186D /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		AA3F0E6D192BD1860042186D /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		AA3F0E70192BD2DE0042186D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		AA3F0E71192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		AA5522621916E98E005D5950 /* VRINX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRINX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522651916E98E005D5950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA5522671916E98E005D5950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -211,7 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86799864191A89BE0070DFFF /* Parse.framework in Frameworks */,
+				AA3F0E65192BCBF50042186D /* Parse.framework in Frameworks */,
 				AA5522B11916EA95005D5950 /* SystemConfiguration.framework in Frameworks */,
 				AA5522AF1916EA8A005D5950 /* StoreKit.framework in Frameworks */,
 				AA5522AD1916EA2F005D5950 /* Security.framework in Frameworks */,
@@ -294,6 +285,19 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		AA3F0E66192BD08C0042186D /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AA3F0E67192BD0D10042186D /* RECommonFunctions.h */,
+				AA3F0E68192BD0D10042186D /* RECommonFunctions.m */,
+				AA3F0E6A192BD1280042186D /* RESideMenu.h */,
+				AA3F0E6B192BD1280042186D /* RESideMenu.m */,
+				AA3F0E6D192BD1860042186D /* UIViewController+RESideMenu.h */,
+				AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */,
+			);
+			name = RESideMenu;
+			sourceTree = "<group>";
+		};
 		AA5522591916E98E005D5950 = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +322,7 @@
 		AA5522641916E98E005D5950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86799863191A89BE0070DFFF /* Parse.framework */,
+				AA3F0E64192BCBF50042186D /* Parse.framework */,
 				AA5522B01916EA95005D5950 /* SystemConfiguration.framework */,
 				AA5522AE1916EA8A005D5950 /* StoreKit.framework */,
 				AA5522AC1916EA2F005D5950 /* Security.framework */,
@@ -391,42 +395,22 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				AA3F0E66192BD08C0042186D /* RESideMenu */,
 				867998C9192AB12B0070DFFF /* PSCropToolComponent */,
 				86799887191AA4EC0070DFFF /* popups */,
 				86799871191A94830070DFFF /* UIViewExtended */,
 				AAC2051D192499DE00B2744C /* RMDateSelectionViewController */,
 				AA5522E2191748AA005D5950 /* UIImageExtended */,
 				AA5522C11916EC45005D5950 /* KPKeyboardScroll */,
-				AA5522B51916EB68005D5950 /* RESideMenu */,
 			);
 			name = ExternalClasses;
-			sourceTree = "<group>";
-		};
-		AA5522B51916EB68005D5950 /* RESideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				8679985A191A897D0070DFFF /* RECommonFunctions.h */,
-				8679985B191A897D0070DFFF /* RECommonFunctions.m */,
-				8679985C191A897D0070DFFF /* RESideMenu.h */,
-				8679985D191A897D0070DFFF /* RESideMenu.m */,
-				8679985E191A897D0070DFFF /* UIViewController+RESideMenu.h */,
-				8679985F191A897D0070DFFF /* UIViewController+RESideMenu.m */,
-			);
-			name = RESideMenu;
-			path = "../../../../Treehouse/RESideMenu-master/RESideMenu";
 			sourceTree = "<group>";
 		};
 		AA5522C11916EC45005D5950 /* KPKeyboardScroll */ = {
 			isa = PBXGroup;
 			children = (
-				86799865191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.h */,
-				86799866191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.m */,
-				86799867191A89E40070DFFF /* TPKeyboardAvoidingScrollView.h */,
-				86799868191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m */,
-				86799869191A89E40070DFFF /* TPKeyboardAvoidingTableView.h */,
-				8679986A191A89E40070DFFF /* TPKeyboardAvoidingTableView.m */,
-				8679986B191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
-				8679986C191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				AA3F0E70192BD2DE0042186D /* TPKeyboardAvoidingScrollView.h */,
+				AA3F0E71192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m */,
 			);
 			name = KPKeyboardScroll;
 			sourceTree = "<group>";
@@ -656,13 +640,14 @@
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
-				8679986D191A89E40070DFFF /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
+				AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
@@ -670,18 +655,16 @@
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998B11929BC860070DFFF /* EntityAccount.m in Sources */,
-				8679986F191A89E40070DFFF /* TPKeyboardAvoidingTableView.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
-				86799860191A897D0070DFFF /* RECommonFunctions.m in Sources */,
-				86799861191A897D0070DFFF /* RESideMenu.m in Sources */,
 				867998B41929BC870070DFFF /* EntityProduct.m in Sources */,
-				8679986E191A89E40070DFFF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
+				AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */,
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
 				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
@@ -690,8 +673,6 @@
 				867998B71929BC870070DFFF /* EntityOrder.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
 				867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */,
-				86799870191A89E40070DFFF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				86799862191A897D0070DFFF /* UIViewController+RESideMenu.m in Sources */,
 				8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */,
 				AAC2051C192496A900B2744C /* OrderMasterViewController.m in Sources */,
 			);
