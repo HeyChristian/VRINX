@@ -22,9 +22,16 @@
         
       
         
+        
+        
         UIImage *logo = [UIImage imageWithData:account.logo];
-        CGRect rect = CGRectMake(-5,0,320,100);
-        UIGraphicsBeginImageContext( rect.size );
+        
+       // CGRect rect = CGRectMake(-5,0,320,90);
+        
+        
+       // logo = [UIImage resizeToSize:logo andSize:logo.size thenCropWithRect:rect];
+       /*
+       UIGraphicsBeginImageContext( rect.size );
         [logo drawInRect:rect];
         UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -37,11 +44,19 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextClipToMask(context, bounds, [newImage CGImage]);
         CGContextFillRect(context, bounds);
-        
-        
+      
         
         //CGSize size = CGSizeMake(320, 120);
         //self.logoView.image = [UIImage imageWithColor:logo andColor:[UIColor whiteColor] andSize:size];
+       
+        */
+        
+        //double colorMasking[6] = {5.0, 1.0, 0.0, 0.0, 1.0, 1.0};
+        //logo = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(logo.CGImage,colorMasking)];
+      
+        CGSize size= CGSizeMake(320,100);
+        logo = [UIImage imageWithImage:logo scaledToSize:size];
+        
         self.logoView.image = logo;
         
         self.accountName.text = nil;

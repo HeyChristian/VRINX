@@ -15,11 +15,13 @@
 #import "AccountCell.h"
 #import "EntityAccount.h"
 #import "AccountDetail.h"
-//#import "EmptyAccount.h"
-//#import "NoAccountsViewController.h"
-//#import "UIViewController+MJPopupViewController.h"
 
-@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate>
+#import "BEMSimpleLineGraphView.h"
+
+
+@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate>{
+    int totalNumber;
+}
 
 @property(nonatomic,strong) NSFetchedResultsController *fetchResultsController;
 
@@ -29,7 +31,7 @@
 @implementation AccountsTableViewController
 
 
-
+BEMSimpleLineGraphView *myGraph;
 
 
 - (void)viewDidLoad
@@ -42,7 +44,18 @@
    // fixItView = [UIColor colorWithRed:0.973 green:0.973 blue:0.973 alpha:1]; //change this to match your navigation bar
    // [self.view addSubview:fixItView];
     
- 
+    
+    
+    //Display account sales graphics
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HeaderCell"];
+	[self configureBannerWithImage:[UIImage imageNamed:@"headerback"] height:190];
+	[self initGraph];
+  
+    
+    
+    
+    
+    
     [self.fetchResultsController performFetch:nil];
     
     
@@ -237,5 +250,129 @@
     [view addSubview:imageView];
     
     return view;
+}
+
+
+
+
+
+#pragma mark - SimpleLineGraph
+
+-(void) initGraph{
+    
+    self.ArrayOfValues = [[NSMutableArray alloc] init];
+    self.ArrayOfDates = [[NSMutableArray alloc] init];
+    
+    totalNumber = 0;
+    
+    self.ArrayOfDates = [NSMutableArray arrayWithObjects: @"January",@"Febrary",@"March",@"Abril",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"Dicember",nil]; // Dates for the X-Axis of the graph
+    
+    for (int i = 0; i < 9; i++) {
+        [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
+       // [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+        
+        totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+    }
+    
+    myGraph= [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    myGraph.delegate = self;
+    
+    
+    
+    UIColor *color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
+    
+  //  myGraph.colorTop = [UIColor whiteColor];
+    myGraph.colorBottom = color;
+    //myGraph.backgroundColor = color;
+    
+    myGraph.alpha=1;
+    // Customization of the graph
+    myGraph.enableTouchReport = YES;
+    myGraph.colorTop = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+   //  myGraph.colorBottom = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0]; // Leaving this not-set on iOS 7 will default to your window's tintColor
+    
+    myGraph.colorLine = [UIColor whiteColor];
+    myGraph.colorXaxisLabel = [UIColor whiteColor];
+    myGraph.widthLine = 3.0;
+    myGraph.enableTouchReport = YES;
+    myGraph.enablePopUpReport = YES;
+    myGraph.enableBezierCurve = YES;
+    
+    [self.contentView addSubview:myGraph];
+    
+}
+
+
+#pragma mark - SimpleLineGraph Data Source
+
+- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
+    return (int)[self.ArrayOfValues count];
+}
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+    return [[self.ArrayOfValues objectAtIndex:index] floatValue];
+}
+
+#pragma mark - SimpleLineGraph Delegate
+
+- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
+    //return [self.ArrayOfDates count];
+    return 1;
+}
+
+- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+    return [self.ArrayOfDates objectAtIndex:index];
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
+  //  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.ArrayOfValues objectAtIndex:index]];
+   // self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.ArrayOfDates objectAtIndex:index]];
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        //self.labelValues.alpha = 0.0;
+        //self.labelDates.alpha = 0.0;
+    } completion:^(BOOL finished){
+        
+        //self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
+        //self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
+        
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+          //  self.labelValues.alpha = 1.0;
+           // self.labelDates.alpha = 1.0;
+        } completion:nil];
+    }];
+}
+
+- (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
+   // self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
+  //  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
+}
+
+
+- (void)refresh{
+    [self.ArrayOfValues removeAllObjects];
+    [self.ArrayOfDates removeAllObjects];
+    
+    for (int i = 0; i < 14; i++) {
+        [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
+        [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+        
+        totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+    }
+    
+    
+    
+    UIColor *color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
+    
+    myGraph.colorTop = color;
+    myGraph.colorBottom = color;
+    myGraph.backgroundColor = color;
+    self.view.tintColor = color;
+    //self.labelValues.textColor = color;
+    self.navigationController.navigationBar.tintColor = color;
+    
+    [myGraph reloadGraph];
 }
 @end

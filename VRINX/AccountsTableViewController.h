@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JAQBlurryTableViewController.h"
 
-@interface AccountsTableViewController : UITableViewController
+@interface AccountsTableViewController : JAQBlurryTableViewController
 - (IBAction)SlideLeftMenu:(id)sender;
 
+
+
+
+@property (strong, nonatomic) NSMutableArray *ArrayOfValues;
+@property (strong, nonatomic) NSMutableArray *ArrayOfDates;
 
 @end
