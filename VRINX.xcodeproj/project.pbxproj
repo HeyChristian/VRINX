@@ -26,6 +26,13 @@
 		867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */ = {isa = PBXBuildFile; fileRef = 867998D1192AD4BB0070DFFF /* dyn_popup_view */; };
 		867998D6192C3FEA0070DFFF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867998D5192C3FEA0070DFFF /* Parse.framework */; };
 		867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998D8192C4CF10070DFFF /* EntityAccount.m */; };
+		867998E7192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998DC192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m */; };
+		867998E8192D27480070DFFF /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998DE192D27480070DFFF /* SWCellScrollView.m */; };
+		867998E9192D27480070DFFF /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E0192D27480070DFFF /* SWLongPressGestureRecognizer.m */; };
+		867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E2192D27480070DFFF /* SWTableViewCell.m */; };
+		867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E4192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m */; };
+		867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E6192D27480070DFFF /* SWUtilityButtonView.m */; };
+		867998F0192D33AC0070DFFF /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998EF192D33AC0070DFFF /* Tools.m */; };
 		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
@@ -128,6 +135,20 @@
 		867998D5192C3FEA0070DFFF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../iosLibs/Parse.framework; sourceTree = "<group>"; };
 		867998D7192C4CF10070DFFF /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
 		867998D8192C4CF10070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
+		867998DB192D27480070DFFF /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		867998DC192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		867998DD192D27480070DFFF /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		867998DE192D27480070DFFF /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		867998DF192D27480070DFFF /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		867998E0192D27480070DFFF /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		867998E1192D27480070DFFF /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		867998E2192D27480070DFFF /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		867998E3192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		867998E4192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		867998E5192D27480070DFFF /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		867998E6192D27480070DFFF /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		867998EE192D33AC0070DFFF /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		867998EF192D33AC0070DFFF /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -303,6 +324,34 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		867998DA192D271B0070DFFF /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				867998DB192D27480070DFFF /* NSMutableArray+SWUtilityButtons.h */,
+				867998DC192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m */,
+				867998DD192D27480070DFFF /* SWCellScrollView.h */,
+				867998DE192D27480070DFFF /* SWCellScrollView.m */,
+				867998DF192D27480070DFFF /* SWLongPressGestureRecognizer.h */,
+				867998E0192D27480070DFFF /* SWLongPressGestureRecognizer.m */,
+				867998E1192D27480070DFFF /* SWTableViewCell.h */,
+				867998E2192D27480070DFFF /* SWTableViewCell.m */,
+				867998E3192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.h */,
+				867998E4192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m */,
+				867998E5192D27480070DFFF /* SWUtilityButtonView.h */,
+				867998E6192D27480070DFFF /* SWUtilityButtonView.m */,
+			);
+			name = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		867998ED192D338B0070DFFF /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				867998EE192D33AC0070DFFF /* Tools.h */,
+				867998EF192D33AC0070DFFF /* Tools.m */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		AA3F0E66192BD08C0042186D /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +448,7 @@
 		AA55226D1916E98E005D5950 /* VRINX */ = {
 			isa = PBXGroup;
 			children = (
+				867998ED192D338B0070DFFF /* Misc */,
 				AA5522E919188529005D5950 /* Model */,
 				AA5522C51916EC7A005D5950 /* ViewControllers */,
 				AA5522B41916EAC6005D5950 /* ExternalClasses */,
@@ -447,6 +497,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				867998DA192D271B0070DFFF /* SWTableViewCell */,
 				AA3F0E94192C04FF0042186D /* JAQBlurry */,
 				AA3F0E80192BFD7C0042186D /* Charts */,
 				AA3F0E66192BD08C0042186D /* RESideMenu */,
@@ -691,8 +742,11 @@
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
 				867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */,
 				AA3F0E8B192BFDC20042186D /* BEMAnimations.m in Sources */,
+				867998F0192D33AC0070DFFF /* Tools.m in Sources */,
 				AA3F0E97192C05450042186D /* JAQBlurryTableViewController.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
+				867998E8192D27480070DFFF /* SWCellScrollView.m in Sources */,
+				867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				AA3F0E8C192BFDC20042186D /* BEMCircle.m in Sources */,
 				AA3F0E8D192BFDC20042186D /* BEMLine.m in Sources */,
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
@@ -713,12 +767,15 @@
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
+				867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
+				867998E7192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
 				867998B41929BC870070DFFF /* EntityProduct.m in Sources */,
+				867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
@@ -729,6 +786,7 @@
 				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */,
+				867998E9192D27480070DFFF /* SWLongPressGestureRecognizer.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				867998B71929BC870070DFFF /* EntityOrder.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,

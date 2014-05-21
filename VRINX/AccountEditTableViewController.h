@@ -34,5 +34,6 @@
 
 - (IBAction)save:(id)sender;
 - (IBAction)changeLogo:(id)sender;
+- (IBAction)DeleteAccount:(id)sender;
 
 @end

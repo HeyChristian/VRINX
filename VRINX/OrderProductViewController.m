@@ -32,6 +32,11 @@
     [super viewDidLoad];
     
     self.selectedSource = ALL;
+  
+    
+}
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
     
     self.products = [[NSArray alloc] init];
@@ -41,11 +46,6 @@
     
     self.orderProducts = [[NSMutableArray alloc] init];
     
-    
-    
-}
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
     
     
     

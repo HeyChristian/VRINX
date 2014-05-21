@@ -33,6 +33,10 @@
     
     [self.navigationController setTitle:@"resize account logo"];
     
+    
+   // if (!CGSizeEqualToSize(CGSizeZero, self.croppingSize)) {
+    //    self.croppingSize = CGSizeMake(640,240);
+   // }
    
       // self.navigationController.rightBarButtonItem = btnSave;
     
@@ -57,7 +61,7 @@
     //crop tool initialization
     self.croppingTool = [[PSCropToolView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
     [self.croppingTool imageToCrop:[self sourceImage]];
-    self.croppingTool.outputSize = CGSizeMake(640, 240);
+    self.croppingTool.outputSize = self.croppingSize;
     self.croppingTool.cropAreaFillFactor = 1;
   //  self.croppingTool.requiredFillFactor = 1;
     

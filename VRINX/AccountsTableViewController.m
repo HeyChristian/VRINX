@@ -15,12 +15,16 @@
 #import "AccountCell.h"
 #import "EntityAccount.h"
 #import "AccountDetail.h"
+#import "ProductTableViewController.h"
+#import "OrderViewController.h"
 
 #import "BEMSimpleLineGraphView.h"
+#import "SWTableViewCell.h"
 
-
-@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate>{
+@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate>{
     int totalNumber;
+    NSIndexPath *selectedCellIndexPath;
+
 }
 
 @property(nonatomic,strong) NSFetchedResultsController *fetchResultsController;
@@ -84,14 +88,21 @@ BEMSimpleLineGraphView *myGraph;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if([segue.identifier isEqualToString:@"Detail"]){
-        UITableViewCell *cell = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
         AccountDetail *accountDetail = (AccountDetail *) segue.destinationViewController;
-        accountDetail.account = [self.fetchResultsController objectAtIndexPath:indexPath];
+        accountDetail.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
     
+    }else if([segue.identifier isEqualToString:@"quickAddProduct"]){
+        ProductTableViewController *productview = (ProductTableViewController *) segue.destinationViewController;
+        productview.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
+        
+    }else if([segue.identifier isEqualToString:@"quickAddOrder"]){
+        OrderViewController *orderview = (OrderViewController *) segue.destinationViewController;
+        orderview.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
+        
     }
+    //quickAddProduct
     
+    //quickAddOrder
 }
 
 #pragma mark - Core Data Function
@@ -153,10 +164,8 @@ BEMSimpleLineGraphView *myGraph;
     
    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
    NSFetchRequest *fetchRequest =[self entryListFetchRequest];
-    
-  //  _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:@"name" cacheName:nil];
-    
    
+    
     _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
     
     _fetchResultsController.delegate = self;
@@ -197,13 +206,15 @@ BEMSimpleLineGraphView *myGraph;
     
     EntityAccount *entry = [self.fetchResultsController objectAtIndexPath:indexPath];
     
-    NSLog(@"Account CELL: %@",entry);
+    //NSLog(@"Account CELL: %@",entry);
+    cell.delegate=self;
     
     [cell configureCellForEntry:entry];
     [cell setBackgroundColor:[UIColor whiteColor]];
     return cell;
 }
 
+/*
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleDelete;
 }
@@ -216,7 +227,7 @@ BEMSimpleLineGraphView *myGraph;
     [coreDataStack saveContext];
     
     
-}
+}*/
 
 
 - (IBAction)SlideLeftMenu:(id)sender {
@@ -284,7 +295,7 @@ BEMSimpleLineGraphView *myGraph;
     myGraph.colorBottom = color;
     //myGraph.backgroundColor = color;
     
-    myGraph.alpha=1;
+    //myGraph.alpha=1;
     // Customization of the graph
     myGraph.enableTouchReport = YES;
     myGraph.colorTop = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
@@ -292,7 +303,7 @@ BEMSimpleLineGraphView *myGraph;
     
     myGraph.colorLine = [UIColor whiteColor];
     myGraph.colorXaxisLabel = [UIColor whiteColor];
-    myGraph.widthLine = 3.0;
+    myGraph.widthLine = 2.0;
     myGraph.enableTouchReport = YES;
     myGraph.enablePopUpReport = YES;
     myGraph.enableBezierCurve = YES;
@@ -316,7 +327,7 @@ BEMSimpleLineGraphView *myGraph;
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
     //return [self.ArrayOfDates count];
-    return 1;
+    return 2;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
@@ -374,4 +385,69 @@ BEMSimpleLineGraphView *myGraph;
     
     [myGraph reloadGraph];
 }
+
+
+#pragma mark - SWTableViewDelegate
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+           // NSLog(@"check button was pressed");
+            selectedCellIndexPath = [self.tableView indexPathForCell:cell];
+            [self performSegueWithIdentifier:@"quickAddOrder" sender:self];
+            
+            break;
+        case 1:
+          //  NSLog(@"clock button was pressed");
+            selectedCellIndexPath = [self.tableView indexPathForCell:cell];
+            [self performSegueWithIdentifier:@"quickAddProduct" sender:self];
+            
+            break;
+        default:
+            break;
+    }
+    
+    //quickAddProduct
+    
+    //quickAddOrder
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:{
+          //  NSLog(@"More button was pressed");
+            
+            
+            
+           // NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            
+          //  AccountDetail *accountDetail = (AccountDetail *) segue.destinationViewController;
+          //  accountDetail.account = [self.fetchResultsController objectAtIndexPath:indexPath];
+            
+             selectedCellIndexPath = [self.tableView indexPathForCell:cell];
+
+            [self performSegueWithIdentifier:@"Detail" sender:self];
+            break;
+        }
+        case 1:
+        {
+            
+            
+            NSLog(@"Delete button was pressed");
+            break;
+            
+            // Delete button was pressed
+            //  NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
+            
+            // [_testArray removeObjectAtIndex:cellIndexPath.row];
+            // [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath]
+            //                     withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+
 @end

@@ -12,8 +12,9 @@
 #import "EntityAccount.h"
 #import "CoreDataStack.h"
 #import "AppDelegate.h"
+#import "CroperViewController.h"
 
-@interface ProductDetailTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ProductDetailTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate>
 
 @property (nonatomic,strong) UIImage *pickedImage;
 
@@ -156,28 +157,32 @@
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     self.pickedImage =  image;
     
+    CroperViewController *cropper = [[CroperViewController alloc]init];
+    cropper.delegate=self;
+    cropper.sourceImage = [self pickedImage];
+    cropper.croppingSize =  CGSizeMake(640,640);
+    [self.navigationController pushViewController:cropper animated:YES];
     
-    
-   // UIImageView * ac= [[UIImageView alloc] init];
-   // ac.backgroundColor = [UIColor colorWithPatternImage:image];
-   // self.itemPhotoCell.backgroundView =ac;
-   // self.itemPhotoCell.backgroundColor = [UIColor clearColor];
-    
-   /*
-    UIImage *backgroundImage =  image;//[UIImage imageNamed:@"dashboardCellEffect.png"];
-    UIView *backgroundCellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 44)];
-    // redraw the image to fit cell's size
-    UIGraphicsBeginImageContextWithOptions(backgroundCellView.frame.size, NO, 0.f);
-    [backgroundImage drawInRect:CGRectMake(0.f, 0.f, backgroundCellView.frame.size.width, backgroundCellView.frame.size.height)];
-    UIImage *refinedImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    [backgroundCellView setBackgroundColor:[UIColor colorWithPatternImage:refinedImage]];
-    self.itemPhotoCell.backgroundView = backgroundCellView;
-    */
+
     
     [self setSquaredConernersToImageView];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void) setCroppedImage:(UIImage *)image{
+    
+    CGRect rect = CGRectMake(0,0,200,200);
+    UIGraphicsBeginImageContext( rect.size );
+    [image drawInRect:rect];
+    UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImagePNGRepresentation(picture1);
+    UIImage *newImage=[UIImage imageWithData:imageData];
+    
+    
+    //CGSize size = CGSizeMake(320, 120);
+    self.pickedImage =newImage; //[UIImage imageWithColor:image andColor:[UIColor whiteColor] andSize:size];
+    
 }
 
 -(void) promptForSource{

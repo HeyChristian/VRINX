@@ -73,10 +73,10 @@
     self.itemLogo.layer.cornerRadius = self.itemLogo.frame.size.width / 2;
     self.itemLogo.clipsToBounds = YES;
     
-    self.itemLogo.layer.cornerRadius = 0.0f;
+    self.itemLogo.layer.cornerRadius = 5.0f;
     
-    self.itemLogo.layer.borderWidth = 1.0f;
-    self.itemLogo.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.itemLogo.layer.borderWidth = 2.0f;
+    self.itemLogo.layer.borderColor = [UIColor lightTextColor].CGColor;
 }
 
 

@@ -17,11 +17,11 @@
 
 @property (nonatomic, assign) id<CropperDelegate>delegate; //create a delegate
 
-
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 - (IBAction)cropAction:(id)sender;
 - (IBAction)retakeAction:(id)sender;
 
 @property (strong,nonatomic) UIImage *sourceImage;
+@property (nonatomic,assign) CGSize croppingSize;
 
 @end

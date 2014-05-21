@@ -29,6 +29,12 @@
     [super viewDidLoad];
     
     
+    
+}
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    
     if(self.account){
         self.accountNameLabel.text = self.account.name;
         self.shortDescriptionLabel.text= self.account.shortDesc;
@@ -36,10 +42,7 @@
         self.earningsLabel.text = [self formatCurrency:self.account.earnings];
         self.logoView.image = [UIImage imageWithData:self.account.logo];;
     }
-}
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-
+    
     self.products = [[NSArray alloc] init];
     self.products = [self.account.products allObjects];
     self.productCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.products.count];
@@ -50,6 +53,7 @@
     
     
     
+    [self.tableView reloadData];
     [self.tableView reloadData];
 }
 #pragma mark - Navigation

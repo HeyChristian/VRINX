@@ -9,9 +9,14 @@
 #import "AccountEditTableViewController.h"
 #import "CoreDataStack.h"
 #import "EntityAccount.h"
+#import "AccountDetail.h"
 #import "CroperViewController.h"
 
-@interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate>
+
+@interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate,UITextFieldDelegate>{
+    
+    int numberOfSection;
+}
 
 @property (nonatomic,strong) UIImage *pickedImage;
 
@@ -24,7 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-      [self.tableView reloadData];
+    
+    self.accountNameField.delegate=self;
+    self.descriptionField.delegate=self;
+    self.earningPercentField.delegate=self;
+    self.salesTaxField.delegate=self;
+    [self.view endEditing:YES];
+    
     
     if(self.account != nil){
         // edit mode
@@ -36,20 +47,27 @@
         self.pickedImage = [UIImage imageWithData:self.account.logo];
         self.logoView.image = self.pickedImage;
         
-        self.showLogoSegment.selectedSegmentIndex = [self.account.showLogo boolValue];
-        self.showAccountNameSegment.selectedSegmentIndex= [self.account.showName boolValue];
-        self.showDescSegment.selectedSegmentIndex=[self.account.showDescription boolValue];
+        self.showLogoSegment.selectedSegmentIndex = [self.account.showLogo intValue];
+        self.showAccountNameSegment.selectedSegmentIndex= [self.account.showName intValue];
+        self.showDescSegment.selectedSegmentIndex=[self.account.showDescription intValue];
         
-        
+        numberOfSection=5;
+       
         
     }else{
+        
+        
+        self.showLogoSegment.selected = YES;
+        self.showAccountNameSegment.selectedSegmentIndex= YES;
+        self.showDescSegment.selectedSegmentIndex=YES;
+        
         
         self.showLogoSegment.selectedSegmentIndex = 1;
         self.showAccountNameSegment.selectedSegmentIndex= 1;
         self.showDescSegment.selectedSegmentIndex=1;
         
         
-        
+        numberOfSection=4;
     }
     
 }
@@ -60,18 +78,24 @@
 }
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-   /*
-    if([segue.identifier isEqualToString:@"cropper"]){
+   
+    if([segue.identifier isEqualToString:@"Detail"]){
         
-       CroperViewController *cropper = [[CroperViewController alloc]  init];
-       cropper = (CroperViewController *) segue.destinationViewController;
-       cropper.sourceImage = [self pickedImage];
+       AccountDetail *detail = [[AccountDetail alloc]  init];
+       detail = (AccountDetail *) segue.destinationViewController;
+       detail.account =  self.account;
+        
     
-    }*/
+    }
     
     
 }
+// Customize the number of sections in the table view.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
+    return numberOfSection;
+    
+}
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     
@@ -82,6 +106,7 @@
     CroperViewController *cropper = [[CroperViewController alloc]init];
     cropper.delegate=self;
     cropper.sourceImage = [self pickedImage];
+    cropper.croppingSize =  CGSizeMake(640,240);
     [self.navigationController pushViewController:cropper animated:YES];
     
    
@@ -130,14 +155,24 @@
     account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     
     
-    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selected];
-    
-    self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selected];
-    self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selected];
-    
+    account.showLogo = [NSNumber numberWithInteger:self.showLogoSegment.selectedSegmentIndex];
+    account.showName = [NSNumber numberWithInteger:self.showAccountNameSegment.selectedSegmentIndex];
+    account.showDescription = [NSNumber numberWithInteger:self.showDescSegment.selectedSegmentIndex];
     
     
+
     [coreDataStack saveContext];
+    
+    
+}
+
+-(NSNumber *) getValue: (UISegmentedControl *)segment{
+    
+    if(segment.selectedSegmentIndex==0){
+        return [NSNumber numberWithInt:0];
+    }else{
+        return [NSNumber numberWithInt:1];
+    }
     
     
 }
@@ -151,7 +186,6 @@
     self.account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     
     self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selectedSegmentIndex];
-    
     self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selectedSegmentIndex];
     self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selectedSegmentIndex];
     
@@ -174,6 +208,8 @@
         [self createAccount];
     }
     
+    
+    //Reload Detail Screen
     [self dismissSelf];
     
     
@@ -189,6 +225,35 @@
         [self promptForPhotoRoll];
     }
     
+}
+
+- (IBAction)DeleteAccount:(id)sender {
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Warning"
+                          message:@"This action will delete all account data, including orders, products and statistics. \n\n Are you sure you take this action?"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"Yes, Im Sure", nil];
+    [alert show];
+    
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"0");
+    }
+    else if (buttonIndex == 1) {
+        NSLog(@"1");
+     
+        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+        [[coreDataStack  managedObjectContext] deleteObject:self.account];
+        [coreDataStack saveContext];
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 -(void) promptForSource{
     UIActionSheet *actionSheed = [[UIActionSheet alloc] initWithTitle:@"Image Source" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Camera",@"Photo Roll", nil];
@@ -233,5 +298,12 @@
         self.logoView.image = pickedImage;
     }
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 @end

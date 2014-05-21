@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
+
 
 @class EntityAccount;
-@interface AccountCell : UITableViewCell
+@interface AccountCell : SWTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
 @property (weak, nonatomic) IBOutlet UILabel *accountName;
