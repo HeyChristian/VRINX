@@ -18,5 +18,6 @@
 
 -(void)configureCellForEntry:(EntityAccount *)account;
 
+@property (weak, nonatomic) IBOutlet UIView *TitleView;
 
 @end

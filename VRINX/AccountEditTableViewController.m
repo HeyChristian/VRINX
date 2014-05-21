@@ -39,7 +39,14 @@
         self.showLogoSegment.selectedSegmentIndex = [self.account.showLogo boolValue];
         self.showAccountNameSegment.selectedSegmentIndex= [self.account.showName boolValue];
         self.showDescSegment.selectedSegmentIndex=[self.account.showDescription boolValue];
-        self.titleColorSegment.selectedSegmentIndex=[self.account.fontColorWhite boolValue];
+        
+        
+        
+    }else{
+        
+        self.showLogoSegment.selectedSegmentIndex = 1;
+        self.showAccountNameSegment.selectedSegmentIndex= 1;
+        self.showDescSegment.selectedSegmentIndex=1;
         
         
         
@@ -123,11 +130,10 @@
     account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     
     
-    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment];
+    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selected];
     
     self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selected];
     self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selected];
-    self.account.fontColorWhite =  self.titleColorSegment.selected == YES ? [NSNumber numberWithInt:0]:[NSNumber numberWithInt:1];
     
     
     
@@ -144,11 +150,12 @@
     self.account.earningPercent =[NSDecimalNumber decimalNumberWithString:self.earningPercentField.text];
     self.account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     
-    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment];
+    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selectedSegmentIndex];
     
-    self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selected];
-    self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selected];
-    self.account.fontColorWhite = ( self.titleColorSegment.selected == YES ? [NSNumber numberWithInt:0]:[NSNumber numberWithInt:1]);
+    self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selectedSegmentIndex];
+    self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selectedSegmentIndex];
+    
+    
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     [coreDataStack saveContext];

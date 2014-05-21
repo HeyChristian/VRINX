@@ -60,7 +60,7 @@ BEMSimpleLineGraphView *myGraph;
     [self.fetchResultsController performFetch:nil];
     
     
-  
+    
     
 }
 
@@ -73,7 +73,11 @@ BEMSimpleLineGraphView *myGraph;
     [self.navigationController.navigationBar setHidden:NO];
     [self.navigationItem setHidesBackButton:NO animated:YES];
     [self.navigationController setToolbarHidden:YES];
+    
+    
+    [self.fetchResultsController performFetch:nil];
     [self.tableView reloadData];
+    
 }
 
 #pragma mark - Navigation
@@ -82,12 +86,7 @@ BEMSimpleLineGraphView *myGraph;
     if([segue.identifier isEqualToString:@"Detail"]){
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-      //  UINavigationController *navigationController = segue.destinationViewController;
-       // AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) navigationController.topViewController;
-        
-        //AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
-        //editAccountVC.account = [self.fetchResultsController objectAtIndexPath:indexPath];
-        
+    
         AccountDetail *accountDetail = (AccountDetail *) segue.destinationViewController;
         accountDetail.account = [self.fetchResultsController objectAtIndexPath:indexPath];
     

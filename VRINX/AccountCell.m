@@ -15,96 +15,62 @@
 
 -(void)configureCellForEntry:(EntityAccount *)account{
     
-    NSLog(@" Account: %@",account);
+   // NSLog(@" Account: %@",account);
+    
+    //Check Options for Table Cell
+    //https://github.com/CEWendel/SWTableViewCell
+    
     
     
     if(account.logo){
-        
-      
-        
-        
-        
         UIImage *logo = [UIImage imageWithData:account.logo];
-        
-       // CGRect rect = CGRectMake(-5,0,320,90);
-        
-        
-       // logo = [UIImage resizeToSize:logo andSize:logo.size thenCropWithRect:rect];
-       /*
-       UIGraphicsBeginImageContext( rect.size );
-        [logo drawInRect:rect];
-        UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        NSData *imageData = UIImagePNGRepresentation(picture1);
-        UIImage *newImage=[UIImage imageWithData:imageData];
-        
-        CGRect bounds = [self bounds];
-        [[UIColor whiteColor] setFill];
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextClipToMask(context, bounds, [newImage CGImage]);
-        CGContextFillRect(context, bounds);
-      
-        
-        //CGSize size = CGSizeMake(320, 120);
-        //self.logoView.image = [UIImage imageWithColor:logo andColor:[UIColor whiteColor] andSize:size];
-       
-        */
-        
-        //double colorMasking[6] = {5.0, 1.0, 0.0, 0.0, 1.0, 1.0};
-        //logo = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(logo.CGImage,colorMasking)];
-      
+   
         CGSize size= CGSizeMake(320,100);
         logo = [UIImage imageWithImage:logo scaledToSize:size];
-        
-        if(account.showLogo){
+     
+        if([account.showLogo intValue]==1){
             self.logoView.image = logo;
-        }else{
-          //  self.logoView.image=nil;
-        }
-        
-        if(account.showName){
-            self.accountName.text = account.name;
-          //  self.accountName.tintColor = account.fontColorWhite ? [UIColor blackColor]:[UIColor whiteColor];
             
         }else{
-            self.accountName.text=nil;
+           self.logoView.image=nil;
         }
-        
-        if(account.showDescription){
-            self.accountDescription.text = account.shortDesc;
-         //   self.accountDescription.tintColor = account.fontColorWhite ? [UIColor blackColor]:[UIColor whiteColor];
-            
-        }else{
-            self.accountDescription.text=nil;
-        }
-        
-        
         
     }else{
+        self.logoView.image=nil;
         
-        
-        
-       // self.logoView.image=nil;
-        
-        if([account.showName boolValue]){
-            self.accountName.text = account.name;
-         //   self.accountName.tintColor = [account.fontColorWhite boolValue] ? [UIColor blackColor]:[UIColor whiteColor];
-            
-        }else{
-            self.accountName.text=nil;
-        }
-        
-        if([account.showDescription boolValue]){
-            self.accountDescription.text = account.shortDesc;
-          //  self.accountDescription.tintColor = [account.fontColorWhite boolValue] ? [UIColor blackColor]:[UIColor whiteColor];
-            
-        }else{
-            self.accountDescription.text=nil;
-        }
-    
-    
     }
+    bool showName=false;
+    bool showDesc=false;
+    
+    
+    if([account.showName intValue]==1 || account.showName == nil){
+        showName=true;
+        self.accountName.text = account.name;
+        
+    }else{
+        self.accountName.text=nil;
+    }
+    
+    if([account.showDescription intValue] ==1 || account.showDescription==nil ){
+        showDesc=true;
+        self.accountDescription.text = account.shortDesc;
+        
+    }else{
+        self.accountDescription.text=nil;
+    }
+    if(showName || showDesc){
+        self.TitleView.hidden=false;
+    }else{
+        self.TitleView.hidden=true;
+    }
+    
+    
+    if(showName || showDesc){
+        self.TitleView.hidden=false;
+    }else{
+        self.TitleView.hidden=true;
+    }
+    
     
 }
 
