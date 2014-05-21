@@ -3,11 +3,15 @@
     <entity name="Account" representedClassName="EntityAccount" syncable="YES">
         <attribute name="earningPercent" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="earnings" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fontColorWhite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="investment" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="logo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="missed" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showDescription" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="showLogo" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="showName" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="tax" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="orders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="accountOrders" inverseEntity="Order" syncable="YES"/>
@@ -39,7 +43,7 @@
         <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="products" inverseEntity="Account" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-506" positionY="-199" width="128" height="208"/>
+        <element name="Account" positionX="-506" positionY="-199" width="128" height="268"/>
         <element name="Order" positionX="-272" positionY="-297" width="128" height="208"/>
         <element name="OrderProduct" positionX="-92" positionY="27" width="128" height="73"/>
         <element name="Product" positionX="-290" positionY="254" width="128" height="133"/>

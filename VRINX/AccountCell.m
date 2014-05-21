@@ -57,13 +57,53 @@
         CGSize size= CGSizeMake(320,100);
         logo = [UIImage imageWithImage:logo scaledToSize:size];
         
-        self.logoView.image = logo;
+        if(account.showLogo){
+            self.logoView.image = logo;
+        }else{
+          //  self.logoView.image=nil;
+        }
         
-        self.accountName.text = nil;
+        if(account.showName){
+            self.accountName.text = account.name;
+          //  self.accountName.tintColor = account.fontColorWhite ? [UIColor blackColor]:[UIColor whiteColor];
+            
+        }else{
+            self.accountName.text=nil;
+        }
+        
+        if(account.showDescription){
+            self.accountDescription.text = account.shortDesc;
+         //   self.accountDescription.tintColor = account.fontColorWhite ? [UIColor blackColor]:[UIColor whiteColor];
+            
+        }else{
+            self.accountDescription.text=nil;
+        }
+        
+        
+        
     }else{
-        self.accountName.text = account.name;
         
-        //self.logoView.image = [UIImage imageNamed:@"icn_noimage"];
+        
+        
+       // self.logoView.image=nil;
+        
+        if([account.showName boolValue]){
+            self.accountName.text = account.name;
+         //   self.accountName.tintColor = [account.fontColorWhite boolValue] ? [UIColor blackColor]:[UIColor whiteColor];
+            
+        }else{
+            self.accountName.text=nil;
+        }
+        
+        if([account.showDescription boolValue]){
+            self.accountDescription.text = account.shortDesc;
+          //  self.accountDescription.tintColor = [account.fontColorWhite boolValue] ? [UIColor blackColor]:[UIColor whiteColor];
+            
+        }else{
+            self.accountDescription.text=nil;
+        }
+    
+    
     }
     
 }

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
 @property (weak, nonatomic) IBOutlet UILabel *accountName;
 
+@property (weak, nonatomic) IBOutlet UILabel *accountDescription;
 
 -(void)configureCellForEntry:(EntityAccount *)account;
 

@@ -25,7 +25,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *salesTaxField;
 
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *showLogoSegment;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *showAccountNameSegment;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *showDescSegment;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *titleColorSegment;
 
 
 

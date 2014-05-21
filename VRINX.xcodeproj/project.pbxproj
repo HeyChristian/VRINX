@@ -16,7 +16,6 @@
 		867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988F1927ADAF0070DFFF /* OrderProductViewController.m */; };
 		867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998951927CBC60070DFFF /* EmptyOrderProductCell.m */; };
 		867998A5192868660070DFFF /* OrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998A4192868660070DFFF /* OrderProductCell.m */; };
-		867998B11929BC860070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B01929BC860070DFFF /* EntityAccount.m */; };
 		867998B41929BC870070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B31929BC870070DFFF /* EntityProduct.m */; };
 		867998B71929BC870070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B61929BC870070DFFF /* EntityOrder.m */; };
 		867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B91929BC870070DFFF /* EntityOrderProduct.m */; };
@@ -25,7 +24,8 @@
 		867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CB192AB1680070DFFF /* PSCropToolView.m */; };
 		867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998CF192AB4A00070DFFF /* CroperViewController.m */; };
 		867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */ = {isa = PBXBuildFile; fileRef = 867998D1192AD4BB0070DFFF /* dyn_popup_view */; };
-		AA3F0E65192BCBF50042186D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3F0E64192BCBF50042186D /* Parse.framework */; };
+		867998D6192C3FEA0070DFFF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867998D5192C3FEA0070DFFF /* Parse.framework */; };
+		867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998D8192C4CF10070DFFF /* EntityAccount.m */; };
 		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
@@ -110,8 +110,6 @@
 		867998951927CBC60070DFFF /* EmptyOrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyOrderProductCell.m; sourceTree = "<group>"; };
 		867998A3192868660070DFFF /* OrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderProductCell.h; sourceTree = "<group>"; };
 		867998A4192868660070DFFF /* OrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductCell.m; sourceTree = "<group>"; };
-		867998AF1929BC860070DFFF /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
-		867998B01929BC860070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
 		867998B21929BC870070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
 		867998B31929BC870070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		867998B51929BC870070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
@@ -127,7 +125,9 @@
 		867998CE192AB4A00070DFFF /* CroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroperViewController.h; sourceTree = "<group>"; };
 		867998CF192AB4A00070DFFF /* CroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroperViewController.m; sourceTree = "<group>"; };
 		867998D1192AD4BB0070DFFF /* dyn_popup_view */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dyn_popup_view; sourceTree = "<group>"; };
-		AA3F0E64192BCBF50042186D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Parse.framework; sourceTree = "<group>"; };
+		867998D5192C3FEA0070DFFF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../iosLibs/Parse.framework; sourceTree = "<group>"; };
+		867998D7192C4CF10070DFFF /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
+		867998D8192C4CF10070DFFF /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
 		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3F0E65192BCBF50042186D /* Parse.framework in Frameworks */,
+				867998D6192C3FEA0070DFFF /* Parse.framework in Frameworks */,
 				AA5522B11916EA95005D5950 /* SystemConfiguration.framework in Frameworks */,
 				AA5522AF1916EA8A005D5950 /* StoreKit.framework in Frameworks */,
 				AA5522AD1916EA2F005D5950 /* Security.framework in Frameworks */,
@@ -374,7 +374,7 @@
 		AA5522641916E98E005D5950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA3F0E64192BCBF50042186D /* Parse.framework */,
+				867998D5192C3FEA0070DFFF /* Parse.framework */,
 				AA5522B01916EA95005D5950 /* SystemConfiguration.framework */,
 				AA5522AE1916EA8A005D5950 /* StoreKit.framework */,
 				AA5522AC1916EA2F005D5950 /* Security.framework */,
@@ -535,6 +535,8 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				867998D7192C4CF10070DFFF /* EntityAccount.h */,
+				867998D8192C4CF10070DFFF /* EntityAccount.m */,
 				867998BB1929C8070070DFFF /* TempModels */,
 				867998B81929BC870070DFFF /* EntityOrderProduct.h */,
 				867998B91929BC870070DFFF /* EntityOrderProduct.m */,
@@ -542,8 +544,6 @@
 				867998B61929BC870070DFFF /* EntityOrder.m */,
 				867998B21929BC870070DFFF /* EntityProduct.h */,
 				867998B31929BC870070DFFF /* EntityProduct.m */,
-				867998AF1929BC860070DFFF /* EntityAccount.h */,
-				867998B01929BC860070DFFF /* EntityAccount.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -701,6 +701,7 @@
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
+				867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
@@ -715,7 +716,6 @@
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
-				867998B11929BC860070DFFF /* EntityAccount.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
 				867998B41929BC870070DFFF /* EntityProduct.m in Sources */,

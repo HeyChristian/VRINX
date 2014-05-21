@@ -56,6 +56,7 @@ BEMSimpleLineGraphView *myGraph;
     
     
     
+    
     [self.fetchResultsController performFetch:nil];
     
     
@@ -72,7 +73,7 @@ BEMSimpleLineGraphView *myGraph;
     [self.navigationController.navigationBar setHidden:NO];
     [self.navigationItem setHidesBackButton:NO animated:YES];
     [self.navigationController setToolbarHidden:YES];
-  
+    [self.tableView reloadData];
 }
 
 #pragma mark - Navigation
@@ -105,8 +106,7 @@ BEMSimpleLineGraphView *myGraph;
 }
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller{
     
-    //  [self.tableView reloadData];
-    
+  
     [self.tableView beginUpdates];
 }
 
