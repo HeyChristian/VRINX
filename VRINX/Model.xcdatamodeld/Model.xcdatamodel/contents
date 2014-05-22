@@ -40,12 +40,13 @@
         <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="products" inverseEntity="Account" syncable="YES"/>
     </entity>
     <elements>
         <element name="Account" positionX="-506" positionY="-199" width="128" height="268"/>
         <element name="Order" positionX="-272" positionY="-297" width="128" height="208"/>
         <element name="OrderProduct" positionX="-92" positionY="27" width="128" height="73"/>
-        <element name="Product" positionX="-290" positionY="254" width="128" height="133"/>
+        <element name="Product" positionX="-290" positionY="254" width="128" height="148"/>
     </elements>
 </model>

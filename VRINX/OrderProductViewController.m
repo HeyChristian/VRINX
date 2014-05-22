@@ -104,7 +104,7 @@
     
     
    EmptyOrderProductCell  *emptyCell;
-    OrderProductCell *productCell;
+   OrderProductCell *productCell;
     
     
     
@@ -125,22 +125,28 @@
        
         
         self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-       productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
        
-        
+       
         if(self.selectedSource == ALL){
            [self.searchBar setHidden:NO];
+            
            [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row]];
         }else{
            [self.searchBar setHidden:YES];
             EntityOrderProduct *order =[self.orderProducts objectAtIndex:indexPath.row];
-           [productCell configureCellForEntry:order.product];
+            
+            if(order.itemCount ==0 ){
+                [self.orderProducts removeObjectAtIndex:indexPath.row];
+            }else{
+                [productCell configureCellForEntry:order.product];
+            }
         }
         
        UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 105, 320, .5)];
        line.backgroundColor = [UIColor lightGrayColor];
        
-        [productCell addSubview:line];
+       [productCell addSubview:line];
         
        productCell.itemStepper.tag = indexPath.row;
        [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -161,9 +167,9 @@
     NSLog(@"Stepper Value: %f", stepper.value);
    
     NSNumber *itemCount = [[NSNumber alloc] initWithDouble:stepper.value + 1];
-    
+    bool exist = NO;
     if(self.selectedSource == ALL){
-        bool exist = NO;
+       
         EntityProduct *product = [self.products objectAtIndex:stepper.tag];
         
         
@@ -174,19 +180,19 @@
         for(int i = 0; i < self.orderProducts.count; i++)
         {
             inCartProduct =  [self.orderProducts objectAtIndex:i];
-            if([inCartProduct.product.objectID isEqual:product.objectID]){
+            if([inCartProduct.product.uuid isEqual:product.uuid]){
                 
                 
                 if(itemCount > 0 ){
                     inCartProduct.itemCount = itemCount;
                     [self.orderProducts removeObjectAtIndex:i];
                     [self.orderProducts insertObject:inCartProduct atIndex:i];
-                    
+                     exist=YES;
                 }else{
                     [self.orderProducts removeObjectAtIndex:i];
                     
                 }
-                exist=YES;
+               
                
             }
             if([inCartProduct.itemCount intValue] == 0 )
@@ -196,7 +202,7 @@
         }
         
         if(exist==NO){
-        
+            tempProduct.uuid=product.uuid;
             tempProduct.objectID=product.objectID;
             tempProduct.name = product.name;
             tempProduct.itemPhoto = product.itemPhoto;
@@ -223,7 +229,7 @@
         for(int i = 0; i < self.orderProducts.count; i++)
         {
             inCartProduct =  [self.orderProducts objectAtIndex:i];
-            if([inCartProduct.product.objectID isEqual:product.objectID]){
+            if([inCartProduct.product.uuid isEqual:product.uuid]){
                 
                 
                 if(itemCount > 0 ){
@@ -240,8 +246,11 @@
             if([inCartProduct.itemCount intValue] == 0 )
                 [self.orderProducts removeObjectAtIndex:i];
             
+            NSLog(@"InCart Prod: %@",inCartProduct.product.name);
             
+            NSLog(@"InCart Count: %@",inCartProduct.itemCount);
         }
+        
         
         
     }
@@ -271,9 +280,29 @@
     }
     else{
         self.selectedSource = INCART;
+       // [self CleanCart];
     }
+    NSLog(@"In Cart : %@", self.orderProducts.debugDescription);
     
     [self.tableView reloadData];
+}
+
+
+-(void) CleanCart{
+    TempOrderProduct *inCartProduct = [[TempOrderProduct alloc] init];
+    
+    for(int i = 0; i < self.orderProducts.count; i++)
+    {
+        inCartProduct =  [self.orderProducts objectAtIndex:i];
+       
+        
+        if([inCartProduct.itemCount intValue] == 0 )
+            [self.orderProducts removeObjectAtIndex:i];
+        
+       
+    }
+    
+
 }
 
 @end

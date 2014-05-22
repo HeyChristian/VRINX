@@ -194,9 +194,10 @@
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex != actionSheet.cancelButtonIndex){
         if(buttonIndex != actionSheet.firstOtherButtonIndex){
-            [self promptForCamera];
+             [self promptForPhotoRoll];
         }else{
-            [self promptForPhotoRoll];
+             [self promptForCamera];
+           
         }
     }
 }

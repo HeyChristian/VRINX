@@ -230,7 +230,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anx-Xe-onU">
                                                     <rect key="frame" x="269" y="0.0" width="51" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.231372565" green="0.65098041299999998" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" red="0.087296960179999994" green="0.67459729130000001" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="edit">
                                                         <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -497,41 +497,42 @@
                                             <rect key="frame" x="10" y="12" width="81" height="81"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Item Name]" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="Ygd-bh-OZe">
-                                            <rect key="frame" x="100" y="10" width="146" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Item Name]" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="Ygd-bh-OZe">
+                                            <rect key="frame" x="100" y="10" width="205" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EG-GM-0x2">
-                                            <rect key="frame" x="220" y="72" width="86" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Item Description]" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="gmo-wG-uv0">
+                                            <rect key="frame" x="100" y="25" width="205" height="39"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.21568629145622253" green="0.58039218187332153" blue="0.85882359743118286" alpha="1" colorSpace="deviceRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="gmo-wG-uv0">
-                                            <rect key="frame" x="100" y="25" width="155" height="39"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-AD-4RA">
+                                            <rect key="frame" x="0.0" y="76" width="88" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="[Item Description]">
-                                                    <attributes>
-                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <font key="NSFont" size="14" name="HelveticaNeue-UltraLight"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1R-E0-xOv">
+                                                    <rect key="frame" x="0.0" y="4" width="83" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.087296960179999994" green="0.67459729130000001" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="itemDescriptionField" destination="gmo-wG-uv0" id="V1H-RM-1Da"/>
                                     <outlet property="itemLogo" destination="0Mr-LK-cv6" id="bCd-Vc-BIG"/>
                                     <outlet property="itemNameField" destination="Ygd-bh-OZe" id="NCM-gV-n5O"/>
-                                    <outlet property="itemPriceField" destination="2EG-GM-0x2" id="0AD-lV-mKy"/>
+                                    <outlet property="itemPriceField" destination="V1R-E0-xOv" id="c1A-BG-WdL"/>
                                     <segue destination="deW-nG-oN7" kind="push" identifier="edit" id="6hr-ku-Cki"/>
                                 </connections>
                             </tableViewCell>
@@ -579,7 +580,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETB-sz-pjh">
                                                     <rect key="frame" x="269" y="209" width="51" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.21568629145622253" green="0.58039218187332153" blue="0.85882359743118286" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" red="0.087296960179999994" green="0.67459729130000001" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="edit">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -652,7 +653,7 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-Su-uz9">
-                                                    <rect key="frame" x="7" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="9" y="11" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="money">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -741,7 +742,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuI-qS-bDA">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.23137256503105164" green="0.65098041296005249" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.64705884456634521" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="LJL-EY-blg">
@@ -785,7 +786,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="p6R-SO-KqV">
+                        <searchBar key="tableHeaderView" contentMode="redraw" translucent="NO" id="p6R-SO-KqV">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -821,6 +822,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="EmptyMessagelabel" destination="a5f-uC-0rw" id="3po-gM-L3R"/>

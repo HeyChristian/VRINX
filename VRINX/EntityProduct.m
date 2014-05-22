@@ -2,7 +2,7 @@
 //  EntityProduct.m
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/18/14.
+//  Created by Christian Vazquez on 5/21/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic price;
 @dynamic shortDesc;
 @dynamic userId;
+@dynamic uuid;
 @dynamic products;
 
 @end

@@ -12,4 +12,5 @@
 
 
 +(UIColor *)colorWithHexString:(NSString *)hex;
++ (NSString *)GetUUID;
 @end

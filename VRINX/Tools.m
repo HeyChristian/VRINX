@@ -47,4 +47,13 @@
                            alpha:1.0f];
 }
 
+
++ (NSString *)GetUUID
+{
+    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+    CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
+    CFRelease(uuidRef);
+    return (__bridge NSString *)uuidStringRef;
+}
+
 @end

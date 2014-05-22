@@ -21,6 +21,8 @@
 #import "BEMSimpleLineGraphView.h"
 #import "SWTableViewCell.h"
 
+
+#import "Tools.h"
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate>{
     int totalNumber;
     NSIndexPath *selectedCellIndexPath;
@@ -48,6 +50,11 @@ BEMSimpleLineGraphView *myGraph;
    // fixItView = [UIColor colorWithRed:0.973 green:0.973 blue:0.973 alpha:1]; //change this to match your navigation bar
    // [self.view addSubview:fixItView];
     
+    NSLog(@"##: %@",[Tools GetUUID]);
+    
+    NSLog(@"##: %@",[Tools GetUUID]);
+    
+    NSLog(@"##: %@",[Tools GetUUID]);
     
     
     //Display account sales graphics

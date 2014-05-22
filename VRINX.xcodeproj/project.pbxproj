@@ -16,7 +16,6 @@
 		867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679988F1927ADAF0070DFFF /* OrderProductViewController.m */; };
 		867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998951927CBC60070DFFF /* EmptyOrderProductCell.m */; };
 		867998A5192868660070DFFF /* OrderProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998A4192868660070DFFF /* OrderProductCell.m */; };
-		867998B41929BC870070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B31929BC870070DFFF /* EntityProduct.m */; };
 		867998B71929BC870070DFFF /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B61929BC870070DFFF /* EntityOrder.m */; };
 		867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998B91929BC870070DFFF /* EntityOrderProduct.m */; };
 		867998BE1929C8750070DFFF /* TempProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998BD1929C8750070DFFF /* TempProduct.m */; };
@@ -33,6 +32,7 @@
 		867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E4192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m */; };
 		867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E6192D27480070DFFF /* SWUtilityButtonView.m */; };
 		867998F0192D33AC0070DFFF /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998EF192D33AC0070DFFF /* Tools.m */; };
+		867998F3192DB0810070DFFF /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998F2192DB0810070DFFF /* EntityProduct.m */; };
 		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
@@ -117,8 +117,6 @@
 		867998951927CBC60070DFFF /* EmptyOrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyOrderProductCell.m; sourceTree = "<group>"; };
 		867998A3192868660070DFFF /* OrderProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderProductCell.h; sourceTree = "<group>"; };
 		867998A4192868660070DFFF /* OrderProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderProductCell.m; sourceTree = "<group>"; };
-		867998B21929BC870070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
-		867998B31929BC870070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		867998B51929BC870070DFFF /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
 		867998B61929BC870070DFFF /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
 		867998B81929BC870070DFFF /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
@@ -149,6 +147,8 @@
 		867998E6192D27480070DFFF /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		867998EE192D33AC0070DFFF /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		867998EF192D33AC0070DFFF /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		867998F1192DB0810070DFFF /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
+		867998F2192DB0810070DFFF /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -586,6 +586,8 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				867998F1192DB0810070DFFF /* EntityProduct.h */,
+				867998F2192DB0810070DFFF /* EntityProduct.m */,
 				867998D7192C4CF10070DFFF /* EntityAccount.h */,
 				867998D8192C4CF10070DFFF /* EntityAccount.m */,
 				867998BB1929C8070070DFFF /* TempModels */,
@@ -593,8 +595,6 @@
 				867998B91929BC870070DFFF /* EntityOrderProduct.m */,
 				867998B51929BC870070DFFF /* EntityOrder.h */,
 				867998B61929BC870070DFFF /* EntityOrder.m */,
-				867998B21929BC870070DFFF /* EntityProduct.h */,
-				867998B31929BC870070DFFF /* EntityProduct.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -767,6 +767,7 @@
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
+				867998F3192DB0810070DFFF /* EntityProduct.m in Sources */,
 				867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				867998E7192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m in Sources */,
@@ -774,7 +775,6 @@
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
-				867998B41929BC870070DFFF /* EntityProduct.m in Sources */,
 				867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */,

@@ -2,7 +2,7 @@
 //  EntityProduct.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/18/14.
+//  Created by Christian Vazquez on 5/21/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSDecimalNumber * price;
 @property (nonatomic, retain) NSString * shortDesc;
 @property (nonatomic, retain) NSString * userId;
+@property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) EntityAccount *products;
 
 @end

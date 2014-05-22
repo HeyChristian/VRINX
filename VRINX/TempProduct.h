@@ -15,4 +15,5 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDecimalNumber * price;
 @property (nonatomic, retain) NSString * shortDesc;
+@property (nonatomic, retain) NSString * uuid;
 @end
