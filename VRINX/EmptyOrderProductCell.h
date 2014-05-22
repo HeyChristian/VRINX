@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *EmptyMessagelabel;
 
+- (IBAction)AddProductAction:(id)sender;
 
 @end

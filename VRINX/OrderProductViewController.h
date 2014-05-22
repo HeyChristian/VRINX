@@ -29,6 +29,7 @@ typedef enum SOURCE{
 @property(nonatomic,strong) EntityOrder *order;
 @property(nonatomic,retain) NSMutableArray *orderProducts;
 @property(nonatomic,strong) NSArray *products;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 - (IBAction)filterProductSource:(id)sender;
 

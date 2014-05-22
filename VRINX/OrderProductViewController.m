@@ -47,7 +47,7 @@
     self.orderProducts = [[NSMutableArray alloc] init];
     
     
-    
+    [self.navigationController setToolbarHidden:YES];
     
     [self.tableView reloadData];
   
@@ -118,15 +118,21 @@
             emptyCell.EmptyMessagelabel.text = @"No have any product in the cart";
         
         self.tableView.separatorColor = [UIColor clearColor];
+        [self.searchBar setHidden:YES];
         
+        self.tableView.backgroundColor = [UIColor whiteColor];
     }else{
+       
         
+        self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
        productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
        
         
         if(self.selectedSource == ALL){
+           [self.searchBar setHidden:NO];
            [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row]];
         }else{
+           [self.searchBar setHidden:YES];
             EntityOrderProduct *order =[self.orderProducts objectAtIndex:indexPath.row];
            [productCell configureCellForEntry:order.product];
         }

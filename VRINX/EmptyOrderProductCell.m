@@ -12,4 +12,8 @@
 
 
 
+- (IBAction)AddProductAction:(id)sender {
+    
+    NSLog(@"Add Product Event");
+}
 @end

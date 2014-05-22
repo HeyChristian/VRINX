@@ -38,7 +38,7 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self.navigationController setToolbarHidden:YES];
     
     self.products = [[NSMutableArray alloc] init];
     self.products = [self.account.products allObjects];
