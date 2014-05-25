@@ -9,8 +9,8 @@
 #import "OrderMasterViewController.h"
 #import "OrderProductViewController.h"
 #import "RMDateSelectionViewController.h"
-
-@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate>
+#import "TempProduct.h"
+@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,OrderProductDelegate>
 
 //@property (strong, nonatomic) NSIndexPath *datePickerIndexPath;
 //@property (strong,nonatomic)NSDate *orderDate;
@@ -30,6 +30,9 @@
     [self.view endEditing:YES];
     
     
+    self.orderProducts = [[NSMutableArray alloc] init];
+    
+    
 }
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -37,8 +40,9 @@
     if([segue.identifier isEqualToString:@"orderProducts"] || [segue.identifier isEqualToString:@"orderProductsBtn"]){
         
         OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
+        newProduct.delegate = self;
         newProduct.account = self.account;
-        
+        newProduct.orderProducts = self.orderProducts;
         NSLog(@"Order Product Account: %@", newProduct.account);
     }
     
@@ -59,7 +63,19 @@
     
     
 }
-
+#pragma mark - Order Product Delegate Functions
+-(void) setOrderProduct:(NSMutableArray *)orderProducts{
+    self.orderProducts = orderProducts;
+    
+    int count=0;
+    
+    for(TempOrderProduct *op in orderProducts){
+        count += op.itemCount.intValue;
+    }
+    
+    self.productCountLabel.text = [NSString stringWithFormat:@"%d",count];
+    
+}
 
 #pragma mark - Table view data source
 

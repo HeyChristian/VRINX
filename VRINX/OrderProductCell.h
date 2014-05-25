@@ -23,6 +23,5 @@
 
 - (IBAction)addToCart:(id)sender;
 
--(void)configureCellForEntry:(EntityProduct *)product;
-
+-(void)configureCellForEntry:(EntityProduct *)product andItemCount:(int) itemCount;
 @end

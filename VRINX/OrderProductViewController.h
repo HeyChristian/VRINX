@@ -10,6 +10,7 @@
 #import "EntityAccount.h"
 #import "EntityOrder.h"
 #import "EntityOrderProduct.h"
+#import "TempOrderProduct.h"
 
 typedef enum SOURCE{
 
@@ -18,11 +19,17 @@ typedef enum SOURCE{
 
 }SOURCE;
 
+
+@protocol OrderProductDelegate <NSObject>     //define a protocol named
+- (void) setOrderProduct:(NSMutableArray *)orderProducts;
+@end
+
 @interface OrderProductViewController : UITableViewController
  
 
 
 
+@property (nonatomic, assign) id delegate; //create a delegate
 
 @property(nonatomic,assign) SOURCE selectedSource;
 @property(nonatomic,strong) EntityAccount *account;
@@ -30,6 +37,9 @@ typedef enum SOURCE{
 @property(nonatomic,retain) NSMutableArray *orderProducts;
 @property(nonatomic,strong) NSArray *products;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
+@property(nonatomic,strong)  UIBarButtonItem *checkoutBtn;
 
 - (IBAction)filterProductSource:(id)sender;
 

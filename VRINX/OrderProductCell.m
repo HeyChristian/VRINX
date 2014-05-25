@@ -48,13 +48,15 @@
     
 }
 
--(void)configureCellForEntry:(EntityProduct *)product{
+-(void)configureCellForEntry:(EntityProduct *)product andItemCount:(int) itemCount{
     
    // NSLog(@" product: %@",product);
     
     self.itemNameField.text = product.name;
     self.itemDescriptionField.text =  product.shortDesc;
     self.itemPriceField.text = [self formatCurrency:product.price];
+    
+    self.itemStepper.value= (double) itemCount;
     
     if(product.itemPhoto){
         self.itemLogo.image = [UIImage imageWithData:product.itemPhoto];
