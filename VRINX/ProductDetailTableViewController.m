@@ -96,6 +96,8 @@
    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     EntityProduct *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.account.managedObjectContext];
     
+    
+    product.uuid=  [self getPK];   //[[NSUUID UUID] UUIDString];
     product.name = self.productNameField.text;
     product.shortDesc = self.shortDescriptionField.text;
     product.price = [NSDecimalNumber decimalNumberWithString:self.priceField.text];
@@ -112,7 +114,19 @@
     
     
 }
+-(NSString *)getPK{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"ddmmyyyyhms"; // or whatever you want; per the unicode standards
+    
+    return [dateFormatter  stringFromDate:[NSDate date]];
+    
+   // NSLog(@"pk  %@", pk);
+    
+    // return nil;
+}
 -(void) updateProduct{
+    
     
     self.product.name = self.productNameField.text;
     self.product.shortDesc = self.shortDescriptionField.text;

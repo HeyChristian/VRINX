@@ -73,7 +73,7 @@
         count += op.itemCount.intValue;
     }
     
-    self.productCountLabel.text = [NSString stringWithFormat:@"%d",count];
+    self.productCountLabel.text = [NSString stringWithFormat:@"( %d )",count];
     
 }
 

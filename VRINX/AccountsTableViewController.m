@@ -23,7 +23,7 @@
 
 
 #import "Tools.h"
-@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate>{
+@interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
     int totalNumber;
     NSIndexPath *selectedCellIndexPath;
 
@@ -50,23 +50,19 @@ BEMSimpleLineGraphView *myGraph;
    // fixItView = [UIColor colorWithRed:0.973 green:0.973 blue:0.973 alpha:1]; //change this to match your navigation bar
    // [self.view addSubview:fixItView];
     
-    NSLog(@"##: %@",[Tools GetUUID]);
-    
-    NSLog(@"##: %@",[Tools GetUUID]);
-    
-    NSLog(@"##: %@",[Tools GetUUID]);
     
     
     //Display account sales graphics
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HeaderCell"];
 	[self configureBannerWithImage:[UIImage imageNamed:@"headerback"] height:190];
-	[self initGraph];
+	[self GetGraphView];
+    
+    //[self initWelcomeViews];
+    
+    
+    
+    
   
-    
-    
-    
-    
-    
     
     [self.fetchResultsController performFetch:nil];
     
@@ -200,7 +196,7 @@ BEMSimpleLineGraphView *myGraph;
 {
     id<NSFetchedResultsSectionInfo> sectionInfo = [self.fetchResultsController sections][section];
     
-    NSLog(@"# of Records : %lu", (unsigned long)[sectionInfo numberOfObjects]);
+   // NSLog(@"# of Records : %lu", (unsigned long)[sectionInfo numberOfObjects]);
     
     return [sectionInfo numberOfObjects];
 }
@@ -275,7 +271,7 @@ BEMSimpleLineGraphView *myGraph;
 
 #pragma mark - SimpleLineGraph
 
--(void) initGraph{
+-(void) GetGraphView{
     
     self.ArrayOfValues = [[NSMutableArray alloc] init];
     self.ArrayOfDates = [[NSMutableArray alloc] init];
@@ -284,7 +280,7 @@ BEMSimpleLineGraphView *myGraph;
     
     self.ArrayOfDates = [NSMutableArray arrayWithObjects: @"January",@"Febrary",@"March",@"Abril",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"Dicember",nil]; // Dates for the X-Axis of the graph
     
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 4; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
        // [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
         
@@ -314,8 +310,15 @@ BEMSimpleLineGraphView *myGraph;
     myGraph.enableTouchReport = YES;
     myGraph.enablePopUpReport = YES;
     myGraph.enableBezierCurve = YES;
+    myGraph.alwaysDisplayDots = YES;
     
-    [self.contentView addSubview:myGraph];
+    
+    
+   
+   [self.contentView addSubview:myGraph];
+  //  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+   // [view addSubview:myGraph];
+    // return view;
     
 }
 
@@ -456,5 +459,59 @@ BEMSimpleLineGraphView *myGraph;
     }
 }
 
+#pragma mark -  UIPageViewController
 
+
+-(void) initWelcomeViews{
+    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+
+    self.pageViewController.delegate=self;
+    self.pageViewController.dataSource=self;
+    
+    self.pageViewController.view.frame = CGRectMake(0, 0, 320, 200);
+    self.pageViewController.view.backgroundColor =[UIColor colorWithRed:0.0 green:99.0/255.0 blue:0.0/255.0 alpha:1.0];
+    
+   //[self.pageViewController  add:[self GetGraphView]];
+    //self.pages = [[NSMutableArray alloc] init];
+    //[self.pages addObject:[self GetGraphView]];
+    
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    view1.backgroundColor = [UIColor colorWithRed:100.0 green:99.0/255.0 blue:0.0/255.0 alpha:1.0];
+    
+    
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    view2.backgroundColor = [UIColor colorWithRed:100.0 green:99.0/255.0 blue:0.0/255.0 alpha:1.0];
+    
+    self.pages = [[NSMutableArray alloc] initWithObjects:view1,nil];
+    
+    
+ 
+    [self.pageViewController setViewControllers:self.pages direction:UIPageViewControllerNavigationDirectionForward  animated:YES completion:^(BOOL finished) {
+        
+        NSLog(@" page event");
+    }];
+   
+    [self.contentView addSubview:self.pageViewController.view];
+    
+}
+
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return self.pages.count;
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
+}
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    return nil;
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    return nil;
+}
 @end

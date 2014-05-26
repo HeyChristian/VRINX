@@ -62,7 +62,8 @@
     
     [self.navigationController setToolbarHidden:YES];
     
-    [self.tableView reloadData];
+    
+    [self SortDataSource];
   
     
     
@@ -181,16 +182,21 @@
         productCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
        
         int itemCount=0;
+        
         if(self.selectedSource == ALL){
+        
             itemCount =[self getItemCountByProduct:[self.products objectAtIndex:indexPath.row] andOrderProducts:self.orderProducts];
             
            [productCell configureCellForEntry:[self.products objectAtIndex:indexPath.row] andItemCount:itemCount];
+        
         }else{
-           //[self.searchBar setHidden:YES];
+         
             EntityOrderProduct *order =[self.orderProducts objectAtIndex:indexPath.row];
             
             if(order.itemCount ==0 ){
+            
                 [self.orderProducts removeObjectAtIndex:indexPath.row];
+            
             }else{
                 itemCount =[self getItemCountByProduct:order.product andOrderProducts:self.orderProducts];
                 
@@ -199,13 +205,14 @@
             }
         }
         
+        
+        
        UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 105, 320, .5)];
        line.backgroundColor = [UIColor lightGrayColor];
-       
        [productCell addSubview:line];
-        
-       productCell.itemStepper.tag = indexPath.row;
-       [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+       
+        //productCell.itemStepper.tag = indexPath.row;
+      // [productCell.itemStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
         
         
     }
@@ -222,6 +229,7 @@
     return count;
 }
 
+
 - (void)stepperValueChanged:(UIStepper *)sender {
     // Replace old stepper value with new one
     //[self.tableView beginUpdates];
@@ -232,7 +240,7 @@
     //NSLog(@"Stepper ID: %ld",(long)stepper.tag);
    // NSLog(@"Stepper Value: %f", stepper.value);
    
-    NSNumber *itemCount = [[NSNumber alloc] initWithDouble:stepper.value + 1];
+    NSNumber *itemCount = nil; // [[NSNumber alloc] initWithDouble:stepper.value + 1];
     bool exist = NO;
     if(self.selectedSource == ALL){
         
@@ -252,7 +260,7 @@
                 
                 
                 if(itemCount > 0 ){
-                    inCartProduct.itemCount = itemCount;
+                    inCartProduct.itemCount = [[NSNumber alloc] initWithInt:inCartProduct.itemCount.intValue + 1];
                     [self.orderProducts removeObjectAtIndex:i];
                     [self.orderProducts insertObject:inCartProduct atIndex:i];
                      exist=YES;
@@ -276,9 +284,9 @@
             tempProduct.itemPhoto = product.itemPhoto;
             tempProduct.shortDesc = product.shortDesc;
             tempProduct.price = product.price;
-        
+    
             inCartProduct.product = tempProduct;
-            inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:stepper.value];
+            inCartProduct.itemCount = [[NSNumber alloc] initWithDouble:1];
         
             [self.orderProducts addObject:inCartProduct];
         }
@@ -353,6 +361,121 @@
     NSLog(@"In Cart : %@", self.orderProducts.debugDescription);
     
     [self.tableView reloadData];
+}
+
+- (IBAction)addItem:(id)sender {
+    UIButton *btn = (UIButton *) sender;
+    NSNumber *pk = [[NSNumber alloc] initWithInteger:btn.tag];
+    [self changeItemStock:pk.stringValue andOperator:@"add"];
+}
+
+- (IBAction)removeItem:(id)sender {
+    
+    UIButton *btn = (UIButton *) sender;
+    NSNumber *pk = [[NSNumber alloc] initWithInteger:btn.tag];
+    [self changeItemStock:pk.stringValue andOperator:@"remove"];
+}
+
+
+-(void) changeItemStock:(NSString *)currentProductIdentifier andOperator:(NSString *) operator{
+    
+    NSLog(@"P: %@ - %@",currentProductIdentifier,operator);
+    
+    bool exist=NO;
+    
+
+        TempOrderProduct *inCartProduct = [[TempOrderProduct alloc] init];
+    
+        for(int pix = 0; pix < self.orderProducts.count; pix++)
+        {
+            inCartProduct =  [self.orderProducts objectAtIndex:pix];
+            
+            if([inCartProduct.product.uuid isEqual:currentProductIdentifier]){
+                
+                exist=YES;
+                
+                if([operator  isEqual: @"add"]){
+                
+                    inCartProduct.itemCount = [[NSNumber alloc] initWithInt:inCartProduct.itemCount.intValue + 1];
+                
+                }else if([operator isEqual:@"remove"]){
+                    inCartProduct.itemCount = [[NSNumber alloc] initWithInt:inCartProduct.itemCount.intValue - 1];
+                
+                }
+                    [self.orderProducts removeObjectAtIndex:pix];
+                
+                if(inCartProduct.itemCount.intValue > 0){
+                 [self.orderProducts insertObject:inCartProduct atIndex:pix];
+                 //  [self.orderProducts addObject:inCartProduct];
+                }
+                
+                break;
+            }//end if product identifier
+            
+           // if([inCartProduct.itemCount intValue] == 0 )
+           //     [self.orderProducts removeObjectAtIndex:i];
+            
+            
+        }//end for
+        
+        if(exist == NO && [operator isEqual:@"add"]){
+            
+            TempProduct *tempProduct = [[TempProduct alloc] init];
+            
+            for(int i=0; i < self.products.count; i++){
+              EntityProduct  *product = [self.products objectAtIndex:i];
+                if([currentProductIdentifier isEqual:product.uuid]){
+                    
+                    tempProduct.uuid        = product.uuid;
+                    tempProduct.objectID    = product.objectID;
+                    tempProduct.name        = product.name;
+                    tempProduct.itemPhoto   = product.itemPhoto;
+                    tempProduct.shortDesc   = product.shortDesc;
+                    tempProduct.price       = product.price;
+                    
+                    break;
+                }
+            }
+            
+            TempOrderProduct *newProductOrder = [[TempOrderProduct alloc] init];
+            newProductOrder.name      = tempProduct.name; // new Attribute for sorting.
+            newProductOrder.product   = tempProduct;
+            newProductOrder.itemCount = [[NSNumber alloc] initWithInt:1];
+            
+            [self.orderProducts addObject:newProductOrder];
+        }
+    
+    
+    [self SortDataSource];
+    
+    
+}
+
+-(void) SortDataSource{
+    
+    //Sort Order Products
+    NSSortDescriptor *sortByName = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortByName];
+    NSArray *sortedArray = [self.orderProducts sortedArrayUsingDescriptors:sortDescriptors];
+    
+    self.orderProducts = [[NSMutableArray alloc] initWithArray:sortedArray];
+    
+    
+    //Sort Products
+    sortByName = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+    sortDescriptors = [NSArray arrayWithObject:sortByName];
+    sortedArray = [self.products sortedArrayUsingDescriptors:sortDescriptors];
+    
+    self.products = [[NSArray alloc] initWithArray:sortedArray];
+    
+    
+    
+    
+    
+    [self.tableView reloadData];
+    
+    
+    
 }
 
 

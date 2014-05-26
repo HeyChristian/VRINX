@@ -555,7 +555,7 @@
                             <tableViewSection headerTitle="Product Image" id="Hm3-cb-OhI">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" rowHeight="240" id="A2F-Ud-8mh">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A2F-Ud-8mh" id="DgQ-Te-r46">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
@@ -585,7 +585,7 @@
                             <tableViewSection headerTitle="Product Detail" id="mYi-fK-6sJ">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3cN-DN-jK6">
-                                        <rect key="frame" x="0.0" y="407" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="343" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cN-DN-jK6" id="DCa-b6-kAd">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -605,7 +605,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="13i-5y-QIH">
-                                        <rect key="frame" x="0.0" y="451" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="387" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13i-5y-QIH" id="PVO-fJ-4lu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -628,7 +628,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="E8h-Ms-F2U">
-                                        <rect key="frame" x="0.0" y="495" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="431" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E8h-Ms-F2U" id="eeF-wf-whd">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -832,13 +832,6 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" value="-1" minimumValue="-1" maximumValue="100" id="rdZ-kK-Nnf">
-                                            <rect key="frame" x="219" y="71" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <connections>
-                                                <action selector="addToCart:" destination="giH-gR-0WL" eventType="valueChanged" id="7O9-vT-Zrj"/>
-                                            </connections>
-                                        </stepper>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Item Description]" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="58F-yp-qN7">
                                             <rect key="frame" x="109" y="29" width="204" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -865,15 +858,36 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.087296960179999994" green="0.67459729130000001" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JQZ-F0-TMa">
+                                            <rect key="frame" x="228" y="68" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="addBlue">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addItem:" destination="zXI-L4-fIj" eventType="touchUpInside" id="BLc-sk-kr5"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V2x-pX-ObW">
+                                            <rect key="frame" x="281" y="68" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="removeBlue">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="removeItem:" destination="zXI-L4-fIj" eventType="touchUpInside" id="RJq-2y-IzM"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addBtn" destination="JQZ-F0-TMa" id="Gt6-6V-IvF"/>
                                     <outlet property="itemCountField" destination="4YK-J9-TNT" id="MqE-k9-dss"/>
                                     <outlet property="itemDescriptionField" destination="58F-yp-qN7" id="th3-hW-Syv"/>
                                     <outlet property="itemLogo" destination="hQW-dR-Bpx" id="FRi-cF-WYE"/>
                                     <outlet property="itemNameField" destination="tHx-er-yIo" id="j2V-20-8nj"/>
                                     <outlet property="itemPriceField" destination="7FT-9a-2I3" id="udf-k3-UPQ"/>
-                                    <outlet property="itemStepper" destination="rdZ-kK-Nnf" id="4wm-VM-jwd"/>
+                                    <outlet property="removeBtn" destination="V2x-pX-ObW" id="KD8-DC-Igr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1769,6 +1783,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addBlue" width="32" height="32"/>
         <image name="box" width="128" height="128"/>
         <image name="folder" width="32" height="32"/>
         <image name="icn_noimage" width="47" height="47"/>
@@ -1783,6 +1798,7 @@
         <image name="play" width="48" height="48"/>
         <image name="proPerfil" width="512" height="512"/>
         <image name="products" width="32" height="32"/>
+        <image name="removeBlue" width="32" height="32"/>
         <image name="specialOffers" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

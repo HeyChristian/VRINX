@@ -18,4 +18,8 @@
 @property (strong, nonatomic) NSMutableArray *ArrayOfValues;
 @property (strong, nonatomic) NSMutableArray *ArrayOfDates;
 
+
+@property (nonatomic,strong) UIPageViewController *pageViewController;
+@property (nonatomic,strong) NSMutableArray *pages;
+
 @end

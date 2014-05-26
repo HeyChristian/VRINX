@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//#import "UIButton+uuid.h"
 
 @class EntityProduct;
 
@@ -19,9 +19,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemPriceField;
 @property (weak, nonatomic) IBOutlet UITextField *itemCountField;
 
-@property (weak, nonatomic) IBOutlet UIStepper *itemStepper;
-
-- (IBAction)addToCart:(id)sender;
 
 -(void)configureCellForEntry:(EntityProduct *)product andItemCount:(int) itemCount;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
+@property (weak, nonatomic) IBOutlet UIButton *removeBtn;
+
+
 @end

@@ -14,39 +14,6 @@
 
 
 
-- (IBAction)addToCart:(id)sender {
-    
-    
-   // NSLog(@" add to cart!!");
-   // UIStepper *stepper = (UIStepper *) sender;
-    
-   // stepper.maximumValue = 100;
-   // stepper.minimumValue = 0;
-    int count=  self.itemStepper.value; //[self.itemCountField.text intValue];
-    
-    
-    if (self.itemStepper){
-        count++;
-        [self.itemCountField setText:[NSString stringWithFormat:@"x %d",count]];
-    }
-    else{
-        count--;
-        [self.itemCountField setText:[NSString stringWithFormat:@"x %d",count]];
-        
-    }
-    
-    /*
-    UIView *view = [sender superview]; //to recover the superview
-    self = (UITableViewCell *) [[view superview] superview]; //this is making a cast to get the cell of the stepper (the one that was pressed)
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:self.selectedCell ]; // to get the index path and help me refresh that cell in specific
-    
-    self.selectedRow = [[NSArray alloc]initWithObjects:indexPath, nil];
-    [self.tableView reloadRowsAtIndexPaths:self.selectedRow withRowAnimation:UITableViewRowAnimationAutomatic]; // to refresh the selected cell
-*/
-    
-   // NSLog(@"item count: %d", count);
-    
-}
 
 -(void)configureCellForEntry:(EntityProduct *)product andItemCount:(int) itemCount{
     
@@ -56,11 +23,16 @@
     self.itemDescriptionField.text =  product.shortDesc;
     self.itemPriceField.text = [self formatCurrency:product.price];
     
-    self.itemStepper.value= (double) itemCount;
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *pk = [f numberFromString:product.uuid];
+    
+    self.itemCountField.text = [[NSString alloc] initWithFormat:@"X %d",itemCount];
+    self.addBtn.tag = pk.integerValue;
+    self.removeBtn.tag = pk.integerValue;
     
     if(product.itemPhoto){
         self.itemLogo.image = [UIImage imageWithData:product.itemPhoto];
-        
         
     }else{
         

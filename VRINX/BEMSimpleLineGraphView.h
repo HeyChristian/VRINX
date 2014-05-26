@@ -20,14 +20,13 @@
 
 #import "BEMCircle.h"
 #import "BEMLine.h"
-#import "BEMAnimations.h"
 
 
 
 @protocol BEMSimpleLineGraphDelegate;
 
 /// Simple line graph / chart UIView subclass for iOS apps. Creates beautiful line graphs (without huge memory impacts) using QuartzCore.
-@interface BEMSimpleLineGraphView : UIView <BEMAnimationDelegate, UIGestureRecognizerDelegate>
+@interface BEMSimpleLineGraphView : UIView <UIGestureRecognizerDelegate>
 
 
 
@@ -110,8 +109,8 @@
 @property (strong, nonatomic) UIFont *labelFont;
 
 
-/// Speed of the animation when the graph appears. From 0 to 10, 0 meaning no animation, 1 very slow and 10 very fast. Default value is 5.
-@property (nonatomic) NSInteger animationGraphEntranceSpeed;
+/// Time of the animation when the graph appears in seconds. Default value is 1.5.
+@property (nonatomic) CGFloat animationGraphEntranceTime;
 
 
 /// If set to YES, the graph will report the value of the closest point from the user current touch location. The 2 methods for touch event bellow should therefore be implemented. Default value is NO.
@@ -122,8 +121,21 @@
 @property (nonatomic) BOOL enablePopUpReport;
 
 
-/// The way the graph is drawn, with or withough bezier curved lines. Default value is NO;
+/// The way the graph is drawn, with or withough bezier curved lines. Default value is NO.
 @property (nonatomic) BOOL enableBezierCurve;
+
+
+/** When set to YES, the points on the Y-axis will be set to all fit in the graph view.
+
+When set to NO, the points on the Y-axis will be set with their absolute value (which means that certain points might not be visible because they are outside of the view).
+
+Default value is YES.
+*/
+@property (nonatomic) BOOL autoScaleYAxis;
+
+
+/// If set to YES, the dots representing the points on the graph will always be visible. Default value is NO.
+@property (nonatomic) BOOL alwaysDisplayDots;
 
 
 /// Color of the bottom part of the graph (between the line and the X-axis).
@@ -209,6 +221,22 @@
 - (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph;
 
 
+//----- CUSTOMIZATION -----//
+
+
+/** The color of the line at the given index. This is called for each line in the graph, every time an update is made.
+ @param graph The graph object requesting the line color.
+ @param index The index from left to right of a given point (X-axis). The first value for the index is 0.
+ @return The color of the line. Specifying nil will cause the line to use the color specifed for the graph. */
+- (UIColor *)lineGraph:(BEMSimpleLineGraphView *)graph lineColorForIndex:(NSInteger)index;
+
+
+/** The alpha of the line at the given index. This is called for each line in the graph, every time an update is made.
+ @param graph The graph object requesting the line alpha.
+ @param index The index from left to right of a given point (X-axis). The first value for the index is 0.
+ @return The alpha value of the line, between 0.0 and 1.0. Specifying nil will cause the line to use the alpha specifed for the graph. */
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph lineAlphaForIndex:(NSInteger)index;
+
 
 //----- TOUCH EVENTS -----//
 
@@ -282,18 +310,5 @@
 - (NSString *)labelOnXAxisForIndex:(NSInteger)index __deprecated;
 
 
-
-/** The color of the line at the given index. This is called for each line in the graph, every time an update is made.
- @param graph The graph object requesting the line color.
- @param index The index from left to right of a given point (X-axis). The first value for the index is 0.
- @return The color of the line. Specifying nil will cause the line to use the color specifed for the graph. */
-- (UIColor *)lineGraph:(BEMSimpleLineGraphView *)graph lineColorForIndex:(NSInteger)index __deprecated;
-
-
-/** The alpha of the line at the given index. This is called for each line in the graph, every time an update is made.
- @param graph The graph object requesting the line alpha.
- @param index The index from left to right of a given point (X-axis). The first value for the index is 0.
- @return The alpha value of the line, between 0.0 and 1.0. Specifying nil will cause the line to use the alpha specifed for the graph. */
-- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph lineAlphaForIndex:(NSInteger)index __deprecated;
 
 @end

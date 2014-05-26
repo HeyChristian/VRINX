@@ -12,7 +12,7 @@
 
 @interface TempOrderProduct : NSObject
 
-    @property (nonatomic, retain) NSNumber * itemCount;
-    @property (nonatomic, retain) TempProduct *product;
-
+@property (nonatomic, retain) NSNumber * itemCount;
+@property (nonatomic, retain) TempProduct *product;
+@property (nonatomic, retain) NSString *name;
 @end

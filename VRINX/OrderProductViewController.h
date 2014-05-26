@@ -20,6 +20,7 @@ typedef enum SOURCE{
 }SOURCE;
 
 
+
 @protocol OrderProductDelegate <NSObject>     //define a protocol named
 - (void) setOrderProduct:(NSMutableArray *)orderProducts;
 @end
@@ -42,5 +43,9 @@ typedef enum SOURCE{
 @property(nonatomic,strong)  UIBarButtonItem *checkoutBtn;
 
 - (IBAction)filterProductSource:(id)sender;
+-(void) changeItemStock:(NSString *)productUUID andOperator:(NSString *)operator;
+
+- (IBAction)addItem:(id)sender;
+- (IBAction)removeItem:(id)sender;
 
 @end

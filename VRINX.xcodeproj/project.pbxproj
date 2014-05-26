@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861B471319326865009E9EBD /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B470E19326865009E9EBD /* BEMCircle.m */; };
+		861B471419326865009E9EBD /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B471019326865009E9EBD /* BEMLine.m */; };
+		861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B471219326865009E9EBD /* BEMSimpleLineGraphView.m */; };
+		861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47191932B302009E9EBD /* UIButton+uuid.m */; };
+		861B47221932C58F009E9EBD /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47211932C58F009E9EBD /* CustomButton.m */; };
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
@@ -37,10 +42,6 @@
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
 		AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E71192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m */; };
-		AA3F0E8A192BFDC20042186D /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E83192BFDC20042186D /* BEMSimpleLineGraphView.m */; };
-		AA3F0E8B192BFDC20042186D /* BEMAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E85192BFDC20042186D /* BEMAnimations.m */; };
-		AA3F0E8C192BFDC20042186D /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E87192BFDC20042186D /* BEMCircle.m */; };
-		AA3F0E8D192BFDC20042186D /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E89192BFDC20042186D /* BEMLine.m */; };
 		AA3F0E97192C05450042186D /* JAQBlurryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E96192C05450042186D /* JAQBlurryTableViewController.m */; };
 		AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E99192C05940042186D /* UIImage+ImageEffects.m */; };
 		AA5522661916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
@@ -99,6 +100,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		861B470D19326865009E9EBD /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		861B470E19326865009E9EBD /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		861B470F19326865009E9EBD /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		861B471019326865009E9EBD /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		861B471119326865009E9EBD /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		861B471219326865009E9EBD /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		861B47181932B302009E9EBD /* UIButton+uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+uuid.h"; sourceTree = "<group>"; };
+		861B47191932B302009E9EBD /* UIButton+uuid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+uuid.m"; sourceTree = "<group>"; };
+		861B47201932C58F009E9EBD /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		861B47211932C58F009E9EBD /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -157,14 +168,6 @@
 		AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		AA3F0E70192BD2DE0042186D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		AA3F0E71192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		AA3F0E82192BFDC20042186D /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
-		AA3F0E83192BFDC20042186D /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
-		AA3F0E84192BFDC20042186D /* BEMAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimations.h; sourceTree = "<group>"; };
-		AA3F0E85192BFDC20042186D /* BEMAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimations.m; sourceTree = "<group>"; };
-		AA3F0E86192BFDC20042186D /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
-		AA3F0E87192BFDC20042186D /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
-		AA3F0E88192BFDC20042186D /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
-		AA3F0E89192BFDC20042186D /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
 		AA3F0E95192C05450042186D /* JAQBlurryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAQBlurryTableViewController.h; sourceTree = "<group>"; };
 		AA3F0E96192C05450042186D /* JAQBlurryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAQBlurryTableViewController.m; sourceTree = "<group>"; };
 		AA3F0E98192C05940042186D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -273,6 +276,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861B47161932B2D8009E9EBD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				861B47171932B2E4009E9EBD /* Buttons */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		861B47171932B2E4009E9EBD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				861B47181932B302009E9EBD /* UIButton+uuid.h */,
+				861B47191932B302009E9EBD /* UIButton+uuid.m */,
+				861B47201932C58F009E9EBD /* CustomButton.h */,
+				861B47211932C58F009E9EBD /* CustomButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		86799871191A94830070DFFF /* UIViewExtended */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,14 +398,12 @@
 		AA3F0E81192BFD810042186D /* SimpleLineChart */ = {
 			isa = PBXGroup;
 			children = (
-				AA3F0E82192BFDC20042186D /* BEMSimpleLineGraphView.h */,
-				AA3F0E83192BFDC20042186D /* BEMSimpleLineGraphView.m */,
-				AA3F0E84192BFDC20042186D /* BEMAnimations.h */,
-				AA3F0E85192BFDC20042186D /* BEMAnimations.m */,
-				AA3F0E86192BFDC20042186D /* BEMCircle.h */,
-				AA3F0E87192BFDC20042186D /* BEMCircle.m */,
-				AA3F0E88192BFDC20042186D /* BEMLine.h */,
-				AA3F0E89192BFDC20042186D /* BEMLine.m */,
+				861B470D19326865009E9EBD /* BEMCircle.h */,
+				861B470E19326865009E9EBD /* BEMCircle.m */,
+				861B470F19326865009E9EBD /* BEMLine.h */,
+				861B471019326865009E9EBD /* BEMLine.m */,
+				861B471119326865009E9EBD /* BEMSimpleLineGraphView.h */,
+				861B471219326865009E9EBD /* BEMSimpleLineGraphView.m */,
 			);
 			name = SimpleLineChart;
 			sourceTree = "<group>";
@@ -497,6 +517,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				861B47161932B2D8009E9EBD /* Categories */,
 				867998DA192D271B0070DFFF /* SWTableViewCell */,
 				AA3F0E94192C04FF0042186D /* JAQBlurry */,
 				AA3F0E80192BFD7C0042186D /* Charts */,
@@ -741,37 +762,38 @@
 			files = (
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
 				867998BA1929BC870070DFFF /* EntityOrderProduct.m in Sources */,
-				AA3F0E8B192BFDC20042186D /* BEMAnimations.m in Sources */,
 				867998F0192D33AC0070DFFF /* Tools.m in Sources */,
 				AA3F0E97192C05450042186D /* JAQBlurryTableViewController.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
 				867998E8192D27480070DFFF /* SWCellScrollView.m in Sources */,
 				867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
-				AA3F0E8C192BFDC20042186D /* BEMCircle.m in Sources */,
-				AA3F0E8D192BFDC20042186D /* BEMLine.m in Sources */,
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
+				861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */,
 				867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
 				AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */,
-				AA3F0E8A192BFDC20042186D /* BEMSimpleLineGraphView.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
+				861B471419326865009E9EBD /* BEMLine.m in Sources */,
+				861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
+				861B47221932C58F009E9EBD /* CustomButton.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				867998F3192DB0810070DFFF /* EntityProduct.m in Sources */,
 				867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				867998E7192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
+				861B471319326865009E9EBD /* BEMCircle.m in Sources */,
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
@@ -919,6 +941,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -940,6 +963,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VRINX/VRINX-Prefix.pch";
 				INFOPLIST_FILE = "VRINX/VRINX-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
