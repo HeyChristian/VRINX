@@ -59,8 +59,6 @@
     self.orderDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
     
-    self.orderCell.hidden = YES;
-    
     
 }
 #pragma mark - Order Product Delegate Functions
@@ -80,9 +78,13 @@
 #pragma mark - Table view data source
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.section == 0 && indexPath.row == 1) {
+    
+    if(indexPath.section == 0 && indexPath.row == 2) {
         [self openDateSelectionControllerWithBlock:self];
-    }// else if (indexPath.section == 0 && indexPath.row == 1) {
+    }
+    
+    
+    // else if (indexPath.section == 0 && indexPath.row == 1) {
        // [self openDateSelectionControllerWithBlock:self];
     //}
     
@@ -165,21 +167,7 @@
     
     [dateSelectionVC show];
 }
-- (IBAction)setMultipleOrders:(id)sender {
-    
-  //  NSLog(@"state: %@", self.multipleOrderSwitch.on);
-    [self.view endEditing:YES];
-    if(self.multipleOrderSwitch.on){
-        self.orderCell.hidden=NO;
-        self.productCell.hidden=YES;
-        
-    
-    }else{
-        self.productCell.hidden=NO;
-        self.orderCell.hidden=YES;
-    }
-    
-}
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

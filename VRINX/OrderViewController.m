@@ -7,7 +7,7 @@
 //
 
 #import "OrderViewController.h"
-#import "OrderMasterViewController.h"
+#import "ChooseOrderTypeController.h"
 
 @interface OrderViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -38,7 +38,7 @@
  
      if([segue.identifier isEqualToString:@"newOrder"] || [segue.identifier isEqualToString:@"newOrderBtn"] ){
      
-         OrderMasterViewController *orderProductVC = (OrderMasterViewController *) segue.destinationViewController;
+         ChooseOrderTypeController *orderProductVC = (ChooseOrderTypeController *) segue.destinationViewController;
          orderProductVC.account = self.account;
      
          NSLog(@"Order Product Account: %@",orderProductVC.account);

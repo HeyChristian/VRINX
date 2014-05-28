@@ -12,6 +12,15 @@
 		861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B471219326865009E9EBD /* BEMSimpleLineGraphView.m */; };
 		861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47191932B302009E9EBD /* UIButton+uuid.m */; };
 		861B47221932C58F009E9EBD /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47211932C58F009E9EBD /* CustomButton.m */; };
+		8676BF261935712100849AD0 /* ChooseOrderTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF251935712100849AD0 /* ChooseOrderTypeController.m */; };
+		8676BF311935888100849AD0 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF291935888100849AD0 /* APAddress.m */; };
+		8676BF321935888100849AD0 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF2B1935888100849AD0 /* APAddressBook.m */; };
+		8676BF331935888100849AD0 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF2D1935888100849AD0 /* APContact.m */; };
+		8676BF341935888100849AD0 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF2F1935888100849AD0 /* APPhoneWithLabel.m */; };
+		8676BF5C1935969900849AD0 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF5B1935969900849AD0 /* ContactListTableViewController.m */; };
+		8676BF5F193598A000849AD0 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF5E193598A000849AD0 /* ContactCell.m */; };
+		8676BF6319359ABA00849AD0 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */; };
+		8676BF661935A47000849AD0 /* DataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF651935A47000849AD0 /* DataGenerator.m */; };
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
@@ -110,6 +119,25 @@
 		861B47191932B302009E9EBD /* UIButton+uuid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+uuid.m"; sourceTree = "<group>"; };
 		861B47201932C58F009E9EBD /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		861B47211932C58F009E9EBD /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		8676BF241935712100849AD0 /* ChooseOrderTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseOrderTypeController.h; sourceTree = "<group>"; };
+		8676BF251935712100849AD0 /* ChooseOrderTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseOrderTypeController.m; sourceTree = "<group>"; };
+		8676BF281935888100849AD0 /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
+		8676BF291935888100849AD0 /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddress.m; sourceTree = "<group>"; };
+		8676BF2A1935888100849AD0 /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBook.h; sourceTree = "<group>"; };
+		8676BF2B1935888100849AD0 /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBook.m; sourceTree = "<group>"; };
+		8676BF2C1935888100849AD0 /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContact.h; sourceTree = "<group>"; };
+		8676BF2D1935888100849AD0 /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContact.m; sourceTree = "<group>"; };
+		8676BF2E1935888100849AD0 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhoneWithLabel.h; sourceTree = "<group>"; };
+		8676BF2F1935888100849AD0 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhoneWithLabel.m; sourceTree = "<group>"; };
+		8676BF301935888100849AD0 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
+		8676BF5A1935969900849AD0 /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewController.h; sourceTree = "<group>"; };
+		8676BF5B1935969900849AD0 /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListTableViewController.m; sourceTree = "<group>"; };
+		8676BF5D193598A000849AD0 /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
+		8676BF5E193598A000849AD0 /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
+		8676BF6119359ABA00849AD0 /* MONActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MONActivityIndicatorView.h; sourceTree = "<group>"; };
+		8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MONActivityIndicatorView.m; sourceTree = "<group>"; };
+		8676BF641935A47000849AD0 /* DataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGenerator.h; sourceTree = "<group>"; };
+		8676BF651935A47000849AD0 /* DataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataGenerator.m; sourceTree = "<group>"; };
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -295,6 +323,42 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		8676BF271935886100849AD0 /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				8676BF281935888100849AD0 /* APAddress.h */,
+				8676BF291935888100849AD0 /* APAddress.m */,
+				8676BF2A1935888100849AD0 /* APAddressBook.h */,
+				8676BF2B1935888100849AD0 /* APAddressBook.m */,
+				8676BF2C1935888100849AD0 /* APContact.h */,
+				8676BF2D1935888100849AD0 /* APContact.m */,
+				8676BF2E1935888100849AD0 /* APPhoneWithLabel.h */,
+				8676BF2F1935888100849AD0 /* APPhoneWithLabel.m */,
+				8676BF301935888100849AD0 /* APTypes.h */,
+			);
+			name = APAddressBook;
+			sourceTree = "<group>";
+		};
+		8676BF5419358B0E00849AD0 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				8676BF5A1935969900849AD0 /* ContactListTableViewController.h */,
+				8676BF5B1935969900849AD0 /* ContactListTableViewController.m */,
+				8676BF5D193598A000849AD0 /* ContactCell.h */,
+				8676BF5E193598A000849AD0 /* ContactCell.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		8676BF6019359AAC00849AD0 /* MONActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				8676BF6119359ABA00849AD0 /* MONActivityIndicatorView.h */,
+				8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */,
+			);
+			name = MONActivityIndicatorView;
+			sourceTree = "<group>";
+		};
 		86799871191A94830070DFFF /* UIViewExtended */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +434,8 @@
 			children = (
 				867998EE192D33AC0070DFFF /* Tools.h */,
 				867998EF192D33AC0070DFFF /* Tools.m */,
+				8676BF641935A47000849AD0 /* DataGenerator.h */,
+				8676BF651935A47000849AD0 /* DataGenerator.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -517,6 +583,8 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8676BF6019359AAC00849AD0 /* MONActivityIndicatorView */,
+				8676BF271935886100849AD0 /* APAddressBook */,
 				861B47161932B2D8009E9EBD /* Categories */,
 				867998DA192D271B0070DFFF /* SWTableViewCell */,
 				AA3F0E94192C04FF0042186D /* JAQBlurry */,
@@ -544,6 +612,7 @@
 		AA5522C51916EC7A005D5950 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8676BF5419358B0E00849AD0 /* Contacts */,
 				867998CD192AB2110070DFFF /* Tools */,
 				AAC205191924967E00B2744C /* Orders */,
 				AAC204DB1922B3B600B2744C /* Products */,
@@ -646,6 +715,8 @@
 				867998951927CBC60070DFFF /* EmptyOrderProductCell.m */,
 				867998A3192868660070DFFF /* OrderProductCell.h */,
 				867998A4192868660070DFFF /* OrderProductCell.m */,
+				8676BF241935712100849AD0 /* ChooseOrderTypeController.h */,
+				8676BF251935712100849AD0 /* ChooseOrderTypeController.m */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -769,7 +840,9 @@
 				867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				AAC205091922CFE500B2744C /* Model.xcdatamodeld in Sources */,
 				AA5522781916E98E005D5950 /* AppDelegate.m in Sources */,
+				8676BF5C1935969900849AD0 /* ContactListTableViewController.m in Sources */,
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
+				8676BF661935A47000849AD0 /* DataGenerator.m in Sources */,
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
@@ -777,8 +850,11 @@
 				867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
+				8676BF261935712100849AD0 /* ChooseOrderTypeController.m in Sources */,
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
+				8676BF6319359ABA00849AD0 /* MONActivityIndicatorView.m in Sources */,
+				8676BF331935888100849AD0 /* APContact.m in Sources */,
 				AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				861B471419326865009E9EBD /* BEMLine.m in Sources */,
@@ -789,9 +865,11 @@
 				861B47221932C58F009E9EBD /* CustomButton.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				867998F3192DB0810070DFFF /* EntityProduct.m in Sources */,
+				8676BF321935888100849AD0 /* APAddressBook.m in Sources */,
 				867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
 				867998E7192D27480070DFFF /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				8676BF5F193598A000849AD0 /* ContactCell.m in Sources */,
 				AA5522D31916F6B7005D5950 /* AccountsTableViewController.m in Sources */,
 				861B471319326865009E9EBD /* BEMCircle.m in Sources */,
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
@@ -802,12 +880,14 @@
 				AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
+				8676BF311935888100849AD0 /* APAddress.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */,
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
 				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */,
+				8676BF341935888100849AD0 /* APPhoneWithLabel.m in Sources */,
 				867998E9192D27480070DFFF /* SWLongPressGestureRecognizer.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				867998B71929BC870070DFFF /* EntityOrder.m in Sources */,
