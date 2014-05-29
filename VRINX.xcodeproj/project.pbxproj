@@ -27,6 +27,7 @@
 		8676BF821936A33400849AD0 /* AMBouncingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF7E1936A33400849AD0 /* AMBouncingView.m */; };
 		8676BF831936A33400849AD0 /* AMSmoothAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF811936A33400849AD0 /* AMSmoothAlertView.m */; };
 		8676BF851936C24500849AD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8676BF841936C24500849AD0 /* Images.xcassets */; };
+		8676BF881936E4C400849AD0 /* GlobalResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF871936E4C400849AD0 /* GlobalResource.m */; };
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
@@ -153,6 +154,8 @@
 		8676BF801936A33400849AD0 /* AMSmoothAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSmoothAlertView.h; sourceTree = "<group>"; };
 		8676BF811936A33400849AD0 /* AMSmoothAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSmoothAlertView.m; sourceTree = "<group>"; };
 		8676BF841936C24500849AD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8676BF861936E4C400849AD0 /* GlobalResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalResource.h; sourceTree = "<group>"; };
+		8676BF871936E4C400849AD0 /* GlobalResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalResource.m; sourceTree = "<group>"; };
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -466,6 +469,8 @@
 				867998EF192D33AC0070DFFF /* Tools.m */,
 				8676BF641935A47000849AD0 /* DataGenerator.h */,
 				8676BF651935A47000849AD0 /* DataGenerator.m */,
+				8676BF861936E4C400849AD0 /* GlobalResource.h */,
+				8676BF871936E4C400849AD0 /* GlobalResource.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				867998961927CBC60070DFFF /* EmptyOrderProductCell.m in Sources */,
 				86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */,
 				8676BF6319359ABA00849AD0 /* MONActivityIndicatorView.m in Sources */,
+				8676BF881936E4C400849AD0 /* GlobalResource.m in Sources */,
 				8676BF331935888100849AD0 /* APContact.m in Sources */,
 				AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,

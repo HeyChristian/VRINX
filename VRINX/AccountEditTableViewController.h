@@ -16,7 +16,7 @@
 
 
 
-@property (nonatomic,strong)EntityAccount *account;
+//@property (nonatomic,strong)EntityAccount *account;
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
 @property (weak, nonatomic) IBOutlet UITextField *accountNameField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionField;

@@ -11,6 +11,9 @@
 #import <AddressBookUI/AddressBookUI.h>
 #import "AMSmoothAlertView.h"
 #import "APContact.h"
+#import "GlobalResource.h"
+
+
 
 /*
  Description:
@@ -90,6 +93,9 @@
 //
 #pragma mark -
 @implementation AddressBookPeoplePickerViewController
+
+
+@synthesize delegate;
 
 // ==========================================================================
 // Constants and Defines
@@ -418,16 +424,44 @@
  
     APContact *contact = [self GetAPContact:person];
 
+    NSString *name;
+    
+    if (contact.firstName.length >0){
+        name = [[NSString alloc] initWithFormat:@"%@ %@",contact.firstName.length >0?contact.firstName:@"",contact.lastName.length > 0 ? contact.lastName:@""];
+    
+    }else if(contact.company.length > 0){
+        
+        name = [[NSString alloc] initWithString:contact.company];
+    }
+
+
     AMSmoothAlertView *alert;
-    alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:[[NSString alloc] initWithFormat:@"%@",contact.compositeName] andText:@"if this is not your choice, press cancel and choose another contact" andCancelButton:YES forAlertType:AlertSelection];
+    alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:name andText:@"if this is not your choice, press cancel and choose another contact" andCancelButton:YES forAlertType:AlertSelection];
     
     
     [alert setTitleFont:[UIFont fontWithName:@"Verdana" size:25.0f]];
     alert.tag = 0;
     alert.delegate = self;
     alert.cornerRadius = 3.0f;
-    
     [alert show];
+    
+    alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
+        if(button == alertObj.defaultButton) {
+            NSLog(@"Default");
+        
+            //self.contactSelected = contact;
+            
+            GlobalResource *global = [GlobalResource sharedInstance];
+            global.selectedContact =  contact;
+            
+            
+            
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            [self performSegueWithIdentifier:@"backOrder" sender:self];
+           
+        }
+    };
+    
     
 	return NO;
 #endif
@@ -463,21 +497,15 @@
     return contact;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex==1){
-        NSLog(@"Select Person");
-        [self.navigationController popViewControllerAnimated:YES];
+
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if(self.contactSelected != nil){
+        [self.delegate setSelectedContact:self.contactSelected];
     }
 }
 
--(void) selectContact:(id) sender{
-    
-    NSLog(@"Select Person");
-    //[self.delegate setCroppedImage:self.croppingTool.getOutputImage]; //call the delegate method hear
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
 
 // Does allow users to perform default actions such as dialing a phone number, when they select a person property.
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier

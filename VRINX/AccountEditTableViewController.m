@@ -11,10 +11,12 @@
 #import "EntityAccount.h"
 #import "AccountDetail.h"
 #import "CroperViewController.h"
+#import "GlobalResource.h"
 
 
 @interface AccountEditTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate,UITextFieldDelegate>{
     
+    GlobalResource *global;
     int numberOfSection;
 }
 
@@ -36,20 +38,21 @@
     self.salesTaxField.delegate=self;
     [self.view endEditing:YES];
     
+    global =[GlobalResource sharedInstance];
     
-    if(self.account != nil){
+    if(global.account != nil){
         // edit mode
         
-        self.accountNameField.text = self.account.name;
-        self.descriptionField.text= self.account.shortDesc;
-        self.salesTaxField.text = [NSString stringWithFormat:@"%@", self.account.tax];
-        self.earningPercentField.text = [NSString stringWithFormat:@"%@", self.account.earningPercent];
-        self.pickedImage = [UIImage imageWithData:self.account.logo];
+        self.accountNameField.text = global.account.name;
+        self.descriptionField.text= global.account.shortDesc;
+        self.salesTaxField.text = [NSString stringWithFormat:@"%@", global.account.tax];
+        self.earningPercentField.text = [NSString stringWithFormat:@"%@", global.account.earningPercent];
+        self.pickedImage = [UIImage imageWithData:global.account.logo];
         self.logoView.image = self.pickedImage;
         
-        self.showLogoSegment.selectedSegmentIndex = [self.account.showLogo intValue];
-        self.showAccountNameSegment.selectedSegmentIndex= [self.account.showName intValue];
-        self.showDescSegment.selectedSegmentIndex=[self.account.showDescription intValue];
+        self.showLogoSegment.selectedSegmentIndex = [global.account.showLogo intValue];
+        self.showAccountNameSegment.selectedSegmentIndex= [global.account.showName intValue];
+        self.showDescSegment.selectedSegmentIndex=[global.account.showDescription intValue];
         
         numberOfSection=5;
        
@@ -83,7 +86,7 @@
         
        AccountDetail *detail = [[AccountDetail alloc]  init];
        detail = (AccountDetail *) segue.destinationViewController;
-       detail.account =  self.account;
+       //detail.account =  self.account;
         
     
     }
@@ -179,15 +182,15 @@
 -(void) updateAccount{
     
     
-    self.account.name = self.accountNameField.text;
-    self.account.shortDesc = self.descriptionField.text;
-    self.account.tax = [NSDecimalNumber decimalNumberWithString:self.salesTaxField.text];
-    self.account.earningPercent =[NSDecimalNumber decimalNumberWithString:self.earningPercentField.text];
-    self.account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    global.account.name = self.accountNameField.text;
+    global.account.shortDesc = self.descriptionField.text;
+    global.account.tax = [NSDecimalNumber decimalNumberWithString:self.salesTaxField.text];
+    global.account.earningPercent =[NSDecimalNumber decimalNumberWithString:self.earningPercentField.text];
+    global.account.logo = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     
-    self.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selectedSegmentIndex];
-    self.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selectedSegmentIndex];
-    self.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selectedSegmentIndex];
+    global.account.showLogo = [NSNumber numberWithBool:self.showLogoSegment.selectedSegmentIndex];
+    global.account.showName = [NSNumber numberWithBool:self.showAccountNameSegment.selectedSegmentIndex];
+    global.account.showDescription = [NSNumber numberWithBool:self.showDescSegment.selectedSegmentIndex];
     
     
     
@@ -202,7 +205,7 @@
 
 - (IBAction)save:(id)sender {
     
-    if(self.account != nil){
+    if(global.account != nil){
         [self updateAccount];
     }else{
         [self createAccount];
@@ -249,7 +252,7 @@
         NSLog(@"1");
      
         CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-        [[coreDataStack  managedObjectContext] deleteObject:self.account];
+        [[coreDataStack  managedObjectContext] deleteObject:global.account];
         [coreDataStack saveContext];
         
         [self.navigationController popToRootViewControllerAnimated:YES];

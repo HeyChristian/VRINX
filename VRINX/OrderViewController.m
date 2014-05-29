@@ -8,8 +8,13 @@
 
 #import "OrderViewController.h"
 #import "ChooseOrderTypeController.h"
+#import "GlobalResource.h"
 
-@interface OrderViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface OrderViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    
+    GlobalResource *global;
+    
+}
 
 @end
 
@@ -22,7 +27,9 @@
     [super viewDidLoad];
     
     self.orders = [[NSArray alloc] init];
-    self.orders = [self.account.orders allObjects];
+    global = [GlobalResource sharedInstance];
+    
+    self.orders = [global.account.orders allObjects];
     
     self.tableView.dataSource =self;
     self.tableView.delegate =self;
@@ -38,10 +45,10 @@
  
      if([segue.identifier isEqualToString:@"newOrder"] || [segue.identifier isEqualToString:@"newOrderBtn"] ){
      
-         ChooseOrderTypeController *orderProductVC = (ChooseOrderTypeController *) segue.destinationViewController;
-         orderProductVC.account = self.account;
+        // ChooseOrderTypeController *orderProductVC = (ChooseOrderTypeController *) segue.destinationViewController;
+        // orderProductVC.account = global.account;
      
-         NSLog(@"Order Product Account: %@",orderProductVC.account);
+    //     NSLog(@"Order Product Account: %@",orderProductVC.account);
          
      }
      

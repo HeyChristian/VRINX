@@ -11,8 +11,11 @@
 #import "EntityProduct.h"
 #import "ProductCell.h"
 #import "ProductDetailTableViewController.h"
+#import "GlobalResource.h"
 
-@interface ProductTableViewController ()
+@interface ProductTableViewController (){
+    GlobalResource *global;
+}
 
 @end
 
@@ -23,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    global = [GlobalResource sharedInstance];
     
 //    self.products = [[NSMutableArray alloc] init];
   //  self.products = [self.account.products allObjects];
@@ -41,7 +46,7 @@
     [self.navigationController setToolbarHidden:YES];
     
     self.products = [[NSMutableArray alloc] init];
-    self.products = [self.account.products allObjects];
+    self.products = [global.account.products allObjects];
     [self.tableView reloadData];
 
 }
@@ -51,15 +56,15 @@
     
     if([segue.identifier isEqualToString:@"product"]){
         
-        ProductDetailTableViewController  *product = (ProductDetailTableViewController *) segue.destinationViewController;
-        product.account = self.account;
+      //  ProductDetailTableViewController  *product = (ProductDetailTableViewController *) segue.destinationViewController;
+       // product.account = global.account;
         
     }else if([segue.identifier isEqualToString:@"edit"]){
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         
         ProductDetailTableViewController  *product = (ProductDetailTableViewController *) segue.destinationViewController;
-        product.account = self.account;
+       // product.account = global.account;
         product.product = [self.products objectAtIndex:indexPath.row];
         
         

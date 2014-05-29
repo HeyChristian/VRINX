@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class EntityAccount;
+//@class EntityAccount;
 @class EntityProduct;
 
 @interface ProductDetailTableViewController : UITableViewController
@@ -16,7 +16,7 @@
 
 
 @property (nonatomic,strong) EntityProduct *product;
-@property (nonatomic,strong) EntityAccount *account;
+//@property (nonatomic,strong) EntityAccount *account;
 @property (weak, nonatomic) IBOutlet UITableViewCell *itemPhotoCell;
 
 

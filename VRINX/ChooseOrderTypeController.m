@@ -7,7 +7,7 @@
 //
 
 #import "ChooseOrderTypeController.h"
-#import "OrderMasterViewController.h"
+//#import "OrderMasterViewController.h"
 
 @interface ChooseOrderTypeController ()
 
@@ -22,10 +22,10 @@
     
     if([segue.identifier isEqualToString:@"singleOrder"]  ){
         
-        OrderMasterViewController *orderProductVC = (OrderMasterViewController *) segue.destinationViewController;
-        orderProductVC.account = self.account;
+       // OrderMasterViewController *orderProductVC = (OrderMasterViewController *) segue.destinationViewController;
+       // orderProductVC.account = self.account;
         
-        NSLog(@"Order Product Account: %@",orderProductVC.account);
+       // NSLog(@"Order Product Account: %@",orderProductVC.account);
         
     }
     

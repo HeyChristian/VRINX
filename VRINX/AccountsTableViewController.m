@@ -20,12 +20,14 @@
 
 #import "BEMSimpleLineGraphView.h"
 #import "SWTableViewCell.h"
+#import "GlobalResource.h"
 
 
 #import "Tools.h"
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
     int totalNumber;
     NSIndexPath *selectedCellIndexPath;
+    GlobalResource *global;
 
 }
 
@@ -56,6 +58,8 @@ BEMSimpleLineGraphView *myGraph;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HeaderCell"];
 	[self configureBannerWithImage:[UIImage imageNamed:@"headerback"] height:190];
 	[self GetGraphView];
+    global = [GlobalResource sharedInstance];
+    global.account = nil;
     
     //[self initWelcomeViews];
     
@@ -90,10 +94,13 @@ BEMSimpleLineGraphView *myGraph;
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    global.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
+    
+   /*
     if([segue.identifier isEqualToString:@"Detail"]){
         AccountDetail *accountDetail = (AccountDetail *) segue.destinationViewController;
         accountDetail.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
-    
+        
     }else if([segue.identifier isEqualToString:@"quickAddProduct"]){
         ProductTableViewController *productview = (ProductTableViewController *) segue.destinationViewController;
         productview.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
@@ -102,7 +109,7 @@ BEMSimpleLineGraphView *myGraph;
         OrderViewController *orderview = (OrderViewController *) segue.destinationViewController;
         orderview.account = [self.fetchResultsController objectAtIndexPath:selectedCellIndexPath];
         
-    }
+    }*/
     //quickAddProduct
     
     //quickAddOrder

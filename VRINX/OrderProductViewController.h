@@ -11,7 +11,7 @@
 #import "EntityOrder.h"
 #import "EntityOrderProduct.h"
 #import "TempOrderProduct.h"
-
+#import "GlobalResource.h"
 typedef enum SOURCE{
 
     ALL=0,
@@ -33,7 +33,8 @@ typedef enum SOURCE{
 @property (nonatomic, assign) id delegate; //create a delegate
 
 @property(nonatomic,assign) SOURCE selectedSource;
-@property(nonatomic,strong) EntityAccount *account;
+
+
 @property(nonatomic,strong) EntityOrder *order;
 @property(nonatomic,retain) NSMutableArray *orderProducts;
 @property(nonatomic,strong) NSArray *products;

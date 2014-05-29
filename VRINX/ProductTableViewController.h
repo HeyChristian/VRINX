@@ -12,7 +12,7 @@
 
 @interface ProductTableViewController : UITableViewController
 
-@property(nonatomic,strong) EntityAccount *account;
+//@property(nonatomic,strong) EntityAccount *account;
 @property(nonatomic,strong) EntityProduct *product;
 @property(nonatomic,strong) NSArray *products;
 

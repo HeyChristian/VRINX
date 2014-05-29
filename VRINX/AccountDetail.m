@@ -12,8 +12,11 @@
 #import "AccountEditTableViewController.h"
 #import "ProductTableViewController.h"
 #import "OrderViewController.h"
+#import "GlobalResource.h"
 
-@interface AccountDetail ()
+@interface AccountDetail (){
+    GlobalResource *global;
+}
 
 @property(nonatomic,strong) NSArray *products;
 @property(nonatomic,strong) NSArray *orders;
@@ -27,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    global = [GlobalResource sharedInstance];
     
     
 }
@@ -35,20 +38,20 @@
     [super viewWillAppear:animated];
 
     
-    if(self.account){
-        self.accountNameLabel.text = self.account.name;
-        self.shortDescriptionLabel.text= self.account.shortDesc;
-        self.missingLabel.text = [self formatCurrency:self.account.missed];
-        self.earningsLabel.text = [self formatCurrency:self.account.earnings];
-        self.logoView.image = [UIImage imageWithData:self.account.logo];;
+    if(global.account){
+        self.accountNameLabel.text = global.account.name;
+        self.shortDescriptionLabel.text= global.account.shortDesc;
+        self.missingLabel.text = [self formatCurrency:global.account.missed];
+        self.earningsLabel.text = [self formatCurrency:global.account.earnings];
+        self.logoView.image = [UIImage imageWithData:global.account.logo];;
     }
     
     self.products = [[NSArray alloc] init];
-    self.products = [self.account.products allObjects];
+    self.products = [global.account.products allObjects];
     self.productCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.products.count];
     
     self.orders = [[NSArray alloc] init];
-    self.orders = [self.account.orders allObjects];
+    self.orders = [global.account.orders allObjects];
     self.orderCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.orders.count];
     
     
@@ -61,18 +64,18 @@
     
     if([segue.identifier isEqualToString:@"edit"]){
         
-        AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
-        editAccountVC.account = self.account;
+      //  AccountEditTableViewController  *editAccountVC = (AccountEditTableViewController *) segue.destinationViewController;
+       // editAccountVC.account = global.account;
     
     }else if([segue.identifier isEqualToString:@"products"]){
      
-        ProductTableViewController *productVC = (ProductTableViewController *) segue.destinationViewController;
-        productVC.account = self.account;
+        //ProductTableViewController *productVC = (ProductTableViewController *) segue.destinationViewController;
+       // productVC.account = global.account;
         
     }else if([segue.identifier isEqualToString:@"orders"]){
         
-        OrderViewController *orderVC = (OrderViewController *) segue.destinationViewController;
-        orderVC.account = self.account;
+      //  OrderViewController *orderVC = (OrderViewController *) segue.destinationViewController;
+       // orderVC.account = global.account;
         
     }
     

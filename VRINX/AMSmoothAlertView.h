@@ -27,6 +27,7 @@ typedef void (^dismissAlertWithButton)(AMSmoothAlertView *, UIButton *);
 @property (nonatomic, strong) UILabel * titleLabel;
 @property (nonatomic, strong) UILabel * textLabel;
 @property (nonatomic, strong) UIButton *defaultButton;
+@property (nonatomic, strong) NSString *defaultButtonLabel;
 @property (nonatomic, strong) UIButton *cancelButton;
 @property (nonatomic, strong) UIImageView *logoView;
 @property (nonatomic, strong) UIFont *titleFont;

@@ -13,8 +13,13 @@
 #import "CoreDataStack.h"
 #import "AppDelegate.h"
 #import "CroperViewController.h"
+#import "GlobalResource.h"
 
-@interface ProductDetailTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate>
+@interface ProductDetailTableViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CropperDelegate>{
+    
+    GlobalResource *global;
+    
+}
 
 @property (nonatomic,strong) UIImage *pickedImage;
 
@@ -31,6 +36,8 @@
    // NSLog(@"account parameter: %@",self.account);
     
     [super viewDidLoad];
+    global = [GlobalResource sharedInstance];
+    
     if(self.product != nil){
        
         self.productNameField.text = self.product.name;
@@ -94,7 +101,7 @@
     
    
    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    EntityProduct *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.account.managedObjectContext];
+    EntityProduct *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:global.account.managedObjectContext];
     
     
     product.uuid=  [self getPK];   //[[NSUUID UUID] UUIDString];
@@ -107,7 +114,7 @@
     }else{
         product.itemPhoto = UIImageJPEGRepresentation([UIImage imageNamed:@"box.png"], 0.75);
     }
-    [self.account addProductsObject:product];
+    [global.account addProductsObject:product];
     
     
     [coreDataStack saveContext];

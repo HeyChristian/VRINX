@@ -11,10 +11,9 @@
 #import "TempOrderProduct.h"
 
 
-
 @interface OrderMasterViewController : UITableViewController
 
-@property(nonatomic,strong) EntityAccount *account;
+//@property(nonatomic,strong) EntityAccount *account;
 
 @property (weak, nonatomic) IBOutlet UILabel *contactNameLabel;
 
@@ -27,9 +26,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *shippingField;
 @property (weak, nonatomic) IBOutlet UILabel *productCountLabel;
 
+
+
 @property(nonatomic,strong) NSMutableArray *orderProducts;
 @property(nonatomic) bool withoutSave;
 
+- (IBAction)cancelOrder:(id)sender;
 
 
 

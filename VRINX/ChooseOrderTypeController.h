@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EntityAccount.h"
 
 @interface ChooseOrderTypeController : UITableViewController
 
-@property(nonatomic,strong) EntityAccount *account;
+//@property(nonatomic,strong) EntityAccount *account;
 
 
 

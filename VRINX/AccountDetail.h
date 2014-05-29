@@ -12,7 +12,7 @@
 @interface AccountDetail : UITableViewController
 
 
-@property (nonatomic,strong)EntityAccount *account;
+//@property (nonatomic,strong)EntityAccount *account;
 
 @property (weak, nonatomic) IBOutlet UILabel *accountNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *shortDescriptionLabel;

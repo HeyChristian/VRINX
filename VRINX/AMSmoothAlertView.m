@@ -269,7 +269,7 @@
     [self setColorForButton:color onButton:_defaultButton withType:type];
     
     //default button end setup
-    [_defaultButton setTitle:@"OK !" forState:UIControlStateNormal];
+    [_defaultButton setTitle:@"OK" forState:UIControlStateNormal];
     _defaultButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:18.0f];
 	[_defaultButton addTarget:self action:@selector(handleButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [_defaultButton.layer setCornerRadius:3.0f];
@@ -326,6 +326,9 @@
 -(void) setMessageText:(NSString*) string
 {
     _textLabel.text = string;
+}
+-(void) setDefaultButtonLabel:(NSString *)string{
+    _defaultButtonLabel = string;
 }
 
 #pragma mark - Animations

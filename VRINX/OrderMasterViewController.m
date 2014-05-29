@@ -10,10 +10,15 @@
 #import "OrderProductViewController.h"
 #import "RMDateSelectionViewController.h"
 #import "TempProduct.h"
-@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,OrderProductDelegate>
+#import "APContact.h"
+#import "AddressBookPeoplePickerViewController.h"
+#import "GlobalResource.h"
 
-//@property (strong, nonatomic) NSIndexPath *datePickerIndexPath;
-//@property (strong,nonatomic)NSDate *orderDate;
+@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,OrderProductDelegate,UIAlertViewDelegate>{
+    GlobalResource *global;
+}
+
+
 
 @end
 
@@ -21,46 +26,78 @@
 
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    global = [GlobalResource sharedInstance];
+    
     self.orderNumberField.delegate = self;
     self.taxField.delegate=self;
     self.shippingField.delegate=self;
-    [self.view endEditing:YES];
-    
-    
     self.orderProducts = [[NSMutableArray alloc] init];
     
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationItem setBackBarButtonItem:nil];
+    [self.navigationItem setLeftBarButtonItem:nil animated:NO];
+   
+}
+-(void) viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+    global.selectedContact=nil;
+    
+    
     
 }
-#pragma mark - Navigation
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if([segue.identifier isEqualToString:@"orderProducts"] || [segue.identifier isEqualToString:@"orderProductsBtn"]){
-        
-        OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
-        newProduct.delegate = self;
-        newProduct.account = self.account;
-        newProduct.orderProducts = self.orderProducts;
-        NSLog(@"Order Product Account: %@", newProduct.account);
-    }
-    
-}
-
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     [self.view endEditing:YES];
+    
+    
+    
+    
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMMM d, yyyy"];
     
     self.orderDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
+   
+  
+    self.contactNameLabel.text = [self getSelectedContact];
+    
+    
+    NSLog(@"%@",self.contactNameLabel.text);
+    
+}
+
+
+#pragma mark - Navigation
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"orderProducts"] || [segue.identifier isEqualToString:@"orderProductsBtn"]){
+        
+        OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
+        
+        newProduct.delegate = self;
+       // newProduct.account = self.account;
+       
+        newProduct.orderProducts = self.orderProducts;
+        
+        
+    }else if([segue.identifier isEqualToString:@"selectContact"] ){
+    
+      //  AddressBookPeoplePickerViewController *addr =(AddressBookPeoplePickerViewController *)segue.destinationViewController;
+       // addr.delegate=self;
+        
+    }
     
     
 }
+
+
 #pragma mark - Order Product Delegate Functions
 -(void) setOrderProduct:(NSMutableArray *)orderProducts{
     self.orderProducts = orderProducts;
@@ -176,5 +213,54 @@
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+}
+
+-(NSString *) getSelectedContact{
+    
+   
+    
+    NSString *name;
+    
+    if (  global.selectedContact.firstName.length >0){
+        name = [[NSString alloc] initWithFormat:@"%@ %@",  global.selectedContact.firstName.length >0?  global.selectedContact.firstName:@"",  global.selectedContact.lastName.length > 0 ?   global.selectedContact.lastName:@""];
+        
+    }else if(  global.selectedContact.company.length > 0){
+        
+        name = [[NSString alloc] initWithString:  global.selectedContact.company];
+    }
+    
+    if(name.length <= 0){
+        name = @"Plese select a contact";
+    }
+    
+    return name;
+}
+
+- (IBAction)cancelOrder:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Warning"
+                          message:@"This action will cancelled order,deleted all your progress. \n\n Are you sure you take this action?"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"Yes, Im Sure", nil];
+    [alert show];
+    
+    
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"0");
+    }
+    else if (buttonIndex == 1) {
+        NSLog(@"1");
+        
+       
+        //Perform segue....
+      //  cancelOrder
+        [self performSegueWithIdentifier:@"cancelOrder" sender:nil];
+        
+        //[self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 @end

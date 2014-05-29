@@ -13,8 +13,12 @@
 #import "EmptyOrderProductCell.h"
 
 #import "TempProduct.h"
-
-@interface OrderProductViewController()<UITableViewDataSource,UITableViewDelegate>
+#import "GlobalResource.h"
+@interface OrderProductViewController()<UITableViewDataSource,UITableViewDelegate>{
+    
+    GlobalResource *global;
+    
+}
 
  
 @end
@@ -31,6 +35,7 @@
 {
     
     [super viewDidLoad];
+    global=[GlobalResource sharedInstance];
     
     self.selectedSource = ALL;
   
@@ -51,8 +56,10 @@
     self.toolbarItems = toolbarItems;
     */
     
+    
+    
     self.products = [[NSArray alloc] init];
-    self.products = [self.account.products allObjects];
+    self.products = [global.account.products allObjects];
     
     NSLog(@"order products >>> %@ ", self.orderProducts);
     
@@ -84,7 +91,7 @@
     if([segue.identifier isEqualToString:@"newProduct"]){
         
         ProductDetailTableViewController  *newProduct = (ProductDetailTableViewController *) segue.destinationViewController;
-        newProduct.account = self.account;
+       //  newProduct.account = global.account;
         
     }
     
