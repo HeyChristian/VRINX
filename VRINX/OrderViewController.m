@@ -35,9 +35,25 @@
     self.tableView.delegate =self;
     
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
+                                             initWithTitle:@""
+                                             style:UIBarButtonItemStylePlain
+                                             target:self
+                                             action:@selector(performBack:)];
+    
 }
 
-
+-(void)performBack:(id) sender{
+    
+    NSLog(@"perform back into order view controller");
+    
+    if(global.backSegueIdentifier != nil){
+        [self performSegueWithIdentifier:global.backSegueIdentifier sender:nil];
+    }else{
+         [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
+}
 
 #pragma mark - Navigation
 

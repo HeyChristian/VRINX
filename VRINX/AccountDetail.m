@@ -77,6 +77,7 @@
       //  OrderViewController *orderVC = (OrderViewController *) segue.destinationViewController;
        // orderVC.account = global.account;
         
+        global.backSegueIdentifier = @"backToDetail";
     }
     
     

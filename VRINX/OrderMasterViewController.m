@@ -32,9 +32,6 @@
     [super viewDidLoad];
     global = [GlobalResource sharedInstance];
     
-    self.orderNumberField.delegate = self;
-    self.taxField.delegate=self;
-    self.shippingField.delegate=self;
     self.orderProducts = [[NSMutableArray alloc] init];
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
@@ -49,13 +46,18 @@
     
     
     
+    
+    
 }
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.view endEditing:YES];
     
     
+    self.orderNumberField.delegate = self;
+    self.taxField.delegate=self;
+    self.shippingField.delegate=self;
+    self.additionalCostField.delegate=self;
     
     
     
@@ -70,6 +72,7 @@
     
     
     NSLog(@"%@",self.contactNameLabel.text);
+    [self.view endEditing:YES];
     
 }
 

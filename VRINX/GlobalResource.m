@@ -34,4 +34,15 @@
     }
     return self;
 }
+
++ (void) ClearResources{
+    GlobalResource *global =[GlobalResource sharedInstance];
+    
+    global.selectedContact = [[APContact alloc] init];
+    global.backSegueIdentifier = [[NSString alloc] init];
+    global.account=nil;
+    
+    
+}
+
 @end

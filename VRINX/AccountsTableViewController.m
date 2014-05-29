@@ -59,7 +59,7 @@ BEMSimpleLineGraphView *myGraph;
 	[self configureBannerWithImage:[UIImage imageNamed:@"headerback"] height:190];
 	[self GetGraphView];
     global = [GlobalResource sharedInstance];
-    global.account = nil;
+    [GlobalResource ClearResources];
     
     //[self initWelcomeViews];
     

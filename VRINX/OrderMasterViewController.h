@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *orderNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *taxField;
 @property (weak, nonatomic) IBOutlet UITextField *shippingField;
+
+@property (weak, nonatomic) IBOutlet UITextField *additionalCostField;
+
 @property (weak, nonatomic) IBOutlet UILabel *productCountLabel;
 
 

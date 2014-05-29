@@ -21,6 +21,7 @@
 
 
 + (GlobalResource *)sharedInstance;
++ (void) ClearResources;
 
     @property(strong, nonatomic, readwrite) APContact *selectedContact;
     @property(strong, nonatomic, readwrite) EntityAccount *account;
