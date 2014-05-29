@@ -10,19 +10,6 @@
 
 @implementation ContactCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)awakeFromNib
-{
-    // Initialization code
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -32,6 +19,9 @@
 }
 
 -(void)configureCellForEntry:(APContact *)contact{
+    
+    
+    
     
     self.firstName.text = [[NSString alloc] initWithFormat:@"%@ %@",contact.firstName,(contact.lastName != nil?contact.lastName:@"")];
     

@@ -21,6 +21,12 @@
 		8676BF5F193598A000849AD0 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF5E193598A000849AD0 /* ContactCell.m */; };
 		8676BF6319359ABA00849AD0 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */; };
 		8676BF661935A47000849AD0 /* DataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF651935A47000849AD0 /* DataGenerator.m */; };
+		8676BF771936846300849AD0 /* AddressBookPeoplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF761936846300849AD0 /* AddressBookPeoplePickerViewController.m */; };
+		8676BF7A193685A900849AD0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8676BF78193685A900849AD0 /* AddressBook.framework */; };
+		8676BF7B193685A900849AD0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8676BF79193685A900849AD0 /* AddressBookUI.framework */; };
+		8676BF821936A33400849AD0 /* AMBouncingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF7E1936A33400849AD0 /* AMBouncingView.m */; };
+		8676BF831936A33400849AD0 /* AMSmoothAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF811936A33400849AD0 /* AMSmoothAlertView.m */; };
+		8676BF851936C24500849AD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8676BF841936C24500849AD0 /* Images.xcassets */; };
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
@@ -60,7 +66,6 @@
 		AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5522701916E98E005D5950 /* InfoPlist.strings */; };
 		AA5522741916E98E005D5950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522731916E98E005D5950 /* main.m */; };
 		AA5522781916E98E005D5950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5522771916E98E005D5950 /* AppDelegate.m */; };
-		AA55227D1916E98E005D5950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55227C1916E98E005D5950 /* Images.xcassets */; };
 		AA5522841916E98E005D5950 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522831916E98E005D5950 /* XCTest.framework */; };
 		AA5522851916E98E005D5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522651916E98E005D5950 /* Foundation.framework */; };
 		AA5522861916E98E005D5950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5522691916E98E005D5950 /* UIKit.framework */; };
@@ -138,6 +143,16 @@
 		8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MONActivityIndicatorView.m; sourceTree = "<group>"; };
 		8676BF641935A47000849AD0 /* DataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGenerator.h; sourceTree = "<group>"; };
 		8676BF651935A47000849AD0 /* DataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataGenerator.m; sourceTree = "<group>"; };
+		8676BF751936846300849AD0 /* AddressBookPeoplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookPeoplePickerViewController.h; sourceTree = "<group>"; };
+		8676BF761936846300849AD0 /* AddressBookPeoplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookPeoplePickerViewController.m; sourceTree = "<group>"; };
+		8676BF78193685A900849AD0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8676BF79193685A900849AD0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		8676BF7D1936A33400849AD0 /* AMBouncingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBouncingView.h; sourceTree = "<group>"; };
+		8676BF7E1936A33400849AD0 /* AMBouncingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBouncingView.m; sourceTree = "<group>"; };
+		8676BF7F1936A33400849AD0 /* AMSmoothAlertConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSmoothAlertConstants.h; sourceTree = "<group>"; };
+		8676BF801936A33400849AD0 /* AMSmoothAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSmoothAlertView.h; sourceTree = "<group>"; };
+		8676BF811936A33400849AD0 /* AMSmoothAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSmoothAlertView.m; sourceTree = "<group>"; };
+		8676BF841936C24500849AD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -211,7 +226,6 @@
 		AA5522751916E98E005D5950 /* VRINX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRINX-Prefix.pch"; sourceTree = "<group>"; };
 		AA5522761916E98E005D5950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA5522771916E98E005D5950 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AA55227C1916E98E005D5950 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA5522821916E98E005D5950 /* VRINXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRINXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5522831916E98E005D5950 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AA55228C1916E98E005D5950 /* VRINXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VRINXTests-Info.plist"; sourceTree = "<group>"; };
@@ -272,6 +286,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8676BF7A193685A900849AD0 /* AddressBook.framework in Frameworks */,
+				8676BF7B193685A900849AD0 /* AddressBookUI.framework in Frameworks */,
 				867998D6192C3FEA0070DFFF /* Parse.framework in Frameworks */,
 				AA5522B11916EA95005D5950 /* SystemConfiguration.framework in Frameworks */,
 				AA5522AF1916EA8A005D5950 /* StoreKit.framework in Frameworks */,
@@ -343,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				8676BF5A1935969900849AD0 /* ContactListTableViewController.h */,
+				8676BF751936846300849AD0 /* AddressBookPeoplePickerViewController.h */,
+				8676BF761936846300849AD0 /* AddressBookPeoplePickerViewController.m */,
 				8676BF5B1935969900849AD0 /* ContactListTableViewController.m */,
 				8676BF5D193598A000849AD0 /* ContactCell.h */,
 				8676BF5E193598A000849AD0 /* ContactCell.m */,
@@ -357,6 +375,18 @@
 				8676BF6219359ABA00849AD0 /* MONActivityIndicatorView.m */,
 			);
 			name = MONActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		8676BF7C1936A31500849AD0 /* AMSmoothAlert */ = {
+			isa = PBXGroup;
+			children = (
+				8676BF7D1936A33400849AD0 /* AMBouncingView.h */,
+				8676BF7E1936A33400849AD0 /* AMBouncingView.m */,
+				8676BF7F1936A33400849AD0 /* AMSmoothAlertConstants.h */,
+				8676BF801936A33400849AD0 /* AMSmoothAlertView.h */,
+				8676BF811936A33400849AD0 /* AMSmoothAlertView.m */,
+			);
+			name = AMSmoothAlert;
 			sourceTree = "<group>";
 		};
 		86799871191A94830070DFFF /* UIViewExtended */ = {
@@ -509,6 +539,8 @@
 		AA5522641916E98E005D5950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8676BF78193685A900849AD0 /* AddressBook.framework */,
+				8676BF79193685A900849AD0 /* AddressBookUI.framework */,
 				867998D5192C3FEA0070DFFF /* Parse.framework */,
 				AA5522B01916EA95005D5950 /* SystemConfiguration.framework */,
 				AA5522AE1916EA8A005D5950 /* StoreKit.framework */,
@@ -540,7 +572,7 @@
 				AA5522B41916EAC6005D5950 /* ExternalClasses */,
 				AA5522761916E98E005D5950 /* AppDelegate.h */,
 				AA5522771916E98E005D5950 /* AppDelegate.m */,
-				AA55227C1916E98E005D5950 /* Images.xcassets */,
+				8676BF841936C24500849AD0 /* Images.xcassets */,
 				AA55226E1916E98E005D5950 /* Supporting Files */,
 				AAC205071922CFE500B2744C /* Model.xcdatamodeld */,
 				86799884191AA1DA0070DFFF /* CusAlertView.h */,
@@ -583,6 +615,7 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8676BF7C1936A31500849AD0 /* AMSmoothAlert */,
 				8676BF6019359AAC00849AD0 /* MONActivityIndicatorView */,
 				8676BF271935886100849AD0 /* APAddressBook */,
 				861B47161932B2D8009E9EBD /* Categories */,
@@ -810,9 +843,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5522721916E98E005D5950 /* InfoPlist.strings in Resources */,
+				8676BF851936C24500849AD0 /* Images.xcassets in Resources */,
 				AA5522C01916EB99005D5950 /* iPhone.storyboard in Resources */,
 				867998D2192AD4BB0070DFFF /* dyn_popup_view in Resources */,
-				AA55227D1916E98E005D5950 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,6 +878,7 @@
 				8676BF661935A47000849AD0 /* DataGenerator.m in Sources */,
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
+				8676BF771936846300849AD0 /* AddressBookPeoplePickerViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */,
 				867998D9192C4CF10070DFFF /* EntityAccount.m in Sources */,
@@ -859,9 +893,11 @@
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				861B471419326865009E9EBD /* BEMLine.m in Sources */,
 				861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */,
+				8676BF821936A33400849AD0 /* AMBouncingView.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
+				8676BF831936A33400849AD0 /* AMSmoothAlertView.m in Sources */,
 				861B47221932C58F009E9EBD /* CustomButton.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
 				867998F3192DB0810070DFFF /* EntityProduct.m in Sources */,

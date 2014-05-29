@@ -23,6 +23,8 @@
 
 @synthesize indicatorView;
 
+NSArray *alphabets;
+
 #pragma mark - life cycle
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -52,12 +54,12 @@
     indicatorView.center = self.view.center;
     [self.view addSubview:indicatorView];
    
+    alphabets = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z", nil];
     
     [self loadContacts];
 
     
-    separator = [DataGenerator wordsFromLetters];
-    indexes = [separator valueForKey:@"headerTitle"];
+  
     
 }
 
@@ -75,24 +77,36 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-    return 1;
-     //return [separator count];
-}
-/*
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    return [separator objectAtIndex:section];
-}*/
 
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [alphabets count];
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSArray *title = [self.contacts objectForKey:@"section"];
+    return [title objectAtIndex:section];
     
-    return [self.contacts count];
-    //return 0;//return [[[self.contacts objectAtIndex:section] objectForKey:@"FirstName"] count] ;
+    // return [[contentArray objectAtIndex:section] objectForKey:@"GroupName"];
+    //return [alphabets objectAtIndex:section];
     
+    //return [[self.contacts sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] objectAtIndex:section];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    return [NSArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z", nil];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+   
+    
+    NSArray *items = [self.contacts objectForKey:@"section"];
+    return [[[items objectAtIndex:section] valueForKey:@"contact.@.count"] intValue];
+    
+   // return [self.contacts count];
+    //return [[[contentArray objectAtIndex:section] valueForKeyPath:@"contents.@count"] intValue];
+
 }
 
 
@@ -101,7 +115,17 @@
 {
     ContactCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    APContact *contact = (APContact *)[self.contacts objectAtIndex:indexPath.row];
+    NSArray *contactList = [self.contacts objectForKey:@"contact"];
+    
+    APContact *contact = (APContact *)[contactList objectAtIndex:indexPath.row];
+    
+  //  NSString *sectionTitle = [alphabets objectAtIndex:indexPath.section];
+    
+    
+  //  NSArray *sectionAnimals = [self.contacts objectForKey:<#(id)#>];
+   // NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
+    
+    
     
     [cell configureCellForEntry:contact];
     return cell;
@@ -128,7 +152,15 @@
          [indicatorView stopAnimating];
          if (!error)
          {
-             self.contacts = [[NSMutableArray alloc] initWithArray:contacts];
+            self.contacts = [[NSDictionary alloc] init];
+           
+             for(APContact *tempC in contacts){
+                 
+                 [self.contacts setValue:[tempC.firstName substringWithRange:NSMakeRange(0,1)] forKey:@"section"];
+                 [self.contacts setValue:tempC forKey:@"contact"];
+                 
+             }
+             
              [self.tableView reloadData];
              
          }

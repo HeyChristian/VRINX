@@ -16,6 +16,8 @@
     NSArray *indexes;
 }
 
-@property(nonatomic,strong) NSMutableArray *contacts;
+@property(nonatomic,strong) NSDictionary *contacts;
+//@property(nonatomic,strong) NSMutableArray *contacts;
+
 
 @end
