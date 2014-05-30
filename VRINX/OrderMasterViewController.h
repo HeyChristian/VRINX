@@ -29,13 +29,25 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *productCountLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *itemsTotalLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *shippingTotalLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *taxTotalLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *additionalTotalLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *granTotalLabel;
 
 
-@property(nonatomic,strong) NSMutableArray *orderProducts;
+//@property(nonatomic,strong) NSMutableArray *orderProducts;
 @property(nonatomic) bool withoutSave;
 
 - (IBAction)cancelOrder:(id)sender;
 
+- (IBAction)TaxValueChange:(id)sender;
 
+- (IBAction)shippingValueChange:(id)sender;
+- (IBAction)additionalValueChange:(id)sender;
 
 @end

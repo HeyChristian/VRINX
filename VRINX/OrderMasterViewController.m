@@ -14,7 +14,7 @@
 #import "AddressBookPeoplePickerViewController.h"
 #import "GlobalResource.h"
 
-@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,OrderProductDelegate,UIAlertViewDelegate>{
+@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>{
     GlobalResource *global;
 }
 
@@ -32,7 +32,10 @@
     [super viewDidLoad];
     global = [GlobalResource sharedInstance];
     
-    self.orderProducts = [[NSMutableArray alloc] init];
+    //self.orderProducts = [[NSMutableArray alloc] init];
+    
+    self.taxField.text = [[NSString alloc] initWithFormat:@"%@",global.account.tax];
+    
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self.navigationItem setBackBarButtonItem:nil];
@@ -42,8 +45,7 @@
 -(void) viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     
-    global.selectedContact=nil;
-    
+  
     
     
     
@@ -70,6 +72,7 @@
   
     self.contactNameLabel.text = [self getSelectedContact];
     
+    [self calculateTotal];
     
     NSLog(@"%@",self.contactNameLabel.text);
     [self.view endEditing:YES];
@@ -82,12 +85,12 @@
     
     if([segue.identifier isEqualToString:@"orderProducts"] || [segue.identifier isEqualToString:@"orderProductsBtn"]){
         
-        OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
+        //OrderProductViewController  *newProduct = (OrderProductViewController *) segue.destinationViewController;
         
-        newProduct.delegate = self;
+        //newProduct.delegate = self;
        // newProduct.account = self.account;
        
-        newProduct.orderProducts = self.orderProducts;
+        //newProduct.orderProducts = self.orderProducts;
         
         
     }else if([segue.identifier isEqualToString:@"selectContact"] ){
@@ -102,16 +105,43 @@
 
 
 #pragma mark - Order Product Delegate Functions
--(void) setOrderProduct:(NSMutableArray *)orderProducts{
-    self.orderProducts = orderProducts;
+-(float) getFloatValue:(NSString *)value{
+    if(value.length>0){
+        return [value floatValue];
+    }else
+        return 0;
     
-    int count=0;
+}
+
+-(void) calculateTotal{
+   
+    int itemCount=0;
+    float itemTotal=0;
+    float granTotal=0;
+    float taxTotal= [self getFloatValue:self.taxField.text];
+    float shTotal = [self getFloatValue:self.shippingField.text];
+    float addTotal = [self getFloatValue:self.additionalCostField.text];
     
-    for(TempOrderProduct *op in orderProducts){
-        count += op.itemCount.intValue;
+    
+    for(TempOrderProduct *op in global.orderProducts){
+        itemCount += op.itemCount.intValue;
+        itemTotal += [op.product.price floatValue] * op.itemCount.intValue;
     }
     
-    self.productCountLabel.text = [NSString stringWithFormat:@"( %d )",count];
+    self.productCountLabel.text = [NSString stringWithFormat:@"( %d )",itemCount];
+    
+    self.itemsTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",itemTotal];
+    self.shippingTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",shTotal];
+    self.taxTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",taxTotal];
+    self.additionalTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",addTotal];
+    
+    
+    granTotal = itemTotal * taxTotal;
+    granTotal += itemTotal;
+    granTotal += shTotal;
+    granTotal += addTotal;
+    
+    self.granTotalLabel.text  = [[NSString alloc] initWithFormat:@"%.2f",granTotal];
     
 }
 
@@ -119,7 +149,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if(indexPath.section == 0 && indexPath.row == 2) {
+    if(indexPath.section == 0 && indexPath.row == 1) {
         [self openDateSelectionControllerWithBlock:self];
     }
     
@@ -250,6 +280,18 @@
     [alert show];
     
     
+}
+
+- (IBAction)TaxValueChange:(id)sender {
+    [self calculateTotal];
+}
+
+- (IBAction)shippingValueChange:(id)sender {
+[self calculateTotal];
+}
+
+- (IBAction)additionalValueChange:(id)sender {
+[self calculateTotal];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {

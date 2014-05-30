@@ -12,6 +12,7 @@
 
 @synthesize selectedContact = _selectedContact;
 @synthesize account=_account;
+@synthesize orderProducts = _orderProducts;
 @synthesize backSegueIdentifier = _backSegueIdentifier;
 
 + (GlobalResource *)sharedInstance {
@@ -29,7 +30,7 @@
         
         _selectedContact = [[APContact alloc] init];
         _backSegueIdentifier = [[NSString alloc] init];
-        
+        _orderProducts = [[NSMutableArray alloc] init];
         //_account=[[EntityAccount alloc] init];
     }
     return self;
@@ -41,6 +42,7 @@
     global.selectedContact = [[APContact alloc] init];
     global.backSegueIdentifier = [[NSString alloc] init];
     global.account=nil;
+    global.orderProducts = [[NSMutableArray alloc] init];
     
     
 }
