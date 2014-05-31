@@ -13,6 +13,7 @@
 #import "APContact.h"
 #import "AddressBookPeoplePickerViewController.h"
 #import "GlobalResource.h"
+#import "CoreDataStack.h"
 
 @interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>{
     GlobalResource *global;
@@ -34,20 +35,18 @@
     
     //self.orderProducts = [[NSMutableArray alloc] init];
     
-    self.taxField.text = [[NSString alloc] initWithFormat:@"%@",global.account.tax];
+    self.taxField.text = [[NSString alloc] initWithFormat:@"%.2f",[self getFloatValue:[global.account.tax stringValue]]];
     
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self.navigationItem setBackBarButtonItem:nil];
     [self.navigationItem setLeftBarButtonItem:nil animated:NO];
    
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+   // self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 -(void) viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    
-  
-    
-    
     
     
 }
@@ -63,14 +62,11 @@
     
     
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMMM d, yyyy"];
-    
-    self.orderDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
    
   
     self.contactNameLabel.text = [self getSelectedContact];
+    [self fillOrderDatelabel];
     
     [self calculateTotal];
     
@@ -132,7 +128,7 @@
     
     self.itemsTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",itemTotal];
     self.shippingTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",shTotal];
-    self.taxTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",taxTotal];
+    self.taxTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",itemTotal * taxTotal];
     self.additionalTotalLabel.text = [[NSString alloc] initWithFormat:@"%.2f",addTotal];
     
     
@@ -198,26 +194,15 @@
     [self.view endEditing:YES];
     RMDateSelectionViewController *dateSelectionVC = [RMDateSelectionViewController dateSelectionController];
     
-    //You can enable or disable bouncing and motion effects
-    //dateSelectionVC.disableBouncingWhenShowing = YES;
-    //dateSelectionVC.disableMotionEffects = YES;
-    
     [dateSelectionVC showWithSelectionHandler:^(RMDateSelectionViewController *vc, NSDate *aDate) {
-        
-        NSLog(@"Successfully selected date: %@ (With block)", aDate);
-        
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMMM d, yyyy"];
-        
-        self.orderDateLabel.text = [dateFormatter stringFromDate:aDate];
-        
+    
+        global.selectedDate = aDate;
+        [self fillOrderDatelabel];
+   
     } andCancelHandler:^(RMDateSelectionViewController *vc) {
     
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMMM d, yyyy"];
-        
-        self.orderDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
-        
+        global.selectedDate = [NSDate date];
+        [self fillOrderDatelabel];
         
     }];
     
@@ -225,6 +210,19 @@
     dateSelectionVC.datePicker.datePickerMode = UIDatePickerModeDate;
     dateSelectionVC.datePicker.minuteInterval = 1;
     dateSelectionVC.datePicker.date = [NSDate date];//[NSDate dateWithTimeIntervalSinceReferenceDate:0];
+}
+-(NSString *) formatDate:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+[dateFormatter setDateFormat:@"MMMM d, yyyy"];
+    
+   return [dateFormatter stringFromDate:date];
+    
+}
+
+-(void) fillOrderDatelabel{
+    self.orderDateLabel.text = [self formatDate: global.selectedDate]; // [dateFormatter stringFromDate:aDate];
+
 }
 
 #pragma mark - Helpers
@@ -307,5 +305,46 @@
         
         //[self.navigationController popToRootViewControllerAnimated:YES];
     }
+}
+
+-(void) save{
+   
+    
+    // NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    EntityOrder *order = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext:global.account.managedObjectContext];
+    
+    order.itemsTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.itemsTotalLabel.text]];
+    order.taxTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.taxTotalLabel.text]];
+    order.additionalCostTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.additionalTotalLabel.text]];
+    order.shippingTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.shippingTotalLabel.text]];
+    order.discount = 0 ;
+    order.granTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.granTotalLabel.text]];
+    order.isMasterOrder = 0;
+    order.creationDate = [NSDate date];
+    order.orderDate = global.selectedDate;
+    
+    [coreDataStack saveContext];
+    
+    EntityOrderProduct *orderProd = [NSEntityDescription insertNewObjectForEntityForName:@"OrderProduct" inManagedObjectContext:order.managedObjectContext];
+    
+    for(TempOrderProduct *top in global.orderProducts){
+        orderProd.itemCount = top.itemCount;
+      /*
+        EntityProduct *pp = [[EntityProduct alloc] init];
+        
+        for(EntityProduct *prod in products){
+            
+            if(prod.uuid == top.uuid){
+                orderProd.product = prod;
+                break;
+            }
+        }
+       */
+        
+        // orderProd.product = nil;
+    }
+    
 }
 @end

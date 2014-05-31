@@ -14,6 +14,9 @@
 @synthesize account=_account;
 @synthesize orderProducts = _orderProducts;
 @synthesize backSegueIdentifier = _backSegueIdentifier;
+@synthesize selectedDate = _selectedDate;
+
+
 
 + (GlobalResource *)sharedInstance {
     static dispatch_once_t onceToken;
@@ -31,6 +34,8 @@
         _selectedContact = [[APContact alloc] init];
         _backSegueIdentifier = [[NSString alloc] init];
         _orderProducts = [[NSMutableArray alloc] init];
+        _selectedDate = [NSDate date];
+        
         //_account=[[EntityAccount alloc] init];
     }
     return self;
@@ -43,7 +48,7 @@
     global.backSegueIdentifier = [[NSString alloc] init];
     global.account=nil;
     global.orderProducts = [[NSMutableArray alloc] init];
-    
+    global.selectedDate = [NSDate date];
     
 }
 

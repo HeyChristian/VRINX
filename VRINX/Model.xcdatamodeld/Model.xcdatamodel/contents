@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Account" representedClassName="EntityAccount" syncable="YES">
         <attribute name="earningPercent" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="earnings" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -17,18 +17,29 @@
         <relationship name="orders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="accountOrders" inverseEntity="Order" syncable="YES"/>
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="products" inverseEntity="Product" syncable="YES"/>
     </entity>
+    <entity name="ContactOrder" representedClassName="EntityContactOrder" syncable="YES">
+        <attribute name="addressBookID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Order" representedClassName="EntityOrder" syncable="YES">
+        <attribute name="additionalCostTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="estimateDelivery" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="granTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="isMasterOrder" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemsTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="orderDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="shippingTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="taxesTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="total" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="taxTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="accountOrders" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Account" inverseName="orders" inverseEntity="Account" syncable="YES"/>
+        <relationship name="contactOrder" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ContactOrder" syncable="YES"/>
         <relationship name="orderProducts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="OrderProduct" syncable="YES"/>
-        <relationship name="orders" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Order" inverseName="orders" inverseEntity="Order" syncable="YES"/>
+        <relationship name="orders" optional="YES" transient="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="orders" inverseEntity="Order" syncable="YES"/>
     </entity>
     <entity name="OrderProduct" representedClassName="EntityOrderProduct" syncable="YES">
         <attribute name="itemCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -45,8 +56,9 @@
     </entity>
     <elements>
         <element name="Account" positionX="-506" positionY="-199" width="128" height="268"/>
-        <element name="Order" positionX="-272" positionY="-297" width="128" height="208"/>
+        <element name="Order" positionX="-272" positionY="-297" width="128" height="268"/>
         <element name="OrderProduct" positionX="-92" positionY="27" width="128" height="73"/>
         <element name="Product" positionX="-290" positionY="254" width="128" height="148"/>
+        <element name="ContactOrder" positionX="-90" positionY="-279" width="128" height="120"/>
     </elements>
 </model>

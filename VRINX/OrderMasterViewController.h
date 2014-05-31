@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EntityAccount.h"
 #import "TempOrderProduct.h"
 
+@class EntityProduct,EntityContactOrder,EntityOrder;
 
 @interface OrderMasterViewController : UITableViewController
 

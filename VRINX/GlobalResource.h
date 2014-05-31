@@ -17,6 +17,7 @@
     EntityAccount  *_account;
     NSMutableArray *_orderProducts;
     NSString *_backSegueIdentifier;
+    NSDate *_selectedDate;
 }
 
 
@@ -26,7 +27,8 @@
 
     @property(strong, nonatomic, readwrite) APContact *selectedContact;
     @property(strong, nonatomic, readwrite) EntityAccount *account;
-    @property(strong,nonatomic,readwrite) NSMutableArray *orderProducts;
+    @property(strong, nonatomic, readwrite) NSMutableArray *orderProducts;
     @property(strong, nonatomic, readwrite) NSString *backSegueIdentifier;
+    @property(strong, nonatomic, readwrite) NSDate *selectedDate;
 
 @end

@@ -2,7 +2,7 @@
 //  EntityAccount.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/20/14.
+//  Created by Christian Vazquez on 5/31/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -15,17 +15,17 @@
 
 @property (nonatomic, retain) NSDecimalNumber * earningPercent;
 @property (nonatomic, retain) NSDecimalNumber * earnings;
+@property (nonatomic, retain) NSNumber * fontColorWhite;
 @property (nonatomic, retain) NSDecimalNumber * investment;
 @property (nonatomic, retain) NSData * logo;
 @property (nonatomic, retain) NSDecimalNumber * missed;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * shortDesc;
-@property (nonatomic, retain) NSDecimalNumber * tax;
-@property (nonatomic, retain) NSString * userId;
-@property (nonatomic, retain) NSNumber * showName;
 @property (nonatomic, retain) NSNumber * showDescription;
 @property (nonatomic, retain) NSNumber * showLogo;
-@property (nonatomic, retain) NSNumber * fontColorWhite;
+@property (nonatomic, retain) NSNumber * showName;
+@property (nonatomic, retain) NSDecimalNumber * tax;
+@property (nonatomic, retain) NSString * userId;
 @property (nonatomic, retain) NSSet *orders;
 @property (nonatomic, retain) NSSet *products;
 @end

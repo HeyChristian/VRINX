@@ -2,7 +2,7 @@
 //  EntityAccount.m
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/20/14.
+//  Created by Christian Vazquez on 5/31/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -15,17 +15,17 @@
 
 @dynamic earningPercent;
 @dynamic earnings;
+@dynamic fontColorWhite;
 @dynamic investment;
 @dynamic logo;
 @dynamic missed;
 @dynamic name;
 @dynamic shortDesc;
-@dynamic tax;
-@dynamic userId;
-@dynamic showName;
 @dynamic showDescription;
 @dynamic showLogo;
-@dynamic fontColorWhite;
+@dynamic showName;
+@dynamic tax;
+@dynamic userId;
 @dynamic orders;
 @dynamic products;
 
