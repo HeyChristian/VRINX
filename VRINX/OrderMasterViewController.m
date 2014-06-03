@@ -14,7 +14,7 @@
 #import "AddressBookPeoplePickerViewController.h"
 #import "GlobalResource.h"
 #import "CoreDataStack.h"
-
+#import "EntityProduct.h"
 @interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>{
     GlobalResource *global;
 }
@@ -35,7 +35,7 @@
     
     //self.orderProducts = [[NSMutableArray alloc] init];
     
-    self.taxField.text = [[NSString alloc] initWithFormat:@"%.2f",[self getFloatValue:[global.account.tax stringValue]]];
+    self.taxField.text = [[NSString alloc] initWithFormat:@"%.4f",[self getFloatValue:[global.account.tax stringValue]]];
     
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
@@ -267,6 +267,8 @@
     return name;
 }
 
+
+
 - (IBAction)cancelOrder:(id)sender {
     
     UIAlertView *alert = [[UIAlertView alloc]
@@ -307,10 +309,11 @@
     }
 }
 
--(void) save{
-   
+- (IBAction)SaveOrder:(id)sender {
+
     
-    // NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
+     NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
+    NSMutableArray *orderProducts = [[NSMutableArray alloc] init];
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     EntityOrder *order = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext:global.account.managedObjectContext];
@@ -325,26 +328,69 @@
     order.creationDate = [NSDate date];
     order.orderDate = global.selectedDate;
     
-    [coreDataStack saveContext];
+   // [coreDataStack saveContext];
     
-    EntityOrderProduct *orderProd = [NSEntityDescription insertNewObjectForEntityForName:@"OrderProduct" inManagedObjectContext:order.managedObjectContext];
+ //   EntityOrderProduct *orderProd = [NSEntityDescription insertNewObjectForEntityForName:@"OrderProduct" inManagedObjectContext:order.managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"OrderProduct"
+                                              inManagedObjectContext:coreDataStack.managedObjectContext];
+    
+    EntityOrderProduct *orderProd=nil;
     
     for(TempOrderProduct *top in global.orderProducts){
-        orderProd.itemCount = top.itemCount;
-      /*
-        EntityProduct *pp = [[EntityProduct alloc] init];
+        
+      
         
         for(EntityProduct *prod in products){
             
-            if(prod.uuid == top.uuid){
-                orderProd.product = prod;
+            if([prod.uuid isEqual:top.product.uuid]){
+                orderProd=[[EntityOrderProduct alloc] initWithEntity:entity
+                                      insertIntoManagedObjectContext:nil];
+                
+                orderProd.itemCount = top.itemCount;
+                //orderProd.product  = [self getProduct:prod.uuid withManagedObjectContext:coreDataStack.managedObjectContext];
+                
+                orderProd.product = [[EntityProduct alloc] initWithEntity:[NSEntityDescription entityForName:@"Product" inManagedObjectContext:coreDataStack.managedObjectContext] insertIntoManagedObjectContext:nil];
+                
+                [orderProd setProduct:prod];
+                [orderProducts addObject:orderProd];
                 break;
             }
-        }
-       */
+       }
+       
         
         // orderProd.product = nil;
     }
+    
+    [order addOrderProducts:[NSSet setWithArray:orderProducts]];
+    
+    [coreDataStack saveContext];
+    
+}
+
+- (EntityProduct *) getProduct:(NSString *)uuid withManagedObjectContext:(NSManagedObjectContext*)context{
+    
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Product" inManagedObjectContext:context]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"uuid = %@", uuid]];
+    [request setFetchLimit:1];
+    
+    NSArray *results = [context executeFetchRequest:request error:nil];
+    
+    EntityProduct* product = nil;
+    
+    if ([results count] == 0)
+    {
+        product= nil;
+    }
+    else
+    {
+        product = (EntityProduct*)[results objectAtIndex:0];
+    }
+    
+    
+    return product;
     
 }
 @end

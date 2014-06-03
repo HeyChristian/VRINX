@@ -126,8 +126,13 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"ddmmyyyyhms"; // or whatever you want; per the unicode standards
     
-    return [dateFormatter  stringFromDate:[NSDate date]];
+    NSString *pk = [[NSString alloc] initWithString:[dateFormatter  stringFromDate:[NSDate date]]];
+    if([[pk substringWithRange:NSMakeRange(0,1)] isEqual:@"0"]){
+        pk = [[NSString alloc] initWithString:[pk substringWithRange:NSMakeRange(1,pk.length-1)]];
+    }
+    NSLog(@"pk: %@",pk);
     
+    return pk;
    // NSLog(@"pk  %@", pk);
     
     // return nil;

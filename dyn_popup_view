@@ -10,3 +10,31 @@ vc2 *viewController = [[vc2 alloc]init];
          viewController.view.alpha = 1;
      }
                      completion:nil];
+                     
+                     
+                     
+                     
+DEMO APP REMO (VERIFICAR LUEGO)
+https://github.com/GnosisHub/GHWalkThrough
+
+for home screen
+https://github.com/jamztang/CSStickyHeaderFlowLayout
+
+https://github.com/Produkt/PDKTStickySectionHeadersCollectionViewLayout
+
+https://github.com/ElectricPeelSoftware/EPSCollectionViewFormLayout
+
+menu like fb , hace  tiempo
+https://github.com/mps/MPSHorizontalMenu
+
+menu circular
+https://github.com/chillok/AnimatedCircularCollectionMenu
+
+
+line graphics
+https://github.com/chillok/AnimatedCircularCollectionMenu
+
+
+
+Perry Como
+Magic Momments

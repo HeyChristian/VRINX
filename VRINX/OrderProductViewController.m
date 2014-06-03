@@ -322,6 +322,10 @@
             
             for(int i=0; i < self.products.count; i++){
               EntityProduct  *product = [self.products objectAtIndex:i];
+                
+                NSLog(@"prod: %@",product.uuid);
+                NSLog(@"Iden: %@",currentProductIdentifier);
+                
                 if([currentProductIdentifier isEqual:product.uuid]){
                     
                     tempProduct.uuid        = product.uuid;

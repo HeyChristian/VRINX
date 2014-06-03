@@ -21,7 +21,7 @@
 #import "BEMSimpleLineGraphView.h"
 #import "SWTableViewCell.h"
 #import "GlobalResource.h"
-
+#import "AccountControlPopup.h"
 
 #import "Tools.h"
 @interface AccountsTableViewController ()<NSFetchedResultsControllerDelegate,BEMSimpleLineGraphDelegate,SWTableViewCellDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
@@ -71,6 +71,10 @@ BEMSimpleLineGraphView *myGraph;
     [self.fetchResultsController performFetch:nil];
     
     
+    
+    
+    AccountControlPopup *popupView = [[AccountControlPopup alloc] initWithSize:CGSizeMake(280, 248)];
+    [popupView show];
     
     
 }

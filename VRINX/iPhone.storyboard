@@ -1299,6 +1299,9 @@
                                                     <state key="normal" title="Confirm Order" image="check">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="SaveOrder:" destination="dmg-iw-cUy" eventType="touchUpInside" id="hCa-AG-V8B"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>

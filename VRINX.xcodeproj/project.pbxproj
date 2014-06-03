@@ -33,6 +33,13 @@
 		8676BF911939A37200849AD0 /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF901939A37200849AD0 /* EntityAccount.m */; };
 		8676BF9A1939A5C800849AD0 /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF991939A5C800849AD0 /* EntityOrderProduct.m */; };
 		8676BF9D1939A64400849AD0 /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF9C1939A64400849AD0 /* EntityOrder.m */; };
+		8676BFA1193D146400849AD0 /* JDCarouselControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA0193D146400849AD0 /* JDCarouselControl.m */; };
+		8676BFAE193D15C300849AD0 /* PopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA4193D15C300849AD0 /* PopupBackgroundView.m */; };
+		8676BFAF193D15C300849AD0 /* PopupBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA6193D15C300849AD0 /* PopupBaseView.m */; };
+		8676BFB0193D15C300849AD0 /* PopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA8193D15C300849AD0 /* PopupController.m */; };
+		8676BFB1193D15C300849AD0 /* PopupExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFAA193D15C300849AD0 /* PopupExtension.m */; };
+		8676BFB2193D15C300849AD0 /* PopupImageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFAC193D15C300849AD0 /* PopupImageBaseView.m */; };
+		8676BFB5193D16C300849AD0 /* AccountControlPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFB4193D16C300849AD0 /* AccountControlPopup.m */; };
 		86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */; };
 		86799874191A94A50070DFFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799873191A94A50070DFFF /* UIViewController+MJPopupViewController.m */; };
 		86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86799876191A94F50070DFFF /* MJPopupBackgroundView.m */; };
@@ -167,6 +174,21 @@
 		8676BF991939A5C800849AD0 /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
 		8676BF9B1939A64400849AD0 /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
 		8676BF9C1939A64400849AD0 /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		8676BF9F193D146400849AD0 /* JDCarouselControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCarouselControl.h; sourceTree = "<group>"; };
+		8676BFA0193D146400849AD0 /* JDCarouselControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCarouselControl.m; sourceTree = "<group>"; };
+		8676BFA3193D15C300849AD0 /* PopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupBackgroundView.h; sourceTree = "<group>"; };
+		8676BFA4193D15C300849AD0 /* PopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupBackgroundView.m; sourceTree = "<group>"; };
+		8676BFA5193D15C300849AD0 /* PopupBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupBaseView.h; sourceTree = "<group>"; };
+		8676BFA6193D15C300849AD0 /* PopupBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupBaseView.m; sourceTree = "<group>"; };
+		8676BFA7193D15C300849AD0 /* PopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupController.h; sourceTree = "<group>"; };
+		8676BFA8193D15C300849AD0 /* PopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupController.m; sourceTree = "<group>"; };
+		8676BFA9193D15C300849AD0 /* PopupExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupExtension.h; sourceTree = "<group>"; };
+		8676BFAA193D15C300849AD0 /* PopupExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupExtension.m; sourceTree = "<group>"; };
+		8676BFAB193D15C300849AD0 /* PopupImageBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupImageBaseView.h; sourceTree = "<group>"; };
+		8676BFAC193D15C300849AD0 /* PopupImageBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupImageBaseView.m; sourceTree = "<group>"; };
+		8676BFAD193D15C300849AD0 /* PopupProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupProtocol.h; sourceTree = "<group>"; };
+		8676BFB3193D16C300849AD0 /* AccountControlPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountControlPopup.h; sourceTree = "<group>"; };
+		8676BFB4193D16C300849AD0 /* AccountControlPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountControlPopup.m; sourceTree = "<group>"; };
 		86799857191A84EC0070DFFF /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = VRINX/RMDateSelectionViewController.h; sourceTree = SOURCE_ROOT; };
 		86799858191A84EC0070DFFF /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = VRINX/RMDateSelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		86799872191A94A50070DFFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
@@ -393,6 +415,33 @@
 				8676BF811936A33400849AD0 /* AMSmoothAlertView.m */,
 			);
 			name = AMSmoothAlert;
+			sourceTree = "<group>";
+		};
+		8676BF9E193D143E00849AD0 /* JDCarouselControl */ = {
+			isa = PBXGroup;
+			children = (
+				8676BF9F193D146400849AD0 /* JDCarouselControl.h */,
+				8676BFA0193D146400849AD0 /* JDCarouselControl.m */,
+			);
+			name = JDCarouselControl;
+			sourceTree = "<group>";
+		};
+		8676BFA2193D15A700849AD0 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				8676BFA3193D15C300849AD0 /* PopupBackgroundView.h */,
+				8676BFA4193D15C300849AD0 /* PopupBackgroundView.m */,
+				8676BFA5193D15C300849AD0 /* PopupBaseView.h */,
+				8676BFA6193D15C300849AD0 /* PopupBaseView.m */,
+				8676BFA7193D15C300849AD0 /* PopupController.h */,
+				8676BFA8193D15C300849AD0 /* PopupController.m */,
+				8676BFA9193D15C300849AD0 /* PopupExtension.h */,
+				8676BFAA193D15C300849AD0 /* PopupExtension.m */,
+				8676BFAB193D15C300849AD0 /* PopupImageBaseView.h */,
+				8676BFAC193D15C300849AD0 /* PopupImageBaseView.m */,
+				8676BFAD193D15C300849AD0 /* PopupProtocol.h */,
+			);
+			name = PopupView;
 			sourceTree = "<group>";
 		};
 		86799871191A94830070DFFF /* UIViewExtended */ = {
@@ -623,6 +672,8 @@
 		AA5522B41916EAC6005D5950 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8676BFA2193D15A700849AD0 /* PopupView */,
+				8676BF9E193D143E00849AD0 /* JDCarouselControl */,
 				8676BF7C1936A31500849AD0 /* AMSmoothAlert */,
 				8676BF6019359AAC00849AD0 /* MONActivityIndicatorView */,
 				8676BF271935886100849AD0 /* APAddressBook */,
@@ -688,6 +739,8 @@
 				AAC204CD1921910600B2744C /* AccountCell.m */,
 				AAC204CF19228D1300B2744C /* AccountDetail.h */,
 				AAC204D019228D1300B2744C /* AccountDetail.m */,
+				8676BFB3193D16C300849AD0 /* AccountControlPopup.h */,
+				8676BFB4193D16C300849AD0 /* AccountControlPopup.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -876,6 +929,7 @@
 			files = (
 				AAC204CE1921910600B2744C /* AccountCell.m in Sources */,
 				867998F0192D33AC0070DFFF /* Tools.m in Sources */,
+				8676BFB5193D16C300849AD0 /* AccountControlPopup.m in Sources */,
 				AA3F0E97192C05450042186D /* JAQBlurryTableViewController.m in Sources */,
 				8676BF8E1939A37200849AD0 /* EntityProduct.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
@@ -902,9 +956,11 @@
 				8676BF881936E4C400849AD0 /* GlobalResource.m in Sources */,
 				8676BF331935888100849AD0 /* APContact.m in Sources */,
 				AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */,
+				8676BFAF193D15C300849AD0 /* PopupBaseView.m in Sources */,
 				AA5522E119173034005D5950 /* OtherUserInfoTableViewController.m in Sources */,
 				861B471419326865009E9EBD /* BEMLine.m in Sources */,
 				861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */,
+				8676BFA1193D146400849AD0 /* JDCarouselControl.m in Sources */,
 				8676BF821936A33400849AD0 /* AMBouncingView.m in Sources */,
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
@@ -922,13 +978,16 @@
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
+				8676BFB1193D15C300849AD0 /* PopupExtension.m in Sources */,
 				867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
+				8676BFB2193D15C300849AD0 /* PopupImageBaseView.m in Sources */,
 				8676BF9A1939A5C800849AD0 /* EntityOrderProduct.m in Sources */,
 				AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */,
 				8676BF911939A37200849AD0 /* EntityAccount.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
 				AAC204D119228D1300B2744C /* AccountDetail.m in Sources */,
+				8676BFB0193D15C300849AD0 /* PopupController.m in Sources */,
 				8676BF311935888100849AD0 /* APAddress.m in Sources */,
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */,
@@ -940,6 +999,7 @@
 				867998E9192D27480070DFFF /* SWLongPressGestureRecognizer.m in Sources */,
 				AA5522E5191748DB005D5950 /* UIImage+RoundedImage.m in Sources */,
 				AAC204E11922B3EC00B2744C /* ProductDetailTableViewController.m in Sources */,
+				8676BFAE193D15C300849AD0 /* PopupBackgroundView.m in Sources */,
 				867998901927ADAF0070DFFF /* OrderProductViewController.m in Sources */,
 				8679988D191AAB620070DFFF /* CustomIOS7AlertView.m in Sources */,
 				AAC2051C192496A900B2744C /* OrderMasterViewController.m in Sources */,
