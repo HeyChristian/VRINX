@@ -2,7 +2,7 @@
 //  EntityOrder.m
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/31/14.
+//  Created by Christian Vazquez on 6/5/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 
@@ -15,20 +15,20 @@
 
 @implementation EntityOrder
 
+@dynamic additionalCostTotal;
 @dynamic creationDate;
-@dynamic orderDate;
+@dynamic discount;
+@dynamic granTotal;
 @dynamic isMasterOrder;
+@dynamic itemsTotal;
+@dynamic orderDate;
 @dynamic shippingTotal;
 @dynamic shortDesc;
 @dynamic taxTotal;
 @dynamic updateDate;
-@dynamic granTotal;
-@dynamic additionalCostTotal;
-@dynamic discount;
-@dynamic itemsTotal;
 @dynamic accountOrders;
+@dynamic contactOrder;
 @dynamic orderProducts;
 @dynamic orders;
-@dynamic contactOrder;
 
 @end

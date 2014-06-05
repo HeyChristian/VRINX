@@ -28,11 +28,7 @@
 		8676BF831936A33400849AD0 /* AMSmoothAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF811936A33400849AD0 /* AMSmoothAlertView.m */; };
 		8676BF851936C24500849AD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8676BF841936C24500849AD0 /* Images.xcassets */; };
 		8676BF881936E4C400849AD0 /* GlobalResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF871936E4C400849AD0 /* GlobalResource.m */; };
-		8676BF8B1939A37100849AD0 /* EntityContactOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF8A1939A37100849AD0 /* EntityContactOrder.m */; };
-		8676BF8E1939A37200849AD0 /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF8D1939A37200849AD0 /* EntityProduct.m */; };
 		8676BF911939A37200849AD0 /* EntityAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF901939A37200849AD0 /* EntityAccount.m */; };
-		8676BF9A1939A5C800849AD0 /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF991939A5C800849AD0 /* EntityOrderProduct.m */; };
-		8676BF9D1939A64400849AD0 /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF9C1939A64400849AD0 /* EntityOrder.m */; };
 		8676BFA1193D146400849AD0 /* JDCarouselControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA0193D146400849AD0 /* JDCarouselControl.m */; };
 		8676BFAE193D15C300849AD0 /* PopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA4193D15C300849AD0 /* PopupBackgroundView.m */; };
 		8676BFAF193D15C300849AD0 /* PopupBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BFA6193D15C300849AD0 /* PopupBaseView.m */; };
@@ -62,6 +58,11 @@
 		867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E4192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m */; };
 		867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998E6192D27480070DFFF /* SWUtilityButtonView.m */; };
 		867998F0192D33AC0070DFFF /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 867998EF192D33AC0070DFFF /* Tools.m */; };
+		86A48B9C193E7A8B00E041E7 /* NSManagedObject+Clone.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48B9B193E7A8B00E041E7 /* NSManagedObject+Clone.m */; };
+		86A48BF3194046CB00E041E7 /* EntityProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BF2194046CB00E041E7 /* EntityProduct.m */; };
+		86A48BF6194046CB00E041E7 /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BF5194046CB00E041E7 /* EntityOrder.m */; };
+		86A48BF9194046CB00E041E7 /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BF8194046CB00E041E7 /* EntityOrderProduct.m */; };
+		86A48BFC194046CB00E041E7 /* EntityContactOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BFB194046CB00E041E7 /* EntityContactOrder.m */; };
 		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
@@ -164,16 +165,8 @@
 		8676BF841936C24500849AD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8676BF861936E4C400849AD0 /* GlobalResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalResource.h; sourceTree = "<group>"; };
 		8676BF871936E4C400849AD0 /* GlobalResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalResource.m; sourceTree = "<group>"; };
-		8676BF891939A37100849AD0 /* EntityContactOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityContactOrder.h; sourceTree = "<group>"; };
-		8676BF8A1939A37100849AD0 /* EntityContactOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityContactOrder.m; sourceTree = "<group>"; };
-		8676BF8C1939A37200849AD0 /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
-		8676BF8D1939A37200849AD0 /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
 		8676BF8F1939A37200849AD0 /* EntityAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityAccount.h; sourceTree = "<group>"; };
 		8676BF901939A37200849AD0 /* EntityAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityAccount.m; sourceTree = "<group>"; };
-		8676BF981939A5C800849AD0 /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
-		8676BF991939A5C800849AD0 /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
-		8676BF9B1939A64400849AD0 /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
-		8676BF9C1939A64400849AD0 /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
 		8676BF9F193D146400849AD0 /* JDCarouselControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCarouselControl.h; sourceTree = "<group>"; };
 		8676BFA0193D146400849AD0 /* JDCarouselControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCarouselControl.m; sourceTree = "<group>"; };
 		8676BFA3193D15C300849AD0 /* PopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupBackgroundView.h; sourceTree = "<group>"; };
@@ -231,6 +224,16 @@
 		867998E6192D27480070DFFF /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		867998EE192D33AC0070DFFF /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		867998EF192D33AC0070DFFF /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		86A48B9A193E7A8B00E041E7 /* NSManagedObject+Clone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Clone.h"; sourceTree = "<group>"; };
+		86A48B9B193E7A8B00E041E7 /* NSManagedObject+Clone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Clone.m"; sourceTree = "<group>"; };
+		86A48BF1194046CB00E041E7 /* EntityProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProduct.h; sourceTree = "<group>"; };
+		86A48BF2194046CB00E041E7 /* EntityProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProduct.m; sourceTree = "<group>"; };
+		86A48BF4194046CB00E041E7 /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
+		86A48BF5194046CB00E041E7 /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		86A48BF7194046CB00E041E7 /* EntityOrderProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrderProduct.h; sourceTree = "<group>"; };
+		86A48BF8194046CB00E041E7 /* EntityOrderProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrderProduct.m; sourceTree = "<group>"; };
+		86A48BFA194046CB00E041E7 /* EntityContactOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityContactOrder.h; sourceTree = "<group>"; };
+		86A48BFB194046CB00E041E7 /* EntityContactOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityContactOrder.m; sourceTree = "<group>"; };
 		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -517,6 +520,8 @@
 		867998ED192D338B0070DFFF /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				86A48B9A193E7A8B00E041E7 /* NSManagedObject+Clone.h */,
+				86A48B9B193E7A8B00E041E7 /* NSManagedObject+Clone.m */,
 				867998EE192D33AC0070DFFF /* Tools.h */,
 				867998EF192D33AC0070DFFF /* Tools.m */,
 				8676BF641935A47000849AD0 /* DataGenerator.h */,
@@ -770,16 +775,16 @@
 		AA5522E919188529005D5950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8676BF9B1939A64400849AD0 /* EntityOrder.h */,
-				8676BF9C1939A64400849AD0 /* EntityOrder.m */,
-				8676BF981939A5C800849AD0 /* EntityOrderProduct.h */,
-				8676BF991939A5C800849AD0 /* EntityOrderProduct.m */,
+				86A48BFA194046CB00E041E7 /* EntityContactOrder.h */,
+				86A48BFB194046CB00E041E7 /* EntityContactOrder.m */,
+				86A48BF7194046CB00E041E7 /* EntityOrderProduct.h */,
+				86A48BF8194046CB00E041E7 /* EntityOrderProduct.m */,
+				86A48BF4194046CB00E041E7 /* EntityOrder.h */,
+				86A48BF5194046CB00E041E7 /* EntityOrder.m */,
+				86A48BF1194046CB00E041E7 /* EntityProduct.h */,
+				86A48BF2194046CB00E041E7 /* EntityProduct.m */,
 				8676BF8F1939A37200849AD0 /* EntityAccount.h */,
 				8676BF901939A37200849AD0 /* EntityAccount.m */,
-				8676BF8C1939A37200849AD0 /* EntityProduct.h */,
-				8676BF8D1939A37200849AD0 /* EntityProduct.m */,
-				8676BF891939A37100849AD0 /* EntityContactOrder.h */,
-				8676BF8A1939A37100849AD0 /* EntityContactOrder.m */,
 				867998BB1929C8070070DFFF /* TempModels */,
 			);
 			name = Model;
@@ -931,7 +936,6 @@
 				867998F0192D33AC0070DFFF /* Tools.m in Sources */,
 				8676BFB5193D16C300849AD0 /* AccountControlPopup.m in Sources */,
 				AA3F0E97192C05450042186D /* JAQBlurryTableViewController.m in Sources */,
-				8676BF8E1939A37200849AD0 /* EntityProduct.m in Sources */,
 				AAC2047119215A8400B2744C /* CoreDataStack.m in Sources */,
 				867998E8192D27480070DFFF /* SWCellScrollView.m in Sources */,
 				867998EB192D27480070DFFF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
@@ -941,12 +945,10 @@
 				AA5522C81916ECD8005D5950 /* LeftMenuViewController.m in Sources */,
 				8676BF661935A47000849AD0 /* DataGenerator.m in Sources */,
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
-				8676BF9D1939A64400849AD0 /* EntityOrder.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
 				8676BF771936846300849AD0 /* AddressBookPeoplePickerViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */,
-				8676BF8B1939A37100849AD0 /* EntityContactOrder.m in Sources */,
 				AAC204D71922A2F000B2744C /* OrderViewController.m in Sources */,
 				867998C41929CAD10070DFFF /* TempOrderProduct.m in Sources */,
 				8676BF261935712100849AD0 /* ChooseOrderTypeController.m in Sources */,
@@ -965,9 +967,11 @@
 				AA5522CE1916F360005D5950 /* RightMenuViewController.m in Sources */,
 				AA5522741916E98E005D5950 /* main.m in Sources */,
 				AAC205181923F50200B2744C /* ProductCell.m in Sources */,
+				86A48BF6194046CB00E041E7 /* EntityOrder.m in Sources */,
 				8676BF831936A33400849AD0 /* AMSmoothAlertView.m in Sources */,
 				861B47221932C58F009E9EBD /* CustomButton.m in Sources */,
 				AA5522CB1916EDB3005D5950 /* RootViewController.m in Sources */,
+				86A48BF3194046CB00E041E7 /* EntityProduct.m in Sources */,
 				8676BF321935888100849AD0 /* APAddressBook.m in Sources */,
 				867998EA192D27480070DFFF /* SWTableViewCell.m in Sources */,
 				8679988A191AA50D0070DFFF /* GlobalPopupAlert.m in Sources */,
@@ -977,12 +981,13 @@
 				861B471319326865009E9EBD /* BEMCircle.m in Sources */,
 				AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */,
 				867998BE1929C8750070DFFF /* TempProduct.m in Sources */,
+				86A48BF9194046CB00E041E7 /* EntityOrderProduct.m in Sources */,
 				86799886191AA1DA0070DFFF /* CusAlertView.m in Sources */,
+				86A48B9C193E7A8B00E041E7 /* NSManagedObject+Clone.m in Sources */,
 				8676BFB1193D15C300849AD0 /* PopupExtension.m in Sources */,
 				867998EC192D27480070DFFF /* SWUtilityButtonView.m in Sources */,
 				867998A5192868660070DFFF /* OrderProductCell.m in Sources */,
 				8676BFB2193D15C300849AD0 /* PopupImageBaseView.m in Sources */,
-				8676BF9A1939A5C800849AD0 /* EntityOrderProduct.m in Sources */,
 				AA3F0E9A192C05940042186D /* UIImage+ImageEffects.m in Sources */,
 				8676BF911939A37200849AD0 /* EntityAccount.m in Sources */,
 				AA5522E819186F08005D5950 /* AccountEditTableViewController.m in Sources */,
@@ -992,6 +997,7 @@
 				AA5522D81916F8A9005D5950 /* LoginViewController.m in Sources */,
 				AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */,
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
+				86A48BFC194046CB00E041E7 /* EntityContactOrder.m in Sources */,
 				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */,

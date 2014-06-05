@@ -9,6 +9,7 @@
 #import "OrderViewController.h"
 #import "ChooseOrderTypeController.h"
 #import "GlobalResource.h"
+#import "EntityOrder.h"
 
 @interface OrderViewController ()<UITableViewDelegate,UITableViewDataSource>{
     
@@ -120,11 +121,23 @@
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
         
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        EntityOrder *order = [self.orders objectAtIndex:indexPath.row];
+        cell.textLabel.text = [self formatDate:order.orderDate];
+        
     }
     // Produce the correct cell the usual way
     
     
     return cell;
 }
-
+-(NSString *) formatDate:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMMM d, yyyy"];
+    
+    return [dateFormatter stringFromDate:date];
+    
+}
 @end

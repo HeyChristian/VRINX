@@ -126,6 +126,7 @@ typedef struct margins {
         [self _updateDimensions];
         [self _layoutSegments];
     }
+    
     self.prevNumberOfIndices = self.numberOfSegments;
 }
 

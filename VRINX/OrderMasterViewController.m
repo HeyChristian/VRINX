@@ -312,11 +312,13 @@
 - (IBAction)SaveOrder:(id)sender {
 
     
-     NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
-    NSMutableArray *orderProducts = [[NSMutableArray alloc] init];
     
+    
+    
+    NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    EntityOrder *order = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext:global.account.managedObjectContext];
+
+    EntityOrder *order = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext:coreDataStack.managedObjectContext];
     
     order.itemsTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.itemsTotalLabel.text]];
     order.taxTotal = [[NSDecimalNumber alloc] initWithFloat:[self getFloatValue:self.taxTotalLabel.text]];
@@ -328,12 +330,13 @@
     order.creationDate = [NSDate date];
     order.orderDate = global.selectedDate;
     
-   // [coreDataStack saveContext];
+    [global.account addOrdersObject:order];
+
+    [coreDataStack saveContext];
     
- //   EntityOrderProduct *orderProd = [NSEntityDescription insertNewObjectForEntityForName:@"OrderProduct" inManagedObjectContext:order.managedObjectContext];
-    
+  
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"OrderProduct"
-                                              inManagedObjectContext:coreDataStack.managedObjectContext];
+                                              inManagedObjectContext:order.managedObjectContext];
     
     EntityOrderProduct *orderProd=nil;
     
@@ -345,52 +348,24 @@
             
             if([prod.uuid isEqual:top.product.uuid]){
                 orderProd=[[EntityOrderProduct alloc] initWithEntity:entity
-                                      insertIntoManagedObjectContext:nil];
-                
+                                      insertIntoManagedObjectContext:order.managedObjectContext];
+               
                 orderProd.itemCount = top.itemCount;
-                //orderProd.product  = [self getProduct:prod.uuid withManagedObjectContext:coreDataStack.managedObjectContext];
-                
-                orderProd.product = [[EntityProduct alloc] initWithEntity:[NSEntityDescription entityForName:@"Product" inManagedObjectContext:coreDataStack.managedObjectContext] insertIntoManagedObjectContext:nil];
-                
                 [orderProd setProduct:prod];
-                [orderProducts addObject:orderProd];
+                [order addOrderProductsObject:orderProd];
                 break;
             }
        }
-       
-        
-        // orderProd.product = nil;
     }
-    
-    [order addOrderProducts:[NSSet setWithArray:orderProducts]];
     
     [coreDataStack saveContext];
     
 }
 
-- (EntityProduct *) getProduct:(NSString *)uuid withManagedObjectContext:(NSManagedObjectContext*)context{
-    
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:[NSEntityDescription entityForName:@"Product" inManagedObjectContext:context]];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"uuid = %@", uuid]];
-    [request setFetchLimit:1];
-    
-    NSArray *results = [context executeFetchRequest:request error:nil];
-    
-    EntityProduct* product = nil;
-    
-    if ([results count] == 0)
-    {
-        product= nil;
-    }
-    else
-    {
-        product = (EntityProduct*)[results objectAtIndex:0];
-    }
-    
-    
-    return product;
-    
-}
+
+
+
+
+
+
 @end

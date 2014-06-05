@@ -2,7 +2,7 @@
 //  EntityOrderProduct.h
 //  VRINX
 //
-//  Created by Christian Vazquez on 5/31/14.
+//  Created by Christian Vazquez on 6/5/14.
 //  Copyright (c) 2014 Christian Vazquez. All rights reserved.
 //
 

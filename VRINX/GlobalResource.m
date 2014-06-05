@@ -15,7 +15,7 @@
 @synthesize orderProducts = _orderProducts;
 @synthesize backSegueIdentifier = _backSegueIdentifier;
 @synthesize selectedDate = _selectedDate;
-
+@synthesize coreDataStack = _coreDataStack;
 
 
 + (GlobalResource *)sharedInstance {
@@ -35,7 +35,7 @@
         _backSegueIdentifier = [[NSString alloc] init];
         _orderProducts = [[NSMutableArray alloc] init];
         _selectedDate = [NSDate date];
-        
+        _coreDataStack = [CoreDataStack defaultStack];
         //_account=[[EntityAccount alloc] init];
     }
     return self;

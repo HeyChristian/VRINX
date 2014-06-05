@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "APContact.h"
+#import "CoreDataStack.h"
 
 @class EntityAccount;
 
@@ -18,6 +19,7 @@
     NSMutableArray *_orderProducts;
     NSString *_backSegueIdentifier;
     NSDate *_selectedDate;
+    CoreDataStack *_coreDataStack;
 }
 
 
@@ -30,5 +32,6 @@
     @property(strong, nonatomic, readwrite) NSMutableArray *orderProducts;
     @property(strong, nonatomic, readwrite) NSString *backSegueIdentifier;
     @property(strong, nonatomic, readwrite) NSDate *selectedDate;
+    @property(nonatomic)  CoreDataStack *coreDataStack;
 
 @end

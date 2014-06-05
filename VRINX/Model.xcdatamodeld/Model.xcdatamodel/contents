@@ -56,9 +56,9 @@
     </entity>
     <elements>
         <element name="Account" positionX="-506" positionY="-199" width="128" height="268"/>
+        <element name="ContactOrder" positionX="-38" positionY="-297" width="128" height="118"/>
         <element name="Order" positionX="-272" positionY="-297" width="128" height="268"/>
-        <element name="OrderProduct" positionX="-92" positionY="27" width="128" height="73"/>
-        <element name="Product" positionX="-290" positionY="254" width="128" height="148"/>
-        <element name="ContactOrder" positionX="-90" positionY="-279" width="128" height="120"/>
+        <element name="OrderProduct" positionX="-63" positionY="81" width="128" height="73"/>
+        <element name="Product" positionX="-261" positionY="72" width="128" height="148"/>
     </elements>
 </model>
