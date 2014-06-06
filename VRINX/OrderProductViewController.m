@@ -45,27 +45,11 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    /*
-    
-    UIBarButtonItem *flexibleSpace =  [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    self.checkoutBtn = [[UIBarButtonItem alloc] initWithTitle:@"Select Items for Checkout" style: target:<#(id)#> action:<#(SEL)#>
-                        //initWithBarButtonSystemItem:(UIBarButtonSystemItem)UIBarButtonItemStylePlain target:self action:nil];  //@selector(cropImage:)];
-    
-    NSArray *toolbarItems = [NSArray arrayWithObjects:flexibleSpace,self.checkoutBtn ,flexibleSpace, nil];
    
-    self.toolbarItems = toolbarItems;
-    */
-    
     
     
     self.products = [[NSArray alloc] init];
     self.products = [global.account.products allObjects];
-    
-    NSLog(@"order products >>> %@ ", global.orderProducts);
-    
-    //if(self.orderProducts == nil){
-     //   self.orderProducts = [[NSMutableArray alloc] init];
-    //}
     
     [self.navigationController setToolbarHidden:YES];
     
@@ -78,24 +62,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     
-    //Pass order product to parent view
-  //  if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-      //  [self.delegate setOrderProduct:global.orderProducts];
-    //}
     [super viewWillDisappear:animated];
 }
 
-#pragma mark - Navigation
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if([segue.identifier isEqualToString:@"newProduct"]){
-        
-      //  ProductDetailTableViewController  *newProduct = (ProductDetailTableViewController *) segue.destinationViewController;
-       //  newProduct.account = global.account;
-        
-    }
-    
-}
 
 #pragma mark - Table view data source
 
@@ -158,9 +127,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // NSLog(@"cell for row at index path: %ld",(long)indexPath.row);
-    
-    
+ 
    EmptyOrderProductCell  *emptyCell;
    OrderProductCell *productCell;
     

@@ -32,6 +32,13 @@
     [super viewDidLoad];
     global = [GlobalResource sharedInstance];
     
+    UIBarButtonItem *barBtnItem =
+    [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home"]
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(performBack:)];
+    [barBtnItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = barBtnItem;
     
 }
 -(void) viewWillAppear:(BOOL)animated{
@@ -59,6 +66,12 @@
     [self.tableView reloadData];
     [self.tableView reloadData];
 }
+
+-(IBAction)performBack:(id) sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
 #pragma mark - Navigation
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     

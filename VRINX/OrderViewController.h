@@ -17,4 +17,8 @@
 @property (nonatomic,strong) NSArray *orders;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
+@property(retain) NSMutableArray* tableViewSections;
+@property(retain) NSMutableDictionary* tableViewCells;
+
 @end

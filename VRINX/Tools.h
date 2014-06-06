@@ -13,4 +13,5 @@
 
 +(UIColor *)colorWithHexString:(NSString *)hex;
 + (NSString *)GetUUID;
++ (NSString*)timeIntervalWithStartDate:(NSDate*)d1;
 @end

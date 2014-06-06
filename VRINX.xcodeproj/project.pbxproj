@@ -63,6 +63,7 @@
 		86A48BF9194046CB00E041E7 /* EntityOrderProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BF8194046CB00E041E7 /* EntityOrderProduct.m */; };
 		86A48BFC194046CB00E041E7 /* EntityContactOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BFB194046CB00E041E7 /* EntityContactOrder.m */; };
 		86A48BFF19411B8F00E041E7 /* EntityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48BFE19411B8F00E041E7 /* EntityOrder.m */; };
+		86A48C02194154A000E041E7 /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A48C01194154A000E041E7 /* OrderCell.m */; };
 		AA3F0E69192BD0D10042186D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E68192BD0D10042186D /* RECommonFunctions.m */; };
 		AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6B192BD1280042186D /* RESideMenu.m */; };
 		AA3F0E6F192BD1860042186D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F0E6E192BD1860042186D /* UIViewController+RESideMenu.m */; };
@@ -234,6 +235,8 @@
 		86A48BFB194046CB00E041E7 /* EntityContactOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityContactOrder.m; sourceTree = "<group>"; };
 		86A48BFD19411B8F00E041E7 /* EntityOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityOrder.h; sourceTree = "<group>"; };
 		86A48BFE19411B8F00E041E7 /* EntityOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityOrder.m; sourceTree = "<group>"; };
+		86A48C00194154A000E041E7 /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		86A48C01194154A000E041E7 /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
 		AA3F0E67192BD0D10042186D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		AA3F0E68192BD0D10042186D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		AA3F0E6A192BD1280042186D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -818,6 +821,8 @@
 				867998A4192868660070DFFF /* OrderProductCell.m */,
 				8676BF241935712100849AD0 /* ChooseOrderTypeController.h */,
 				8676BF251935712100849AD0 /* ChooseOrderTypeController.m */,
+				86A48C00194154A000E041E7 /* OrderCell.h */,
+				86A48C01194154A000E041E7 /* OrderCell.m */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -998,6 +1003,7 @@
 				AA3F0E6C192BD1280042186D /* RESideMenu.m in Sources */,
 				86799859191A84EC0070DFFF /* RMDateSelectionViewController.m in Sources */,
 				86A48BFC194046CB00E041E7 /* EntityContactOrder.m in Sources */,
+				86A48C02194154A000E041E7 /* OrderCell.m in Sources */,
 				867998CC192AB1680070DFFF /* PSCropToolView.m in Sources */,
 				86799877191A94F50070DFFF /* MJPopupBackgroundView.m in Sources */,
 				867998D0192AB4A00070DFFF /* CroperViewController.m in Sources */,
