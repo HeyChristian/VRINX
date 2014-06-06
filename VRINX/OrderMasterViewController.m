@@ -15,7 +15,10 @@
 #import "GlobalResource.h"
 #import "CoreDataStack.h"
 #import "EntityProduct.h"
-@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>{
+#import "APPhoneWithLabel.h"
+#import "AMSmoothAlertView.h"
+
+@interface OrderMasterViewController ()<RMDateSelectionViewControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate,AMSmoothAlertViewDelegate>{
     GlobalResource *global;
 }
 
@@ -312,9 +315,6 @@
 - (IBAction)SaveOrder:(id)sender {
 
     
-    
-    
-    
     NSArray *products =  [[NSArray alloc] initWithArray:[global.account.products allObjects]];
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
 
@@ -329,6 +329,23 @@
     order.isMasterOrder = 0;
     order.creationDate = [NSDate date];
     order.orderDate = global.selectedDate;
+    
+    //Client Info
+    order.clientName = global.selectedContact.compositeName;
+    order.clientCompany = global.selectedContact.company;
+    order.clientRecordID = global.selectedContact.recordID;
+    order.clientThumbnail =  UIImagePNGRepresentation(global.selectedContact.thumbnail);
+    
+    
+    for(APPhoneWithLabel *pwl in global.selectedContact.phonesWithLabels){
+        order.clientPhoneLabel = pwl.label;
+        order.clientPhoneNumber = pwl.phone;
+        break;
+    }
+    
+    for(NSString *email in global.selectedContact.emails){
+        order.clientEmail =  email;
+    }
     
     [global.account addOrdersObject:order];
 
@@ -359,6 +376,23 @@
     }
     
     [coreDataStack saveContext];
+    
+    AMSmoothAlertView *alert;
+    alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:@"Successfully" andText:@"now on you can see the details and proceed to record payments in the payment section." andCancelButton:NO forAlertType:AlertSuccess];
+    
+    [alert setTitleFont:[UIFont fontWithName:@"Verdana" size:25.0f]];
+    alert.tag = 0;
+    alert.delegate = self;
+    alert.cornerRadius = 3.0f;
+    [alert show];
+    
+    alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
+        if(button == alertObj.defaultButton) {
+    
+            [self performSegueWithIdentifier:@"cancelOrder" sender:nil];
+    
+        }
+    };
     
 }
 

@@ -469,7 +469,16 @@
 }
 -(APContact *) GetAPContact:(ABRecordRef)person{
     
-    APContact *contact = [[APContact alloc] init];
+    
+    
+    APContact *contact = [[APContact alloc] initWithRecordRef:person fieldMask:APContactFieldAll];
+    return contact;
+    
+    
+ //[[APContact alloc] init];
+    
+    contact =[[APContact alloc] initWithRecordRef:person fieldMask:APContactFieldAll];
+    
     [contact setValue:(__bridge NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty) forKey:@"firstName"];
     [contact setValue:(__bridge NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty) forKey:@"lastName"];
     [contact setValue:(__bridge NSString *)ABRecordCopyValue(person, kABPersonOrganizationProperty) forKey:@"company"];
@@ -487,7 +496,7 @@
         
         NSLog(@"  ### %@  --- %@ ### )", locLabel1, phoneLabel1);
 
-   
+        
     }
     
   //  [contact setValue:(__bridge NSString *)ABRecordCopyValue(person, kABPersonPhon) forKey:@"company"];

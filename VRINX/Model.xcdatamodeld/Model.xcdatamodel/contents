@@ -26,6 +26,14 @@
     </entity>
     <entity name="Order" representedClassName="EntityOrder" syncable="YES">
         <attribute name="additionalCostTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="clientCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientEmailLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientPhoneLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientRecordID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="clientThumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="discount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="granTotal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -57,7 +65,7 @@
     <elements>
         <element name="Account" positionX="-506" positionY="-199" width="128" height="268"/>
         <element name="ContactOrder" positionX="-38" positionY="-297" width="128" height="118"/>
-        <element name="Order" positionX="-272" positionY="-297" width="128" height="268"/>
+        <element name="Order" positionX="-272" positionY="-297" width="128" height="388"/>
         <element name="OrderProduct" positionX="-63" positionY="81" width="128" height="73"/>
         <element name="Product" positionX="-261" positionY="72" width="128" height="148"/>
     </elements>

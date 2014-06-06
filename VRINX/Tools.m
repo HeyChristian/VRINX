@@ -8,6 +8,8 @@
 
 #import "Tools.h"
 #import "UIImage+ImageEffects.h"
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 @implementation Tools
 
 
@@ -80,4 +82,8 @@
     return blurredSnapshotImage;
 }
 */
+
+
+
+
 @end

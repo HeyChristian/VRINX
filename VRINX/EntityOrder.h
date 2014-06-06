@@ -24,6 +24,14 @@
 @property (nonatomic, retain) NSString * shortDesc;
 @property (nonatomic, retain) NSDecimalNumber * taxTotal;
 @property (nonatomic, retain) NSDate * updateDate;
+@property (nonatomic, retain) NSString * clientName;
+@property (nonatomic, retain) NSString * clientCompany;
+@property (nonatomic, retain) NSNumber * clientRecordID;
+@property (nonatomic, retain) NSString * clientPhoneNumber;
+@property (nonatomic, retain) NSString * clientPhoneLabel;
+@property (nonatomic, retain) NSData * clientThumbnail;
+@property (nonatomic, retain) NSString * clientEmailLabel;
+@property (nonatomic, retain) NSString * clientEmail;
 @property (nonatomic, retain) EntityAccount *accountOrders;
 @property (nonatomic, retain) EntityContactOrder *contactOrder;
 @property (nonatomic, retain) NSSet *orderProducts;

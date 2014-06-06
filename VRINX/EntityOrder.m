@@ -26,6 +26,14 @@
 @dynamic shortDesc;
 @dynamic taxTotal;
 @dynamic updateDate;
+@dynamic clientName;
+@dynamic clientCompany;
+@dynamic clientRecordID;
+@dynamic clientPhoneNumber;
+@dynamic clientPhoneLabel;
+@dynamic clientThumbnail;
+@dynamic clientEmailLabel;
+@dynamic clientEmail;
 @dynamic accountOrders;
 @dynamic contactOrder;
 @dynamic orderProducts;

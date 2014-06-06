@@ -35,12 +35,16 @@
     self.tableView.dataSource =self;
     self.tableView.delegate =self;
     
+    //initWithImage: [UIImage imageNamed:@"cusBack"]
+    UIBarButtonItem *barBtnItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(performBack:)];
+    [barBtnItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = barBtnItem;
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
-                                             initWithTitle:@"Back"
-                                             style:UIBarButtonItemStylePlain
-                                             target:self
-                                             action:@selector(performBack:)];
+    
     
 }
 
@@ -48,18 +52,28 @@
     [super viewDidAppear:animated];
     global.selectedContact=nil;
     global.orderProducts=[[NSMutableArray alloc] init];
+    
+    
+   // initWithImage: [UIImage imageNamed:@""];
+    
+   
+    
+    
+    
 }
 -(IBAction)performBack:(id) sender{
     
-    NSLog(@"perform back into order view controller");
+   // NSLog(@"perform back into order view controller");
     
-    [self performSegueWithIdentifier:@"backToDetail" sender:nil];
-    /*
-    if(global.backSegueIdentifier != nil){
+   // [self.navigationController popToRootViewControllerAnimated:YES];
+    
+   // [self performSegueWithIdentifier:@"backToDetail" sender:nil];
+    
+    if(global.backSegueIdentifier.length > 0){
         [self performSegueWithIdentifier:global.backSegueIdentifier sender:nil];
     }else{
          [self.navigationController popToRootViewControllerAnimated:YES];
-    }*/
+    }
     
 }
 
