@@ -132,7 +132,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 84;
+    return 73;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,9 +155,9 @@
         [ocell configureCellForEntry:order];
         
         
-        UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 84, 320, .5)];
-        line.backgroundColor = [UIColor lightGrayColor];
-        [ocell addSubview:line];
+       // UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 84, 320, .5)];
+        //line.backgroundColor = [UIColor lightGrayColor];
+        //[ocell addSubview:line];
         return ocell;
         
     }

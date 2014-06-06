@@ -12,11 +12,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *clientNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ordelTotalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *orderTotalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderDateLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *timeView;
+@property (weak, nonatomic) IBOutlet UIView *totalView;
+@property (weak, nonatomic) IBOutlet UIView *dueView;
 
 -(void)configureCellForEntry:(EntityOrder *)order;
     
