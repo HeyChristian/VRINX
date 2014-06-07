@@ -29,10 +29,10 @@
 {
     [super viewDidLoad];
     
-    self.orders = [[NSArray alloc] init];
+    self.orders = [[NSMutableArray alloc] init];
     global = [GlobalResource sharedInstance];
     
-    self.orders = [global.account.orders allObjects];
+    self.orders = [[NSMutableArray alloc] initWithArray:[global.account.orders allObjects]];
     
     self.tableView.dataSource =self;
     self.tableView.delegate =self;
@@ -45,6 +45,9 @@
                                     action:@selector(performBack:)];
     [barBtnItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = barBtnItem;
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"orderDate" ascending:FALSE];
+    [self.orders sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     [self setupDataSource];
     //84
@@ -70,6 +73,7 @@
     NSMutableArray *unsortedDates = [[NSMutableArray alloc] init]; // [self.sections allKeys];
     
     for(EntityOrder *order in self.orders){
+       // order.orderDate
        [unsortedDates addObject:order.orderDate];
     }
     

@@ -25,7 +25,7 @@
     self.dueView.layer.masksToBounds = YES;
     
     self.clientNameLabel.text = order.clientName;
-    self.orderDateLabel.text = [Tools timeIntervalWithStartDate:order.orderDate];
+    self.orderDateLabel.text = [Tools timeIntervalWithStartDate:order.creationDate];
     
     int items=0;
     for(EntityOrderProduct *op in order.orderProducts){
