@@ -16,6 +16,7 @@
 @synthesize backSegueIdentifier = _backSegueIdentifier;
 @synthesize selectedDate = _selectedDate;
 @synthesize coreDataStack = _coreDataStack;
+@synthesize selectedOrder = _selectedOrder;
 
 
 + (GlobalResource *)sharedInstance {
@@ -47,6 +48,7 @@
     global.selectedContact = [[APContact alloc] init];
     global.backSegueIdentifier = [[NSString alloc] init];
     global.account=nil;
+    global.selectedOrder = nil;
     global.orderProducts = [[NSMutableArray alloc] init];
     global.selectedDate = [NSDate date];
     

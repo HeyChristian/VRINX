@@ -764,7 +764,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <color key="highlightedColor" patternImage="FF63FE16-CFC2-400D-8DEC-F2E8CF48F675" colorSpace="pattern"/>
+                                                            <color key="highlightedColor" patternImage="4570C2C3-A20E-4F48-8345-DA50DEC0631A" colorSpace="pattern"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="∑" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kJ-Wg-zVX">
                                                             <rect key="frame" x="7" y="0.0" width="17" height="19"/>
@@ -2402,7 +2402,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FF63FE16-CFC2-400D-8DEC-F2E8CF48F675" width="320" height="460">
+        <image name="4570C2C3-A20E-4F48-8345-DA50DEC0631A" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

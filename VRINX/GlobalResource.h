@@ -10,7 +10,7 @@
 #import "APContact.h"
 #import "CoreDataStack.h"
 
-@class EntityAccount;
+@class EntityAccount,EntityOrder;
 
 @interface GlobalResource : NSObject{
     
@@ -20,6 +20,7 @@
     NSString *_backSegueIdentifier;
     NSDate *_selectedDate;
     CoreDataStack *_coreDataStack;
+    EntityOrder *_selectedOrder;
 }
 
 
@@ -29,6 +30,7 @@
 
     @property(strong, nonatomic, readwrite) APContact *selectedContact;
     @property(strong, nonatomic, readwrite) EntityAccount *account;
+    @property(strong, nonatomic, readwrite) EntityOrder *selectedOrder;
     @property(strong, nonatomic, readwrite) NSMutableArray *orderProducts;
     @property(strong, nonatomic, readwrite) NSString *backSegueIdentifier;
     @property(strong, nonatomic, readwrite) NSDate *selectedDate;

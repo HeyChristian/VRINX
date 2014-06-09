@@ -170,6 +170,9 @@
     
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    global.selectedOrder = [self.orders objectAtIndex:indexPath.row];
+}
 -(NSString *) formatDate:(NSDate *)date{
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
