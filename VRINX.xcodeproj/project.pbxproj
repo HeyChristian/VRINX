@@ -12,6 +12,7 @@
 		861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B471219326865009E9EBD /* BEMSimpleLineGraphView.m */; };
 		861B471A1932B302009E9EBD /* UIButton+uuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47191932B302009E9EBD /* UIButton+uuid.m */; };
 		861B47221932C58F009E9EBD /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 861B47211932C58F009E9EBD /* CustomButton.m */; };
+		863D59CD194550540030E289 /* OrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863D59CC194550540030E289 /* OrderDetailViewController.m */; };
 		8676BF261935712100849AD0 /* ChooseOrderTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF251935712100849AD0 /* ChooseOrderTypeController.m */; };
 		8676BF311935888100849AD0 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF291935888100849AD0 /* APAddress.m */; };
 		8676BF321935888100849AD0 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676BF2B1935888100849AD0 /* APAddressBook.m */; };
@@ -135,6 +136,8 @@
 		861B47191932B302009E9EBD /* UIButton+uuid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+uuid.m"; sourceTree = "<group>"; };
 		861B47201932C58F009E9EBD /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		861B47211932C58F009E9EBD /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		863D59CB194550540030E289 /* OrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailViewController.h; sourceTree = "<group>"; };
+		863D59CC194550540030E289 /* OrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailViewController.m; sourceTree = "<group>"; };
 		8676BF241935712100849AD0 /* ChooseOrderTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseOrderTypeController.h; sourceTree = "<group>"; };
 		8676BF251935712100849AD0 /* ChooseOrderTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseOrderTypeController.m; sourceTree = "<group>"; };
 		8676BF281935888100849AD0 /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
@@ -823,6 +826,8 @@
 				8676BF251935712100849AD0 /* ChooseOrderTypeController.m */,
 				86A48C00194154A000E041E7 /* OrderCell.h */,
 				86A48C01194154A000E041E7 /* OrderCell.m */,
+				863D59CB194550540030E289 /* OrderDetailViewController.h */,
+				863D59CC194550540030E289 /* OrderDetailViewController.m */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -951,6 +956,7 @@
 				8676BF661935A47000849AD0 /* DataGenerator.m in Sources */,
 				AA3F0E72192BD2DE0042186D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AA5522DE1916F90E005D5950 /* SignupViewController.m in Sources */,
+				863D59CD194550540030E289 /* OrderDetailViewController.m in Sources */,
 				8676BF771936846300849AD0 /* AddressBookPeoplePickerViewController.m in Sources */,
 				AAC204DE1922B3D500B2744C /* ProductTableViewController.m in Sources */,
 				861B471519326865009E9EBD /* BEMSimpleLineGraphView.m in Sources */,
